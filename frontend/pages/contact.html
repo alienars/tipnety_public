@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="راه‌های ارتباط با فروشگاه تیپ نتی و پشتیبانی" />
+    <title>تماس با ما - تیپ نتی</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body data-page="contact-us">
+    <!-- ===== HEADER ===== -->
+    <div data-include="/partials/header.html"></div>
+
+    <!-- ===== SECTION: PAGE HEADER ===== -->
+    <!-- partials/page-header.html -->
+
+    <div data-title="ارتباط با مرکز پشتیبانی تیپ نتی" data-description="خدمات مشتریان تیپ نتی آماده هرگونه پاسخگویی در زمینه‌های پیگیری، شکایات، انتقادات، پیشنهادات و درخواست‌های مربوط به سفارش و راهنمایی مورد نیاز مشتریان است." data-active-page="contact">
+      <!-- Breadcrumb for Mobile View (Visible on small screens) -->
+      <div class="m-0 w-full px-4 py-6 border-b md:hidden bg-gray-200">
+        <nav class="flex items-center text-3xs text-black-400">
+          <a href="/index.html" class="text-black-400">فروشگاه لباس تیپ</a>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mx-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span class="font-semibold text-black-600 page-header-title"></span>
+        </nav>
+      </div>
+
+      <!-- Main Header Section with Background -->
+      <section class="relative bg-cover bg-center text-white" style="background-image: url('../assets/img/pages-head-bg.png')">
+        <!-- مسیر عکس را اصلاح کنید -->
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 container mx-auto px-4 py-16 md:py-24 text-center">
+          <!-- Breadcrumb for Desktop View (Hidden on small screens) -->
+          <nav class="hidden md:flex md:absolute md:top-6 md:right-6 items-center text-sm text-gray-300 mb-12 md:mb-0">
+            <a href="/index.html" class="hover:text-white">فروشگاه لباس تیپ</a>
+            <span class="mx-2">/</span>
+            <span class="font-semibold text-white page-header-title"></span>
+          </nav>
+
+          <!-- Title and Description -->
+          <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl md:text-xl font-extrabold mb-4 page-header-title text-gray-100"></h1>
+            <p class="text-base md:text-sm leading-relaxed page-header-description text-gray-500"></p>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="page-header-nav flex flex-wrap items-center justify-center gap-3 md:gap-4 mt-12">
+            <a href="/pages/about-us.html" data-page="about" class="py-2.5 px-6 rounded-full border text-xs font-semibold transition-colors duration-300 border-white/50 text-white hover:bg-white/10 hover:border-white">معرفی تیپ نتی</a>
+            <a href="/pages/rules.html" data-page="rules" class="py-2.5 px-6 rounded-full border text-xs font-semibold transition-colors duration-300 border-white/50 text-white hover:bg-white/10 hover:border-white">قوانین و مقررات</a>
+            <a href="/pages/contact.html" data-page="contact" class="py-2.5 px-6 rounded-full border text-xs font-semibold transition-colors duration-300 border-white/50 text-white hover:bg-white/10 hover:border-white">ارتباط و پشتیبانی</a>
+            <a href="/pages/faq.html" data-page="faq" class="py-2.5 px-6 rounded-full border text-xs font-semibold transition-colors duration-300 border-white/50 text-white hover:bg-white/10 hover:border-white">پرسش‌های رایج</a>
+            <a href="/pages/branches.html" data-page="branches" class="py-2.5 px-6 rounded-full border text-xs font-semibold transition-colors duration-300 border-white/50 text-white hover:bg-white/10 hover:border-white">شعب حضوری</a>
+            <a href="/pages/privacy.html" data-page="privacy" class="py-2.5 px-6 rounded-full border text-xs font-semibold transition-colors duration-300 border-white/50 text-white hover:bg-white/10 hover:border-white">حریم خصوصی</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- ===== END SECTION: PAGE HEADER ===== -->
+
+    <!-- =================================================================== -->
+    <!-- محتوای اصلی صفحه (بخش جدید و طراحی شده) -->
+    <!-- =================================================================== -->
+    <main class="bg-[#ffffff] py-12 md:py-20">
+      <div class="container mx-auto px-4">
+        <!-- Grid updated for equal columns on large screens -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- ستون اطلاعات تماس (اصلاح شده با تب های جدید) -->
+          <div class="lg:col-span-1 bg-white rounded-2xl p-4 sm:p-6 md:p-8 order-1 lg:order-1 border border-gray-300 rounded-xl">
+            <div x-data="{ activeTab: 'general' }">
+              <!-- نوار تب ها -->
+              <div class="flex items-center border-b border-gray-200">
+                <button @click="activeTab = 'general'" :class="{ 'font-bold text-black-600 border-yellow-400': activeTab === 'general', 'font-light text-gray-400 border-transparent': activeTab !== 'general' }" class="py-3 px-4 text-sm border-b-2 transition-colors">اطلاعات کلی</button>
+                <div class="h-2 w-px bg-gray-300 mx-2"></div>
+                <button @click="activeTab = 'vahabi'" :class="{ 'font-bold text-black-600 border-yellow-400': activeTab === 'vahabi', 'font-light text-gray-400 border-transparent': activeTab !== 'vahabi' }" class="py-3 px-4 text-sm border-b-2 transition-colors">شعبه وهابی</button>
+                <div class="h-2 w-px bg-gray-300 mx-2"></div>
+                <button @click="activeTab = 'golestan'" :class="{ 'font-bold text-black-600 border-yellow-400': activeTab === 'golestan', 'font-light text-gray-400 border-transparent': activeTab !== 'golestan' }" class="py-3 px-4 text-sm border-b-2 transition-colors">شعبه گلستان</button>
+                <div class="h-2 w-px bg-gray-300 mx-2"></div>
+                <button @click="activeTab = 'downtown'" :class="{ 'font-bold text-black-600 border-yellow-400': activeTab === 'downtown', 'font-light text-gray-400 border-transparent': activeTab !== 'downtown' }" class="py-3 px-4 text-sm border-b-2 transition-colors">مرکز شهر</button>
+              </div>
+
+              <div class="pt-6">
+                <!-- محتوای مشترک برای همه تب ها -->
+                <div x-show="['general', 'vahabi', 'golestan', 'downtown'].includes(activeTab)" x-cloak>
+                  <!-- نقشه برای تب اطلاعات کلی -->
+                  <div x-show="activeTab === 'general'" class="rounded-xl overflow-hidden mb-6 h-[250px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.923956279534!2d48.6657155151852!3d31.3271119813658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc41837a7e6d6d1%3A0x7fa2393b4a48840c!2sKianpars%2C%20Ahvaz%2C%20Khuzestan%20Province%2C%20Iran!5e0!3m2!1sen!2sus!4v1678886543210" width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                  <!-- اسلایدر برای تب های شعب -->
+                  <div x-show="['vahabi', 'golestan', 'downtown'].includes(activeTab)" class="swiper contact-branch-slider relative rounded-xl overflow-hidden mb-6 max-h-[350px]">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="../assets/img/contact-slider.png" class="w-full h-full object-cover" alt="تصویر شعبه وهابی" /></div>
+                      <div class="swiper-slide"><img src="../assets/img/contact-slider.png" class="w-full h-full object-cover" alt="تصویر شعبه گلستان" /></div>
+                      <div class="swiper-slide"><img src="../assets/img/contact-slider.png" class="w-full h-full object-cover" alt="تصویر شعبه مرکز شهر" /></div>
+                    </div>
+                    <div class="absolute bottom-4 right-4 z-10 flex items-center gap-2">
+                      <button class="custom-swiper-next bg-white hover:bg-white transition-all rounded-full p-2 flex items-center justify-center w-12 h-8 hover:ring-1 hover:ring-gray-300/60">
+<i-con name="arrow-left-2" class="w-4 h-5 text-black-600"></i-con>
+                      </button>
+                      <button class="custom-swiper-prev bg-white hover:bg-white transition-all rounded-full p-2 flex items-center justify-center w-12 h-8 hover:ring-1 hover:ring-gray-300/60">
+<i-con name="arrow-right-2" class="w-4 h-5 text-black-600"></i-con>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- اطلاعات متناسب با هر تب -->
+                <div x-show="activeTab === 'general'" x-cloak class="space-y-2">
+                  <div class="flex items-center justify-between gap-4 py-3 border-b border-gray-100">
+                    <div class="flex items-center gap-4">
+                      <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="location-pin" class="w-5 h-5 text-yellow-600"></i-con>
+                      </div>
+                      <span class="text-sm text-black-500">آدرس:</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <p class="text-sm font-bold text-gray-800 text-left">شعبه وهابی: کیان پارس، بین ۵ و ۶ وهابی</p>
+                        <a href="#" class="flex-shrink-0 flex items-center gap-1 bg-yellow-600 text-white text-xs font-semibold px-2 py-1.5 rounded-full hover:bg-yellow-500 transition-colors">
+                            <span>مسیریابی</span>
+                            <i-con name="navigation" class="w-3 h-3 text-white"></i-con>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 py-3 border-b border-gray-100">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="phone" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">شماره تماس:</span>
+                    <p dir="ltr" class="mr-auto text-sm font-bold text-gray-800">061-33362861</p>
+                  </div>
+                  <div class="flex items-center gap-4 py-3 border-b border-gray-100">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="postal-code" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">کد پستی:</span>
+                    <p dir="ltr" class="mr-auto text-sm font-bold text-gray-800">61555-11111</p>
+                  </div>
+                  <div class="flex items-center gap-4 py-3">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="clock" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">ساعات کاری:</span>
+                    <div class="mr-auto flex items-center gap-1.5 text-sm dir-ltr font-light">
+                      <span class="text-black-600">از ساعت</span>
+                      <span class="font-semibold text-yellow-600">10:00</span>
+                      <span class="text-black-600">تا</span>
+                      <span class="font-semibold text-yellow-600">23:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div x-show="activeTab === 'vahabi'" x-cloak class="space-y-2">
+                  <div class="flex items-center justify-between gap-4 py-3 border-b border-gray-100">
+                    <div class="flex items-center gap-4">
+                      <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="location-pin" class="w-5 h-5 text-yellow-600"></i-con>
+                      </div>
+                      <span class="text-sm text-black-500">آدرس:</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <p class="text-sm font-bold text-gray-800 text-left">شعبه وهابی: کیان پارس، بین ۵ و ۶ وهابی</p>
+                        <a href="#" class="flex-shrink-0 flex items-center gap-1 bg-yellow-600 text-white text-xs font-semibold px-2 py-1.5 rounded-full hover:bg-yellow-500 transition-colors">
+                            <span>مسیریابی</span>
+                            <i-con name="navigation" class="w-3 h-3 text-white"></i-con>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 py-3 border-b border-gray-100">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="phone" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">شماره تماس:</span>
+                    <p dir="ltr" class="mr-auto text-sm font-bold text-gray-800">061-33362861</p>
+                  </div>
+                  <div class="flex items-center gap-4 py-3 border-b border-gray-100">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="postal-code" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">کد پستی:</span>
+                    <p dir="ltr" class="mr-auto text-sm font-bold text-gray-800">61555-11111</p>
+                  </div>
+                  <div class="flex items-center gap-4 py-3">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="clock" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">ساعات کاری:</span>
+                    <div class="mr-auto flex items-center gap-1.5 text-sm dir-ltr font-light">
+                      <span class="text-black-600">از ساعت</span>
+                      <span class="font-semibold text-yellow-600">10:00</span>
+                      <span class="text-black-600">تا</span>
+                      <span class="font-semibold text-yellow-600">23:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div x-show="activeTab === 'golestan'" x-cloak class="space-y-2">
+                  <div class="flex items-center justify-between gap-4 py-3 border-b border-gray-100">
+                    <div class="flex items-center gap-4">
+                      <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="location-pin" class="w-5 h-5 text-yellow-600"></i-con>
+                      </div>
+                      <span class="text-sm text-black-500">آدرس:</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <p class="text-sm font-bold text-gray-800 text-left">شعبه وهابی: کیان پارس، بین ۵ و ۶ وهابی</p>
+                        <a href="#" class="flex-shrink-0 flex items-center gap-1 bg-yellow-600 text-white text-xs font-semibold px-2 py-1.5 rounded-full hover:bg-yellow-500 transition-colors">
+                            <span>مسیریابی</span>
+                            <i-con name="navigation" class="w-3 h-3 text-white"></i-con>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 py-3 border-b border-gray-100">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="phone" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">شماره تماس:</span>
+                    <p dir="ltr" class="mr-auto text-sm font-bold text-gray-800">061-33362861</p>
+                  </div>
+                  <div class="flex items-center gap-4 py-3 border-b border-gray-100">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="postal-code" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">کد پستی:</span>
+                    <p dir="ltr" class="mr-auto text-sm font-bold text-gray-800">61555-11111</p>
+                  </div>
+                  <div class="flex items-center gap-4 py-3">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="clock" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">ساعات کاری:</span>
+                    <div class="mr-auto flex items-center gap-1.5 text-sm dir-ltr font-light">
+                      <span class="text-black-600">از ساعت</span>
+                      <span class="font-semibold text-yellow-600">10:00</span>
+                      <span class="text-black-600">تا</span>
+                      <span class="font-semibold text-yellow-600">23:00</span>
+                    </div>
+                  </div>
+                </div>
+                <div x-show="activeTab === 'downtown'" x-cloak class="space-y-2">
+                  <div class="flex items-center justify-between gap-4 py-3 border-b border-gray-100">
+                    <div class="flex items-center gap-4">
+                      <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="location-pin" class="w-5 h-5 text-yellow-600"></i-con>
+                      </div>
+                      <span class="text-sm text-black-500">آدرس:</span>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <p class="text-sm font-bold text-gray-800 text-left">شعبه وهابی: کیان پارس، بین ۵ و ۶ وهابی</p>
+                        <a href="#" class="flex-shrink-0 flex items-center gap-1 bg-yellow-600 text-white text-xs font-semibold px-2 py-1.5 rounded-full hover:bg-yellow-500 transition-colors">
+                            <span>مسیریابی</span>
+                            <i-con name="navigation" class="w-3 h-3 text-white"></i-con>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 py-3 border-b border-gray-100">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="phone" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">شماره تماس:</span>
+                    <p dir="ltr" class="mr-auto text-sm font-bold text-gray-800">061-33362861</p>
+                  </div>
+                  <div class="flex items-center gap-4 py-3 border-b border-gray-100">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="postal-code" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">کد پستی:</span>
+                    <p dir="ltr" class="mr-auto text-sm font-bold text-gray-800">61555-11111</p>
+                  </div>
+                  <div class="flex items-center gap-4 py-3">
+                    <div class="flex-shrink-0 w-5 h-5 text-gray-400">
+                        <i-con name="clock" class="w-5 h-5 text-yellow-600"></i-con>
+                    </div>
+                    <span class="text-sm text-black-500">ساعات کاری:</span>
+                    <div class="mr-auto flex items-center gap-1.5 text-sm dir-ltr font-light">
+                      <span class="text-black-600">از ساعت</span>
+                      <span class="font-semibold text-yellow-600">10:00</span>
+                      <span class="text-black-600">تا</span>
+                      <span class="font-semibold text-yellow-600">23:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ستون فرم تماس -->
+          <div class="lg:col-span-1 bg-white rounded-2xl p-4 sm:p-6 md:p-8 order-2 lg:order-2 border border-gray-300 rounded-xl">
+            <h3 class="text-lg font-bold text-gray-900 mb-10">تماس با تیپ نتی</h3>
+            <form action="#" method="POST" class="space-y-10">
+              <div class="relative">
+                <label for="full-name" class="absolute -top-3 right-4 bg-white px-2 text-sm font-medium text-gray-600">
+                  نام و نام خانوادگی
+                  <span class="text-red-500 mr-1">*</span>
+                </label>
+                <input type="text" id="full-name" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 transition h-[80px] focus:ring-1 focus:ring-gray-300 focus:border-gray-400 text-gray-800 align-top pt-5" />
+              </div>
+              <div class="relative">
+                <label for="email-phone" class="absolute -top-3 right-4 bg-white px-2 text-sm font-medium text-gray-600">
+                  ایمیل یا شماره تماس
+                  <span class="text-red-500 mr-1">*</span>
+                </label>
+                <input type="text" id="email-phone" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 transition h-[80px] focus:ring-1 focus:ring-gray-300 focus:border-gray-400 text-gray-800 align-top pt-5" />
+              </div>
+              <div class="relative">
+                <label for="message" class="absolute -top-3 right-4 bg-white px-2 text-sm font-medium text-gray-600">
+                  متن پیام خود را بنویسید
+                  <span class="text-red-500 mr-1">*</span>
+                </label>
+                <textarea id="message" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 transition h-[160px] focus:ring-1 focus:ring-gray-300 focus:border-gray-400 text-gray-800 align-top pt-5 resize-none"></textarea>
+              </div>
+              <div>
+                <button type="submit" class="w-full bg-black-600 text-white text-base font-semibold py-4 px-6 rounded-full hover:bg-black-500 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">ارسال پیام</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- فوتر اصلی سایت -->
+    <div data-include="/partials/footer.html"></div>
+
+    <!-- اسکریپت اصلی -->
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/pages/contact.js"></script>
+  </body>
+</html>

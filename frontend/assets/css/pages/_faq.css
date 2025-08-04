@@ -1,0 +1,30 @@
+
+        /* Accordion Content Transition */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+        }
+        
+        /* Custom Checkbox Styles */
+        .custom-checkbox:checked + .checkbox-custom-style {
+            background-color: #374151;
+            border-color: #374151;
+        }
+        .custom-checkbox:checked + .checkbox-custom-style .custom-tick-icon {
+            display: block;
+        }
+
+        /* FAQ Icon Animation */
+        .accordion-icon-wrapper {
+            transition: transform 0.4s ease-in-out;
+        }
+        .faq-item.open .accordion-icon-wrapper {
+            transform: rotate(180deg);
+        }
+        .faq-item.open .icon-plus {
+            opacity: 0;
+        }
+        .faq-item.open .icon-minus {
+            opacity: 1;
+        }

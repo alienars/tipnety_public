@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خطای ۴۰۴ - صفحه مورد نظر یافت نشد">
+    <title>404 - صفحه یافت نشد</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font.css">
+</head>
+<body class="bg-gray-50" data-page="auth">
+    <main>
+<div class="content-wrapper">
+  <!-- ======================= Header ======================= -->
+  <!-- 
+            NOTE: Include your header partial here if needed.
+            For a true 404 page, often the header is omitted 
+            to focus the user on the message.
+        -->
+  <!-- @@include('../partials/header.html') -->
+  <!-- ===================== End Header ===================== -->
+
+  <!-- Main Content Area -->
+  <main class="h-screen flex flex-col">
+    <!-- Top Dark Section -->
+    <div
+      class="relative bg-black-600 flex-grow flex items-center justify-center text-white px-4 py-16 md:py-20 basis-[90%]">
+      <!-- رپر اصلی: فلکس افقی -->
+      <div
+        class="flex flex-col items-center space-y-6 text-center md:flex-row md:items-center md:space-y-0 md:space-x-20 md:text-right">
+        <!-- آیکن بزرگ‌تر در موبایل -->
+        <i-con name="404" class="w-32 h-32 md:w-56 md:h-56 text-yellow-600 flex-shrink-0"></i-con>
+
+        <!-- متون با سایز کوچکتر در موبایل -->
+        <div class="space-y-1 mt-2">
+          <h2 class="text-xl md:text-3xl font-bold text-white [direction:rtl]">
+            متاسفانه صفحه مورد نظر یافت نشد
+          </h2>
+          <p class="text-sm md:text-lg text-gray-200 font-extralight [direction:rtl]">
+            ممکن است محصول مورد نظر حذف شده باشد و یا خطایی رخ داده باشد!
+          </p>
+        </div>
+      </div>
+
+      <!-- curve+logo همیشه کف پدر بچسبد -->
+      <div
+  class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 flex flex-col items-center mb-4 md:mb-2"
+>
+  <i-con name="curve-1" class="w-30 h-18 md:w-32 md:h-14" ></i-con>
+  <i-con name="logo" class="w-10 h-10 md:w-10 md:h-16 -mt-10 text-black-600 overflow-visible" ></i-con>
+</div>
+
+    </div>
+
+    <!-- Bottom White Section -->
+    <div class="bg-[#FFFFFF] py-8 md:py-12 px-4 basis-[10%]">
+      <!-- Separator with Logo -->
+
+      <!-- Actions: Timer and Back Link -->
+      <div x-data="countdown" x-init="init()"
+      class="container mx-auto max-w-7xl flex flex-col-reverse md:flex-row items-center justify-between px-4">
+      <a href="./index.html" class="flex flex-row-reverse items-center gap-2 text-gray-600 transition-colors">
+        <span class="font-semibold text-black-400 text-xs">بازگشت به صفحه اصلی</span>
+        <i-con name="arrow-left-1" class="w-4 h-4 text-black-400"></i-con>
+      </a>
+  
+      <div class="flex items-center gap-3">
+        <span class="text-gray-600 font-semibold text-sm md:text-base">
+          <span class="font-extrabold text-black-600 text-3xs md:text-base">
+            ثانیه دیگر به صفحه اصلی سایت آرنا آی تی منتقل می‌شوید
+          </span>
+        </span>
+      </span>
+          <div class="relative w-12 h-12 md:w-14 md:h-14">
+            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+              <!-- Background Circle -->
+              <path d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831" class="stroke-current text-gray-200" fill="none"
+                stroke-width="3.5" />
+              <!-- Progress Circle -->
+              <path d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                class="stroke-current text-yellow-600 transition-all duration-1000 linear" fill="none"
+                stroke-width="1.5" stroke-dasharray="100" :stroke-dashoffset="progress" stroke-linecap="round" />
+            </svg>
+            <!-- Countdown Number -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <span x-text="formatNumber(countdown)" class="text-lg font-bold text-yellow-600 mt-1"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ======================= Footer ======================= -->
+  <!-- 
+            NOTE: Include your footer partial here if needed.
+        -->
+  <!-- @@include('../partials/footer.html') -->
+  <!-- ===================== End Footer ===================== -->
+</div>    </main>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="../assets/js/pages/404.js"></script>
+</body>
+</html>

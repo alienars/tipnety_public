@@ -1,0 +1,39 @@
+/* main-slim/assets/css/components/_notifications.css */
+
+/*
+  تعریف کلی انیمیشن‌ها:
+  این بخش سرعت و نرمی حرکت را مشخص می‌کند.
+  cubic-bezier یک انیمیشن نرم و طبیعی ایجاد می‌کند.
+*/
+[x-transition\:enter],
+[x-transition\:leave] {
+    transition: all 0.5s cubic-bezier(0.5, 1, 0.5, 1);
+}
+
+/*
+  انیمیشن ورود:
+  شروع از بالای صفحه (خارج از دید) و کاملاً شفاف.
+*/
+.alpine-enter-start {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+/* پایان در جای اصلی و کاملاً نمایان. */
+.alpine-enter-end {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*
+  انیمیشن خروج:
+  شروع از جای اصلی و کاملاً نمایان.
+*/
+.alpine-leave-start {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* پایان با حرکت به سمت بالا و محو شدن. */
+.alpine-leave-end {
+    opacity: 0;
+    transform: translateY(-100%);
+}

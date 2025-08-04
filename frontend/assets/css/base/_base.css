@@ -1,0 +1,61 @@
+@layer base {
+    html {
+      font-family: var(--font-sans) , sans-serif;
+      font-weight: 500; /* وزن پیش‌فرض regular */
+    }
+  }
+  
+  @layer components {
+    .btn-primary {
+        @apply px-4 py-2 bg-primary-500 text-white rounded-lg font-semibold shadow-md transition-transform hover:scale-105;
+    }
+    .btn-secondary {
+        @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-lg;
+    }
+  }
+
+
+  @layer utilities {
+    /* ——— تایپوگرافی ——— */
+    .text-4xs { font-size: 0.5rem;    line-height: 0.75rem; }  /* 8px */
+    .text-3xs { font-size: 0.625rem;  line-height: 0.875rem; } /* 10px */
+    .text-2xs { font-size: 0.75rem;   line-height: 1rem; }      /* 12px */
+    
+
+    .rounded-3xl { border-radius: 1.5rem; }  /* 24px */
+    .rounded-4xl { border-radius: 2rem; }    /* 32px */
+    .rounded-5xl { border-radius: 2.5rem; }  /* 40px */
+
+    .tracking-tightest { letter-spacing: -0.075em; }
+    .tracking-widest  { letter-spacing:  0.25em; }
+  
+    .p-5 { padding: 1.25rem; }   
+    /* ——— رنگ‌های برند ——— */
+    .bg-primary   { background-color: var(--color-primary); }
+    .text-primary   { color: var(--color-primary); }
+    .border-primary { border-color: var(--color-primary); }
+    .ring-primary   { --tw-ring-color: var(--color-primary); }
+  
+    .bg-secondary   { background-color: var(--color-secondary); }
+    .text-secondary   { color: var(--color-secondary); }
+    .border-secondary { border-color: var(--color-secondary); }
+  
+    .bg-accent   { background-color: var(--color-accent); }
+    .text-accent   { color: var(--color-accent); }
+    .border-accent { border-color: var(--color-accent); }
+  
+    /* ——— رنگ‌های معنایی ——— */
+    .bg-success   { background-color: var(--color-success); }
+    .text-success   { color: var(--color-success); }
+    .bg-error     { background-color: var(--color-error); }
+    .text-error     { color: var(--color-error); }
+    .bg-warning   { background-color: var(--color-warning); }
+    .text-warning   { color: var(--color-warning); }
+    .bg-info      { background-color: var(--color-info); }
+    .text-info      { color: var(--color-info); }
+  
+    /* ——— انیمیشن و ترنزیشن ——— */
+    .animate-fade-in-down {
+      animation: fade-in-down 0.5s ease-out;
+    }
+  }

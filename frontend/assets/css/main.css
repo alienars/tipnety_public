@@ -1,0 +1,158 @@
+/* assets/css/main.css */
+
+/* ❗️ روش جدید برای وارد کردن Tailwind v4 */
+@import "tailwindcss";
+
+
+/* ۲. وارد کردن استایل‌های پایه */
+@import "./base/_fonts.css";
+@import "./base/_theme.css";
+@import "./base/_base.css";
+
+/* ۳. وارد کردن استایل کامپوننت‌های عمومی */
+@import "./components/_header.css";
+@import "./components/_footer.css";
+@import "./components/_cards.css";
+@import "./components/_buttons.css";
+@import "./components/_notifications.css";
+@import "./components/_icons.css";
+
+/* ۴. وارد کردن استایل‌های مخصوص صفحات */
+@import "./pages/_login.css";
+@import "./pages/_faq.css";
+@import "./pages/_about.css";
+/* menu custom css */
+
+
+/* menu */
+/* استایل برای اسکرول‌بار سفارشی در منوی موبایل و مودال جستجو */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+  
+  /* استایل برای آیتم فعال در منوی دسته‌بندی موبایل */
+  .mobile-category-active {
+    background-color: #f2f4f7; /* gray-100 */
+  }
+
+  
+
+
+/* ✅ استایل‌های اضافه شده برای دکمه‌های Swiper */
+.hero-slider-nav button {
+    @apply w-11 h-11 border border-[#a18a77] rounded-lg text-[#a18a77] bg-white/80 backdrop-blur-sm transition-all duration-300 hover:bg-[#a18a77] hover:text-white;
+}
+
+.search-swiper .swiper-button-next,
+.search-swiper .swiper-button-prev {
+    @apply bg-white rounded-full w-10 h-10 shadow-lg text-gray-800;
+}
+.search-swiper .swiper-button-next::after,
+.search-swiper .swiper-button-prev::after {
+    @apply text-base font-bold;
+}
+
+/* استایل pagination موبایل برای اسلایدر اصلی */
+.hero-slider .swiper-pagination-bullet {
+    @apply w-6 h-1.5 rounded-sm bg-white opacity-80 transition-all duration-300;
+}
+.hero-slider .swiper-pagination-bullet-active {
+    @apply w-10 bg-amber-500 opacity-100;
+}
+
+
+
+
+
+/* testtttt */
+
+
+/* استایل برای اسکرول بار سفارشی */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a5a5a5;
+}
+.mobile-category-active {
+    background-color: #f3f4f6;
+    border-right: 3px solid #ef4444;
+}
+/* استایل دکمه های Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    color: #1f2937;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+/* 4cards-offers */
+
+
+.product-slider-component {
+    position: relative;
+    margin-bottom: 4rem; /* فاصله بین اسلایدرها */
+}
+.product-slider-component .swiper {
+    padding: 0 40px;
+}
+.product-slider-component .swiper-button-next,
+.product-slider-component .swiper-button-prev {
+    background-color: white;
+    border-radius: 9999px;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-slider-component .swiper-button-next { right: 10px; }
+.product-slider-component .swiper-button-prev { left: 10px; }
+
+.product-slider-component .swiper-button-next:after,
+.product-slider-component .swiper-button-prev:after {
+    content: '';
+}
+.product-slider-component .swiper-button-next:hover,
+.product-slider-component .swiper-button-prev:hover {
+    transform: scale(1.1);
+}
+.product-slider-component .swiper-slide {
+    transition: opacity 0.3s ease-in-out;
+}
+.mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+}

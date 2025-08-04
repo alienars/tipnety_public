@@ -1,0 +1,8 @@
+/* icons.css - styles for lazy loaded icon placeholders */
+
+@layer components {
+  .icon-placeholder {
+    @apply bg-gray-200 animate-pulse rounded block w-full h-full;
+  }
+}
+

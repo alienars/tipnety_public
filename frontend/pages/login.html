@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ورود یا ثبت نام در فروشگاه تیپ نتی">
+    <title>ورود یا ثبت نام</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font.css">
+</head>
+<body data-page="auth">
+    <!-- ===== NOTIFICATIONS ===== -->
+<div
+    x-data
+    class="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center space-y-3 w-full max-w-sm px-4"
+>
+    <template x-for="item in $store.notifications.items" :key="item.id">
+        <div
+            x-show="!item.closing"
+            @click.stop="$store.notifications.remove(item.id)"
+            dir="rtl"
+            class="relative w-full rounded-xl shadow-lg p-4 flex items-center cursor-pointer transition-all duration-500"
+            :class="{
+                'bg-green-500 text-white': item.type === 'success',
+                'bg-red-600 text-white': item.type === 'error',
+                'bg-amber-400 text-gray-800': item.type === 'warning'
+            }"
+            x-transition:enter="ease-out"
+            x-transition:enter-start="-translate-y-full opacity-0"
+            x-transition:enter-end="translate-y-0 opacity-100"
+            x-transition:leave="ease-in"
+            x-transition:leave-start="translate-y-0 opacity-100"
+            x-transition:leave-end="-translate-y-full opacity-0"
+        >
+            <!-- آیکون‌ها -->
+            <template x-if="item.type === 'success'">
+  <i-con name="check-mark" class="w-7 h-7 ml-2 text-current"></i-con>
+</template>
+
+<template x-if="item.type === 'error'">
+  <i-con name="cross-mark" class="w-7 h-7 ml-2 text-current"></i-con>
+</template>
+
+<template x-if="item.type === 'warning'">
+  <i-con name="warning-mark" class="w-7 h-7 ml-2 text-current"></i-con>
+</template>
+
+            <div class="w-px h-10 bg-white/30 ml-4"></div>
+            
+            <div class="flex-grow text-right">
+                <p class="font-bold" x-text="item.title"></p>
+                <p class="text-sm mt-1" x-text="item.message"></p>
+            </div>
+        </div>
+    </template>
+</div>
+<!-- ===== END NOTIFICATIONS ===== -->
+
+<!-- ===== HEADER ===== -->
+<div data-include="/partials/header.html"></div>
+
+<main>
+    <!-- ===== LOGIN FORM ===== -->
+<div 
+    x-data="authForm" 
+    class="flex flex-col items-center justify-center min-h-screen p-4 bg-white-100"
+>
+    
+    
+    <div class="w-full max-w-lg">
+        <template x-if="step === 'phone_entry'">
+            <div class="bg-white p-6 md:p-8 text-center">
+                <div class="flex flex-row justify-start items-center gap-4 mb-14">
+                    <a href="#" class="flex-shrink-0">
+  <img
+    src="../assets/img/logo.png"
+    alt="Logo"
+    class="block h-10 w-auto object-contain"
+  />
+</a>
+
+                    <div class="flex flex-col items-start text-right">
+                      <h1 class="text-xl font-semibold text-black-600 mb-1">ورود یا ثبت نام</h1>
+                      <p class="text-sm text-black-300 font-light">شماره موبایل یا ایمیل خود را وارد کنید</p>
+                    </div>
+                  </div>
+                  
+                
+                  <div class="relative mb-6">
+  <input
+    x-model="userInput"
+    type="tel"
+    dir="ltr"
+    class="w-full text-center text-lg bg-white-100 border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:border-gray-400 transition-colors"
+  >
+  <span class="absolute -top-2 right-4 bg-white-100 px-2 text-2xs text-black-300 flex items-center">
+    <span>ایمیل</span>
+    <!-- خط جداکننده -->
+    <span class="mx-3 h-3 w-px bg-gray-300"></span>
+    <span>شماره تماس</span>
+  </span>
+</div>
+                
+                <p class="font-light text-xs text-black-600 mt-6 leading-6 text-right">
+  با ورود و یا ثبت نام، شما 
+  <a href="#" class="font-bold text-amber-500">شرایط و قوانین</a> 
+  استفاده از سایت تیپ نتی و
+  <a href="#" class="font-bold text-amber-500">قوانین حریم خصوصی</a> 
+  را می‌پذیرید.
+</p>
+                
+                <!-- <button
+  @click="goToOtpStep()"
+  class="w-full bg-black-600 text-white font-semibold text-sm py-6 rounded-full mt-8 flex items-center justify-center gap-x-3 hover:bg-black-500 transition-colors cursor-pointer"
+>
+  <span>ورود به حساب کاربری</span>
+  <i-con name="arrow-left" class="w-4 h-4 text-white ml-2"></i-con>
+</button> -->
+
+<button
+  @click="goToOtpStep()"
+  class="relative w-full bg-black-600 text-white font-semibold text-sm 
+         py-6 px-6            /* پدینگ عمودی و افقی داشته باشیم */
+         rounded-full mt-8 
+         flex items-center justify-center  /* متن وسط */
+         hover:bg-black-500 transition-colors 
+         cursor-pointer"
+>
+  <!-- آیکن: مطلق، چسبیده به چپ، وسط عمودی -->
+  <i-con
+    name="arrow-left"
+    class="absolute left-4 top-1/2 transform -translate-y-1/2
+           w-5 h-5 text-white"
+  ></i-con>
+
+  <!-- متن: چون justify-center هست، وسط قرار می‌گیره -->
+  <span>ورود به حساب کاربری</span>
+</button>
+
+
+            </div>
+        </template>
+
+        <template x-if="step === 'otp_entry'">
+                    <div class="bg-white p-6 md:p-8 text-center rounded-2xl">
+                        <!-- بخش عنوان و دکمه بازگشت -->
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-x-3 flex-row-reverse">
+                                <h2 class="text-lg font-bold text-gray-800">کد تایید را وارد نمایید</h2>
+                                <button @click="step = 'phone_entry'" class="w-10 h-10 cursor-pointer rounded-full border-2 border-black-100 flex items-center justify-center bg-transparent">
+<i-con name="arrow-left-2" class="w-4 h-4 text-yellow-600"></i-con>
+                                </button>
+                            </div>
+                            <!-- <button @click="step = 'phone_entry'" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors">
+<i-con name="shopping-basket" class="w-5 h-5 text-stone-950"></i-con>
+                            </button> -->
+                        </div>
+                        
+                        <!-- بخش پیام ارسال کد و تایمر -->
+                        <div class="flex justify-between items-center mb-8 text-sm">
+                            <p class="text-black-500">
+                                <span>کد تایید به </span>
+                                <span class="font-bold text-yellow-600" dir="ltr" x-text="userInput"></span>
+                                <span> ارسال شد</span>
+                            </p>
+                            <div class="font-semibold h-6 flex items-center">
+                                <template x-if="!timer.expired">
+                                     <div class="text-black-500 flex items-center">
+  <span>تا ارسال مجدد</span>
+  <!-- جداکننده عمودی باریک و کم‌رنگ -->
+  <span class="w-px h-5 bg-gray-300 mx-2"></span>
+  <span x-text="timer.display"></span>
+</div>
+                                </template>
+                                <template x-if="timer.expired">
+                                    <button @click="resetTimer()" class="text-amber-500 flex items-center gap-x-2 cursor-pointer flex-row-reverse">
+<i-con name="simple-refresh" class="w-3 h-3 text-yellow-600"></i-con>
+                                        <span>ارسال مجدد</span>
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
+
+                        <!-- بخش اینپوت‌های کد تایید -->
+                        <div class="flex justify-center gap-6 md:gap-6 mb-6" dir="ltr">
+                            <template x-for="(n, index) in 4" :key="index">
+                                <input type="tel" maxlength="1" class="w-full h-20 text-center text-2xl font-bold border-2 border-gray-200 rounded-lg focus:outline-none focus:border-gray-800 transition-all" @keyup="if ($event.target.value.length === 1 && $event.target.nextElementSibling) $event.target.nextElementSibling.focus();" @keyup.backspace="if ($event.target.value.length === 0 && $event.target.previousElementSibling) $event.target.previousElementSibling.focus();">
+                            </template>
+                        </div>
+                        
+                        <p class="font-light text-xs text-black-600 mt-6 leading-6 text-right">
+                            با ورود و یا ثبت نام، شما
+                            <a href="#" class="font-bold text-amber-500">شرایط و قوانین</a>
+                            استفاده از سایت و
+                            <a href="#" class="font-bold text-amber-500">قوانین حریم خصوصی</a>
+                            را می‌پذیرید.
+                        </p>
+                        
+                        <button
+  @click="goToOtpStep()"
+  class="relative w-full bg-black-600 text-white font-semibold text-sm 
+         py-6 px-6            /* پدینگ عمودی و افقی داشته باشیم */
+         rounded-full mt-8 
+         flex items-center justify-center  /* متن وسط */
+         hover:bg-black-500 transition-colors 
+         cursor-pointer"
+>
+  <!-- آیکن: مطلق، چسبیده به چپ، وسط عمودی -->
+  <i-con
+    name="arrow-left"
+    class="absolute left-4 top-1/2 transform -translate-y-1/2
+           w-5 h-5 text-white"
+  ></i-con>
+
+  <!-- متن: چون justify-center هست، وسط قرار می‌گیره -->
+  <span>ثبت نام و ورود</span>
+</button>
+                        
+                    </div>
+                </template>
+    </div>
+</div>    <!-- ===== END LOGIN FORM ===== -->
+</main>
+
+<!-- ===== FOOTER ===== -->
+<!-- <div data-include="/partials/footer.html"></div> -->
+
+<script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

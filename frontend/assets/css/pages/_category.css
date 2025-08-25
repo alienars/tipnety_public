@@ -1,0 +1,308 @@
+/* ===== Desktop grid behaviour via data attribute ===== */
+.catalog{--popover-z:60}
+@media (min-width:1024px){
+  .catalog[data-sidebar="open"] .products{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .catalog[data-sidebar="closed"] .products{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .catalog[data-sidebar="open"] .filters{display:block}
+  .catalog[data-sidebar="open"] .content{grid-column:span 9 / span 9}
+  .catalog[data-sidebar="closed"] .filters{display:none}
+  .catalog[data-sidebar="closed"] .content{grid-column:span 12 / span 12}
+}
+/* details chevron */
+summary::-webkit-details-marker{display:none}
+.chev{transition:transform .15s ease}
+details[open] .chev{transform:rotate(180deg)}
+/* Dual-range visual track (JS will update CSS vars) */
+.range-track{--min:0;--max:100;background:linear-gradient(to left,#e5e7eb 0% calc(var(--min)*1%),#f59e0b calc(var(--min)*1%) calc((100 - var(--max))*1%),#e5e7eb calc((100 - var(--max))*1%) 100%)}
+.rng{pointer-events:none;position:absolute;inset:0;height:.375rem;width:100%;appearance:none;background:transparent}
+.rng::-webkit-slider-thumb{pointer-events:auto;appearance:none;width:1rem;height:1rem;border-radius:9999px;background:#fff;border:1px solid #f59e0b;box-shadow:0 1px 1px rgb(0 0 0 /.06)}
+.rng::-moz-range-thumb{pointer-events:auto;width:1rem;height:1rem;border:1px solid #f59e0b;border-radius:9999px;background:#fff}
+/* shared small UI helpers */
+.row{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.5rem .5rem;border-radius:.75rem}
+.row:hover{background:#f9fafb}
+.pill{display:inline-flex;align-items:center;justify-content:center;border:1px solid #e5e7eb;padding:.5rem .75rem;border-radius:.75rem;color:#374151}
+.pill:hover{background:#f9fafb}
+.btn-primary{background:#f59e0b;color:#fff;border-radius:9999px;padding:.9rem 1rem;box-shadow:0 2px 6px rgb(245 158 11 / .3)}
+.btn-secondary{background:#fff;border:1px solid #fde68a;color:#b45309;border-radius:9999px;padding:.7rem 1rem}
+.chip{--tw-shadow:0 1px 1px rgb(0 0 0 / 0.03);padding:.375rem .75rem;border-radius:9999px;border:1px solid #e5e7eb;background:#fafafa;box-shadow:var(--tw-shadow);font-size:.75rem;color:#374151}
+/* .chip:hover{background:#f5f5f5} */
+/* Mini filter popovers (desktop) */
+.popwrap{position:relative}
+.popover{position:absolute;inset-inline-start:0;top:100%;margin-top:.75rem;z-index:var(--popover-z);display:none}
+.popover.show{display:block}
+/* Mobile sheets */
+.sheet{position:fixed;inset:0;z-index:70;display:none}
+.sheet.show{display:block}
+.sheet .panel{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column}
+.sheet .header{position:sticky;top:0;background:#fff}
+.tap{min-height:44px}
+
+/* .swiper-slide.slide-overlay-first .relative::after,
+.swiper-slide.slide-overlay-last .relative::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.swiper-slide.slide-overlay-first .relative::after {
+      background: rgba(248, 249, 250, 0.85);
+}
+
+.swiper-slide.slide-overlay-last .relative::after {
+      background: rgba(248, 249, 250, 0.85);
+} */
+.mini-pro-swiper .top-text{
+  background-color: #DC3134;
+  box-shadow: 0 0 0 3px rgba(220, 49, 52, 0.32);
+  height: 27px;
+  top: 16px;
+  border-radius: 32px;
+  padding: 12px 8px 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.mini-pro-swiper .bottom-text{
+  font-size: 0.8em !important;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.32);
+  height: 41px;
+  bottom: 16px;
+  border-radius: 32px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.mini-pro-swiper .category-prev .shadow{
+  left: -10px;
+  margin-left: -10px;
+  transform: scale(0.9);
+}
+.mini-pro-swiper .category-next .shadow{
+  right: -10px;
+  margin-right: -10px;
+  transform: scale(0.9);
+}
+.mini-pro-main{
+  margin-bottom: 150px;
+}
+.mini-pro-main .mini-pro-main-inner{
+  
+  background: #F5F5F6;
+}
+#miniFiltersWrap .popwrap .chip{
+  padding: .370rem .90rem;
+}
+
+
+.checkbox-custom{
+width: 1.5rem; height: 1.5rem;
+border: 2px solid #6b7280; /* gray-500 */
+border-radius: 9999px; /* rounded-full */
+display: inline-flex; align-items: center; justify-content: center;
+transition: all .2s;
+flex-shrink: 0;
+background-color: transparent;
+}
+/* اسکرول‌بار سفارشی (در RTL معمولا سمت چپ دیده میشه) */
+.custom-scroll{
+scrollbar-width: thin;
+scrollbar-color: #f59e0b #e5e7eb; /* thumb amber-500-ish | track gray-200 */
+}
+.custom-scroll::-webkit-scrollbar{ width: 8px; }
+.custom-scroll::-webkit-scrollbar-track{ background: #e5e7eb; } /* gray-200 */
+.custom-scroll::-webkit-scrollbar-thumb{
+background: #f59e0b; /* amber-500 */
+border-radius: 9999px;
+}
+/* آکاردئون: وقتی باز است، فلش بچرخد */
+.filter-section.open > .filter-header i-con{
+transform: rotate(180deg);
+}
+
+.filter-row{ display:flex; align-items:center; gap:.75rem; width:100%; padding:.50rem 0 .50rem 0; cursor:pointer; transition:background-color .12s; }
+.filter-row:hover{ background: rgba(0,0,0,.02); }
+
+/* چک‌باکس کاستوم */
+.filter-row input[type="checkbox"]{ position:absolute; opacity:0; pointer-events:none; }
+.checkbox-custom{
+width:1.5rem; height:1.5rem; border:2px solid #6b7280; border-radius:9999px;
+display:inline-flex; align-items:center; justify-content:center; background:transparent; transition:all .15s; flex-shrink:0;
+}
+.checkbox-custom .tick{ display:none; width:1rem; height:1rem; } /* تیک سفید روی زمینه تیره */
+
+/* وقتی فعال: بدون بردر، زمینه black-600 */
+.filter-row:has(input:checked) .checkbox-custom{
+border-color: transparent;
+background:#1f2937; /* black-600 */
+}
+.filter-row:has(input:checked) .checkbox-custom .tick{ display:block; }
+
+/* آکاردئون: فلش بچرخه وقتی سکشن open است */
+.filter-section.open > .filter-header i-con{ transform:rotate(180deg); }
+
+/* اسکرول‌بار: فقط تُمب زرد */
+.custom-scroll{ scrollbar-width: thin; scrollbar-color: #f59e0b transparent; }
+.custom-scroll::-webkit-scrollbar{ width:8px; }
+.custom-scroll::-webkit-scrollbar-track{ background: transparent; }
+.custom-scroll::-webkit-scrollbar-thumb{ background:#f59e0b; border-radius:9999px; }
+
+/* دکمه آیکنی 48px */
+.icon-btn{
+width:48px; height:48px; display:inline-flex; align-items:center; justify-content:center;
+background:#fff; border:1px solid var(--color-black-600,#1f2937); border-radius:12px;
+border-radius: 50%;
+}
+
+/* بیضی رنگ با دابل‌بوردر */
+.color-oval{
+width:48px; height:24px; border-radius:9999px; background: var(--oval-color,#000);
+box-shadow: 0 0 0 3px #f3f4f6, 0 0 0 4px #d1d5db; /* inner: gray-100 (کلفت‌تر) + outer: gray-300 (نازک‌تر) */
+display:inline-block;
+}
+
+/* تگ برند انگلیسی کم‌رنگ */
+.brand-badge{
+min-width:48px; height:24px; padding:0 .5rem; border-radius:9999px;
+display:inline-flex; align-items:center; justify-content:center;
+font-size:.75rem; letter-spacing:.05em; color:#6b7280; background:#f9fafb; border:1px solid #e5e7eb;
+}
+
+/* رنج دوبل */
+.range-wrap{
+position: relative;
+height: 36px; /* کمی جا برای شَست‌ها */
+transform: scaleX(-1);
+}
+
+/* خط خاکستریِ زیرین */
+.range-track{
+position:absolute;
+left:0; right:0;
+top:50%; transform:translateY(-50%);
+height:6px; border-radius:9999px;
+background:#e5e7eb; /* بخش انتخاب‌نشده: طوسی */
+}
+
+/* نوار میانی انتخاب‌شده (با --min و --max) */
+.range-track::before{
+content:"";
+position:absolute; top:0; bottom:0;
+left: calc(var(--min, 0) * 100%);
+right: calc(var(--max, 0) * 100%);
+background: var(--color-black-600, #1f2937); /* black-600 */
+border-radius:9999px;
+}
+
+/* خودِ اسلایدرها: وسطِ عمودی و بی‌استایل کردن ترک پیش‌فرض */
+.rng{
+position:absolute;
+left:0; right:0;
+top:25%; transform:translateY(-25%);
+height:16px; /* هم‌قد شَست */
+background:transparent;
+appearance:none; -webkit-appearance:none;
+direction:ltr; /* مهم برای جلوگیری از معکوس شدن در RTL */
+
+}
+
+/* پنهان کردن/بی‌اثر کردن ترک پیش‌فرض */
+.rng::-webkit-slider-runnable-track{ height:6px; background:transparent; }
+.rng::-moz-range-track{ height:6px; background:transparent; }
+
+/* شَست‌ها: دقیقاً روی خط و وسط */
+.rng::-webkit-slider-thumb{
+-webkit-appearance:none;
+width:16px; height:16px; border-radius:9999px;
+background: var(--color-black-600, #1f2937);
+border:2px solid var(--color-black-600, #1f2937);
+box-sizing:border-box;
+margin-top:0; /* دیگه لازم نیست جبران کنیم */
+}
+.rng::-moz-range-thumb{
+width:16px; height:16px; border-radius:9999px;
+background: var(--color-black-600, #1f2937);
+border:2px solid var(--color-black-600, #1f2937);
+box-sizing:border-box;
+}
+.color-prev{
+box-shadow:0 0 0 3px #f3f4f6, 0 0 0 4px #d1d5db;
+}
+
+.product-tag{
+margin: 1em 1em 0 0;
+}
+
+.product-off-tag{
+margin: 0 0.75em 0.75em 0;
+outline: 3px solid #e5afb0;
+padding: 0.25em 0.4em 0 0.4em;
+font-size: 1em;
+}
+
+i-con[name="toman"] svg {
+color: black !important;
+}
+
+#filterHub i-con[name="toman"] svg {
+color: #838383 !important;
+}
+
+#filterHub .flex.items-center.gap-2 button i-con, #filterHub div.relative{
+rotate: 180deg;
+}
+
+.rotate-90{
+rotate: 90deg;
+}
+
+#filterHub span.rounded-full{
+padding-top: 2px;
+border: 1px solid #c9c9c9;
+color: #c9c9c9 !important;
+}
+
+.specific-gray-text-color{
+color: #a9a8ab !important;
+}
+
+.specific-gray-bg-color{
+background-color: #c5c5c5 !important;
+}
+
+.special-gray-border{
+border: 1px solid rgb(225, 225, 225);
+}
+
+.specific-rotation{
+rotate: 180deg;
+}
+
+.grayscale-image {
+filter: grayscale(100%);
+}
+
+.special-full-height{
+height: 100%;
+}
+
+@media (max-width: 767px) {
+.mini-pro-main .mini-pro-main-inner {
+background-image: linear-gradient(
+to bottom,      /* جهت گرادینت از بالا به پایین */
+#F5F5F6,       /* رنگ شروع در بالا */
+#ffffff 120px   /* در 90 پیکسلی به رنگ سفید کامل می‌رسد */
+);
+}
+}
+@media (min-width: 767px) {
+.mini-pro-main .mini-pro-main-inner{
+height:280px;
+}
+}

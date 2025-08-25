@@ -37,6 +37,8 @@ export default defineConfig({
         notfound: resolve(__dirname, "pages/404.html"),
         faq: resolve(__dirname, "pages/faq.html"),
         about: resolve(__dirname, "pages/about.html"),
+        dashboard: resolve(__dirname, "pages/dashboard.html"),
+        category: resolve(__dirname, "pages/category.html"),
         // Additional pages can be added here
       },
     },

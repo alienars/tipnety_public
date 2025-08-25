@@ -1,3 +1,9 @@
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 /**
  * Header Component Initialization
  * Handles search modal, mobile menu, and category navigation
@@ -6,8 +12,7 @@ export function initHeader() {
     // Search Modal Logic
     const searchModal = document.getElementById('search-modal');
     if (searchModal) {
-        const desktopSearchInput = document.getElementById('desktop-search-input');
-        const mobileSearchInput = document.getElementById('mobile-search-input');
+        const searchTriggers = document.querySelectorAll('.open-search-trigger');
         const closeSearchModalButton = document.getElementById('close-search-modal');
         let popularCategoriesSlider;
 
@@ -20,8 +25,8 @@ export function initHeader() {
             if (!popularCategoriesSlider) {
                 setTimeout(() => {
                     popularCategoriesSlider = new Swiper('.popular-categories-slider', {
-                        modules: [window.SwiperModules.Navigation],
-                        loop: false,
+                        modules: [Navigation, Pagination],
+                        loop: true,
                         spaceBetween: 16,
                         slidesPerView: 2.5,
                         navigation: {
@@ -49,8 +54,9 @@ export function initHeader() {
         };
 
         // Event listeners for search modal
-        desktopSearchInput?.addEventListener('focus', openSearchModal);
-        mobileSearchInput?.addEventListener('focus', openSearchModal);
+        searchTriggers.forEach(trigger => {
+            trigger.addEventListener('click', openSearchModal);
+        });
         closeSearchModalButton?.addEventListener('click', closeSearchModal);
     }
 

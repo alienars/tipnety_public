@@ -1,4 +1,4 @@
-/* ===== Desktop grid behaviour via data attribute ===== */
+/* ===== Desktop grid behavior via data attribute ===== */
 .catalog {
   --popover-z: 60
 }
@@ -29,7 +29,7 @@
   }
 }
 
-/* details chevron */
+/* Details chevron styling */
 summary::-webkit-details-marker {
   display: none
 }
@@ -79,7 +79,7 @@ details[open] .chev {
   background: #fff
 }
 
-/* shared small UI helpers */
+/* Shared small UI helpers */
 .row {
   display: flex;
   align-items: center;
@@ -134,7 +134,6 @@ details[open] .chev {
   color: #374151
 }
 
-/* .chip:hover{background:#f5f5f5} */
 /* Mini filter popovers (desktop) */
 .popwrap {
   position: relative
@@ -183,23 +182,7 @@ details[open] .chev {
   min-height: 44px
 }
 
-/* .swiper-slide.slide-overlay-first .relative::after,
-.swiper-slide.slide-overlay-last .relative::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 0.75rem;
-    pointer-events: none;
-    z-index: 10;
-}
-
-.swiper-slide.slide-overlay-first .relative::after {
-      background: rgba(248, 249, 250, 0.85);
-}
-
-.swiper-slide.slide-overlay-last .relative::after {
-      background: rgba(248, 249, 250, 0.85);
-} */
+/* Mini product swiper styling */
 .mini-pro-swiper .top-text {
   background-color: #DC3134;
   box-shadow: 0 0 0 3px rgba(220, 49, 52, 0.32);
@@ -244,7 +227,6 @@ details[open] .chev {
 }
 
 .mini-pro-main .mini-pro-main-inner {
-
   background: #F5F5F6;
 }
 
@@ -252,14 +234,12 @@ details[open] .chev {
   padding: .370rem .90rem;
 }
 
-
+/* Custom checkbox styling */
 .checkbox-custom {
   width: 1.5rem;
   height: 1.5rem;
   border: 2px solid #6b7280;
-  /* gray-500 */
   border-radius: 9999px;
-  /* rounded-full */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -268,11 +248,10 @@ details[open] .chev {
   background-color: transparent;
 }
 
-/* اسکرول‌بار سفارشی (در RTL معمولا سمت چپ دیده میشه) */
+/* Custom scrollbar styling */
 .custom-scroll {
   scrollbar-width: thin;
   scrollbar-color: #f59e0b #e5e7eb;
-  /* thumb amber-500-ish | track gray-200 */
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -283,18 +262,17 @@ details[open] .chev {
   background: #e5e7eb;
 }
 
-/* gray-200 */
 .custom-scroll::-webkit-scrollbar-thumb {
   background: #f59e0b;
-  /* amber-500 */
   border-radius: 9999px;
 }
 
-/* آکاردئون: وقتی باز است، فلش بچرخد */
+/* Accordion arrow rotation when open */
 .filter-section.open>.filter-header i-con {
   transform: rotate(180deg);
 }
 
+/* Filter row styling */
 .filter-row {
   display: flex;
   align-items: center;
@@ -309,7 +287,7 @@ details[open] .chev {
   background: rgba(0, 0, 0, .02);
 }
 
-/* چک‌باکس کاستوم */
+/* Custom checkbox styling for filter rows */
 .filter-row input[type="checkbox"] {
   position: absolute;
   opacity: 0;
@@ -335,25 +313,22 @@ details[open] .chev {
   height: 1rem;
 }
 
-/* تیک سفید روی زمینه تیره */
-
-/* وقتی فعال: بدون بردر، زمینه black-600 */
+/* Checkbox active state styling */
 .filter-row:has(input:checked) .checkbox-custom {
   border-color: transparent;
   background: #1f2937;
-  /* black-600 */
 }
 
 .filter-row:has(input:checked) .checkbox-custom .tick {
   display: block;
 }
 
-/* آکاردئون: فلش بچرخه وقتی سکشن open است */
+/* Accordion arrow rotation when section is open */
 .filter-section.open>.filter-header i-con {
   transform: rotate(180deg);
 }
 
-/* اسکرول‌بار: فقط تُمب زرد */
+/* Custom scrollbar styling - thumb only */
 .custom-scroll {
   scrollbar-width: thin;
   scrollbar-color: #f59e0b transparent;
@@ -372,7 +347,7 @@ details[open] .chev {
   border-radius: 9999px;
 }
 
-/* دکمه آیکنی 48px */
+/* Icon button styling */
 .icon-btn {
   width: 48px;
   height: 48px;
@@ -385,18 +360,17 @@ details[open] .chev {
   border-radius: 50%;
 }
 
-/* بیضی رنگ با دابل‌بوردر */
+/* Color oval with double border */
 .color-oval {
   width: 48px;
   height: 24px;
   border-radius: 9999px;
   background: var(--oval-color, #000);
   box-shadow: 0 0 0 3px #f3f4f6, 0 0 0 4px #d1d5db;
-  /* inner: gray-100 (کلفت‌تر) + outer: gray-300 (نازک‌تر) */
   display: inline-block;
 }
 
-/* تگ برند انگلیسی کم‌رنگ */
+/* Brand badge styling */
 .brand-badge {
   min-width: 48px;
   height: 24px;
@@ -412,15 +386,14 @@ details[open] .chev {
   border: 1px solid #e5e7eb;
 }
 
-/* رنج دوبل */
+/* Dual range slider styling */
 .range-wrap {
   position: relative;
   height: 36px;
-  /* کمی جا برای شَست‌ها */
   transform: scaleX(-1);
 }
 
-/* خط خاکستریِ زیرین */
+/* Base track styling */
 .range-track {
   position: absolute;
   left: 0;
@@ -430,10 +403,9 @@ details[open] .chev {
   height: 6px;
   border-radius: 9999px;
   background: #e5e7eb;
-  /* بخش انتخاب‌نشده: طوسی */
 }
 
-/* نوار میانی انتخاب‌شده (با --min و --max) */
+/* Selected range track */
 .range-track::before {
   content: "";
   position: absolute;
@@ -442,28 +414,24 @@ details[open] .chev {
   left: calc(var(--min, 0) * 100%);
   right: calc(var(--max, 0) * 100%);
   background: var(--color-black-600, #1f2937);
-  /* black-600 */
   border-radius: 9999px;
 }
 
-/* خودِ اسلایدرها: وسطِ عمودی و بی‌استایل کردن ترک پیش‌فرض */
+/* Range slider inputs */
 .rng {
   position: absolute;
   left: 0;
   right: 0;
-  top: 25%;
-  transform: translateY(-25%);
+  top: 50%;
+  transform: translateY(-50%);
   height: 16px;
-  /* هم‌قد شَست */
   background: transparent;
   appearance: none;
   -webkit-appearance: none;
   direction: ltr;
-  /* مهم برای جلوگیری از معکوس شدن در RTL */
-
 }
 
-/* پنهان کردن/بی‌اثر کردن ترک پیش‌فرض */
+/* Hide default track styling */
 .rng::-webkit-slider-runnable-track {
   height: 6px;
   background: transparent;
@@ -474,7 +442,7 @@ details[open] .chev {
   background: transparent;
 }
 
-/* شَست‌ها: دقیقاً روی خط و وسط */
+/* Range slider thumbs */
 .rng::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 16px;
@@ -483,8 +451,7 @@ details[open] .chev {
   background: var(--color-black-600, #1f2937);
   border: 2px solid var(--color-black-600, #1f2937);
   box-sizing: border-box;
-  margin-top: 0;
-  /* دیگه لازم نیست جبران کنیم */
+  margin-top: -5px;
 }
 
 .rng::-moz-range-thumb {
@@ -496,10 +463,12 @@ details[open] .chev {
   box-sizing: border-box;
 }
 
+/* Color preview styling */
 .color-prev {
   box-shadow: 0 0 0 3px #f3f4f6, 0 0 0 4px #d1d5db;
 }
 
+/* Product tag styling */
 .product-tag {
   margin: 1em 1em 0 0;
 }
@@ -511,6 +480,7 @@ details[open] .chev {
   font-size: 1em;
 }
 
+/* Toman icon color overrides */
 i-con[name="toman"] svg {
   color: black !important;
 }
@@ -519,6 +489,7 @@ i-con[name="toman"] svg {
   color: #838383 !important;
 }
 
+/* Filter hub rotation and styling */
 #filterHub .flex.items-center.gap-2 button i-con,
 #filterHub div.relative {
   rotate: 180deg;
@@ -534,6 +505,7 @@ i-con[name="toman"] svg {
   color: #c9c9c9 !important;
 }
 
+/* Specific color classes */
 .specific-gray-text-color {
   color: #a9a8ab !important;
 }
@@ -558,14 +530,12 @@ i-con[name="toman"] svg {
   height: 100%;
 }
 
+/* Mobile responsive styling */
 @media (max-width: 767px) {
   .mini-pro-main .mini-pro-main-inner {
     background-image: linear-gradient(to bottom,
-        /* جهت گرادینت از بالا به پایین */
         #F5F5F6,
-        /* رنگ شروع در بالا */
         #ffffff 120px
-        /* در 90 پیکسلی به رنگ سفید کامل می‌رسد */
       );
   }
 }
@@ -576,24 +546,22 @@ i-con[name="toman"] svg {
   }
 }
 
+/* Color swatch styling */
 .color-swatch {
   border: 2px solid white;
 }
 
+/* Hide scrollbar utility */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
-  /* For Chrome, Safari, and Opera */
 }
 
 .no-scrollbar {
   -ms-overflow-style: none;
-  /* For IE and Edge */
   scrollbar-width: none;
-  /* For Firefox */
 }
 
-
-
+/* Mobile product card overlay */
 @media (max-width: 767px) {
   .product-card {
     position: relative;
@@ -607,6 +575,5 @@ i-con[name="toman"] svg {
     right: 0;
     bottom: 0;
     z-index: 10;
-    /* یک لایه نامرئی روی کل کارت ایجاد می‌کند */
   }
 }

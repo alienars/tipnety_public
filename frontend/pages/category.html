@@ -1310,38 +1310,61 @@
 
         <!-- PRODUCTS GRID -->
         <!-- PRODUCTS GRID -->
-        <section class="content col-span-12 lg:col-span-9 px-4 md:px-0"> <!-- Added px-4 for horizontal padding on mobile -->
+        <section class="content col-span-12 lg:col-span-9 px-4 md:px-0">
+          <!-- Added px-4 for horizontal padding on mobile -->
           <!-- @@cards -->
           <div class="container mx-auto">
             <!-- Product Grid -->
             <div class="grid products grid-cols-2 sm:grid-cols-3 gap-4 lg:gap-6">
 
               <!-- Product Item 1: With Discount -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
-                <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
-                  <!-- Main Image -->
-                  <img src="../assets/img/category/middle/1.jpg" alt="تیشرت طرح دار مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
-                  <!-- Hover Image -->
-                  <img src="../assets/img/category/middle/2.jpg" alt="تیشرت طرح دار مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                  <div
-                    class="absolute top-1 right-1 bg-white/90 rounded-full px-3 py-1 text-xs font-semibold text-black product-tag">
-                    کالکشن جدید</div>
-                  <div
-                    class="absolute bottom-1 right-1 bg-red-600 text-gray-100 rounded-full px-3 py-1 text-xs font-medium flex items-center gap-1.5 shadow-[0_0_0_1px_rgba(220,38,38,0.33)] product-off-tag">
-                    <i-con name="percent" class="w-2 h-2 text-gray-100 mb-1"></i-con>
-                    <span>۱۶</span>
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
+                  <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
+                    <!-- Main Image -->
+                    <img src="../assets/img/category/middle/1.jpg" alt="تیشرت طرح دار مردانه"
+                      class="product-main-image w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    <!-- Hover Image -->
+                    <img src="../assets/img/category/middle/2.jpg" alt="تیشرت طرح دار مردانه"
+                      class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                    <div
+                      class="absolute top-1 right-1 bg-white/90 rounded-full px-3 py-1 text-xs font-semibold text-black product-tag">
+                      کالکشن جدید</div>
+                    <div
+                      class="absolute bottom-1 right-1 bg-red-600 text-gray-100 rounded-full px-3 py-1 pb-2 text-xs font-medium flex items-center gap-1 shadow-[0_0_0_1px_rgba(220,38,38,0.33)] product-off-tag">
+                      <i-con name="percent" class="w-3 h-3 text-gray-100 mb-1"></i-con>
+                      <span>۱۶</span>
+                    </div>
+                    <!-- @@add cart -->
+                    <div
+                      class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                      <div class="transform-wrapper">
+                        <div
+                          class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                          <div class="plus-icon transition-opacity duration-200">
+                            <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                          </div>
+                          <div
+                            class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                            <button
+                              class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                            <button
+                              class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                            <button
+                              class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                            <button
+                              class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- @@add cart -->
                   </div>
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
-                  </div>
-                </div>
+                </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
-                    تیشرت طرح دار مردانه لجنی ۱۴۲۱</h3>
+                    تیشرت طرح دار مرداشرت طرح دار مردانه لجنی ۱۴شرت طرح دار مردانه لجنی ۱۴نه لجنی ۱۴۲۱</h3>
                   <div class="flex-grow"></div>
                   <div class="flex justify-between items-center mb-3">
                     <div class="hidden md:flex items-center gap-2">
@@ -1361,34 +1384,63 @@
                       </div>
                     </div>
                   </div>
-                  <div class="hidden md:flex justify-end gap-2">
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #a7c7e7; border: 2px solid white; box-shadow: 0 0 0 1px #a7c7e7;"></span>
+                  <div class="flex justify-end gap-2">
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #a7c7e7; box-shadow: 0 0 0 1px #a7c7e7;"
+                      data-main-image="../assets/img/category/middle/5.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #c9c9c9; border: 2px solid white; box-shadow: 0 0 0 1px #c9c9c9;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #c9c9c9; box-shadow: 0 0 0 1px #c9c9c9;"
+                      data-main-image="../assets/img/category/middle/3.jpg"
+                      data-hover-image="../assets/img/category/middle/4.jpg"></span>
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #ffb3ba; border: 2px solid white; box-shadow: 0 0 0 1px #ffb3ba;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #ffb3ba; box-shadow: 0 0 0 1px #ffb3ba;"
+                      data-main-image="../assets/img/category/middle/1.jpg"
+                      data-hover-image="../assets/img/category/middle/2.jpg"></span>
                   </div>
                 </div>
+
               </div>
 
               <!-- Product Item 2: Simple -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/2.jpg" alt="پافر مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/3.jpg" alt="پافر مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                   <div
                     class="absolute top-1 right-1 bg-white/90 rounded-full px-3 py-1 text-xs font-semibold text-black product-tag">
                     جدید</div>
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1411,29 +1463,53 @@
                     </div>
                   </div>
                   <div class="hidden md:flex justify-end gap-2">
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #fdfd96; border: 2px solid white; box-shadow: 0 0 0 1px #fdfd96;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #fdfd96; box-shadow: 0 0 0 1px #fdfd96;"
+                      data-main-image="../assets/img/category/middle/5.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
                   </div>
                 </div>
               </div>
 
               <!-- Product Item 3: Multiple Colors -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/3.jpg" alt="تیشرت مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/4.jpg" alt="تیشرت مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                   <div
-                    class="absolute bottom-1 right-1 bg-red-600 text-gray-100 rounded-full px-3 py-1 text-xs font-medium flex items-center gap-1.5 shadow-[0_0_0_1px_rgba(220,38,38,0.33)] product-off-tag">
-                    <i-con name="percent" class="w-2 h-2 text-gray-100 mb-1"></i-con>
+                    class="absolute bottom-1 right-1 bg-red-600 text-gray-100 rounded-full px-3 py-1 pb-2 text-xs font-medium flex items-center gap-1 shadow-[0_0_0_1px_rgba(220,38,38,0.33)] product-off-tag">
+                    <i-con name="percent" class="w-3 h-3 text-gray-100 mb-1"></i-con>
                     <span>۵</span>
                   </div>
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1462,44 +1538,76 @@
                       class="w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-xs font-bold text-gray-600">
                       <i-con name="plus" class="w-4 h-4 text-black-600"></i-con>
                     </div>
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #b19cd9; border: 2px solid white; box-shadow: 0 0 0 1px #b19cd9;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #b19cd9; box-shadow: 0 0 0 1px #b19cd9;"
+                      data-main-image="../assets/img/category/middle/1.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #aec6cf; border: 2px solid white; box-shadow: 0 0 0 1px #aec6cf;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #aec6cf; box-shadow: 0 0 0 1px #aec6cf;"
+                      data-main-image="../assets/img/category/middle/2.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #77dd77; border: 2px solid white; box-shadow: 0 0 0 1px #77dd77;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #77dd77; box-shadow: 0 0 0 1px #77dd77;"
+                      data-main-image="../assets/img/category/middle/3.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #ffc0cb; border: 2px solid white; box-shadow: 0 0 0 1px #ffc0cb;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #ffc0cb; box-shadow: 0 0 0 1px #ffc0cb;"
+                      data-main-image="../assets/img/category/middle/4.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #ffb347; border: 2px solid white; box-shadow: 0 0 0 1px #ffb347;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #ffb347; box-shadow: 0 0 0 1px #ffb347;"
+                      data-main-image="../assets/img/category/middle/5.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
                   </div>
                 </div>
               </div>
 
               <!-- Product Item 4: With Discount -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/4.jpg" alt="تیشرت طرح دار مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/7.jpg" alt="تیشرت طرح دار مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                   <div
                     class="absolute top-1 right-1 bg-white/90 rounded-full px-3 py-1 text-xs font-semibold text-black product-tag">
                     جدید</div>
                   <div
-                    class="absolute bottom-1 right-1 bg-red-600 text-gray-100 rounded-full px-3 py-1 text-xs font-medium flex items-center gap-1.5 shadow-[0_0_0_1px_rgba(220,38,38,0.33)] product-off-tag">
-                    <i-con name="percent" class="w-2 h-2 text-gray-100 mb-1"></i-con>
+                    class="absolute bottom-1 right-1 bg-red-600 text-gray-100 rounded-full px-3 py-1 pb-2 text-xs font-medium flex items-center gap-1 shadow-[0_0_0_1px_rgba(220,38,38,0.33)] product-off-tag">
+                    <i-con name="percent" class="w-3 h-3 text-gray-100 mb-1"></i-con>
                     <span>۴۸</span>
                   </div>
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1525,31 +1633,59 @@
                   </div>
                   <div class="hidden md:flex justify-end gap-2">
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #a9a9a9; border: 2px solid white; box-shadow: 0 0 0 1px #a9a9a9;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #a9a9a9; box-shadow: 0 0 0 1px #a9a9a9;"
+                      data-main-image="../assets/img/category/middle/1.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #d3d3d3; border: 2px solid white; box-shadow: 0 0 0 1px #d3d3d3;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #d3d3d3; box-shadow: 0 0 0 1px #d3d3d3;"
+                      data-main-image="../assets/img/category/middle/2.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                    <span class="w-6 h-6 rounded-full"
-                      style="background-color: #ff6961; border: 2px solid white; box-shadow: 0 0 0 1px #ff6961;"></span>
+                    <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                      style="background-color: #ff6961; box-shadow: 0 0 0 1px #ff6961;"
+                      data-main-image="../assets/img/category/middle/3.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
                   </div>
                 </div>
               </div>
 
               <!-- Product Item 5 -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/7.jpg" alt="عینک مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/8.jpg" alt="عینک مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1569,13 +1705,15 @@
 
               <!-- Special "Set" Card -->
               <!-- Changed aspect ratio of image container to make card taller, containing its unique content. -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                
                 <div class="relative overflow-hidden aspect-[3/4] sm:aspect-[3/5] rounded-2xl special-full-height">
+                  <a href="#" class="card-link">
                   <!-- Adjusted aspect ratio for taller image on small screens -->
                   <img src="../assets/img/category/middle/8.jpg" alt="ست پاییزه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/6.jpg" alt="ست پاییزه (نمای دوم)"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                   <div
                     class="absolute top-1 right-1 bg-white/90 rounded-full px-3 py-1 text-xs font-semibold text-black product-tag">
                     کالکشن جدید</div>
@@ -1583,29 +1721,53 @@
                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <!-- Content (title and button) INSIDE the image, positioned at bottom -->
                   <div class="absolute bottom-0 inset-x-0 p-6 text-center z-10 text-white">
-                    <h3 class="text-lg md:text-xl font-bold mb-4">ست پاییزه شماره ۵۶۰</h3>
+                    <h3 class="text-sm md:text-xl font-bold mb-4">ست پاییزه شماره ۵۶۰</h3>
                     <button
-                      class="bg-white/90 text-gray-900 font-semibold rounded-full flex items-center justify-center gap-2 px-6 py-2 mx-auto hover:bg-white transition-colors ring-5 ring-white/33">
+                      class="bg-white/90 text-gray-900 font-semibold text-[10px] md:text-sm rounded-full flex items-center justify-center gap-1 px-3 py-2 md:gap-2 md:px-6 md:py-2 mx-auto hover:bg-white transition-colors ring-5 ring-white/33">
                       <span>خرید ست</span>
                       <i-con name="arrow-left" class="w-4 h-4 text-gray-800"></i-con>
                     </button>
                   </div>
+                </a>
                 </div>
+              
                 <!-- Removed the separate pt-8 content div for this card, as its content is now inside the image. -->
               </div>
 
               <!-- Product Item 7 -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/6.jpg" alt="شلوار ورزشی"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/5.jpg" alt="شلوار ورزشی"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1623,17 +1785,39 @@
               </div>
 
               <!-- Product Item 8 -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/5.jpg" alt="پیراهن مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/6.jpg" alt="پیراهن مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1652,17 +1836,39 @@
               </div>
 
               <!-- Product Item 9 -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/10.jpg" alt="پیراهن مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/11.jpg" alt="پیراهن مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1681,17 +1887,39 @@
               </div>
 
               <!-- Product Item 10 -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/11.jpg" alt="پیراهن مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/9.jpg" alt="پیراهن مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1710,17 +1938,39 @@
               </div>
 
               <!-- Product Item 11 -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
                   <img src="../assets/img/category/middle/9.jpg" alt="پیراهن مردانه"
-                    class="w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                    class="product-main-image  w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                   <img src="../assets/img/category/middle/12.jpg" alt="پیراهن مردانه"
-                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                  <div class="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 bg-white rounded-full cursor-pointer opacity-0 group-hover:opacity-100 
-            translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <i-con name="plus" class="w-6 h-6 text-black-600"></i-con>
+                    class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                  <!-- @@add cart -->
+                  <div
+                  class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                  <div class="transform-wrapper">
+                    <div
+                      class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                      <div class="plus-icon transition-opacity duration-200">
+                        <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                      </div>
+                      <div
+                        class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                        <button
+                          class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              <!-- @@add cart -->
+                </div>
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1739,18 +1989,19 @@
               </div>
 
               <!-- Product Item 12 -->
-              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4">
+              <div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                <a href="#" class="card-link">
                 <div class="relative overflow-hidden aspect-[2/3] rounded-2xl overflow-hidden">
                   <img src="../assets/img/category/middle/12.jpg" alt="پیراهن مردانه"
                     class="w-full h-full object-cover grayscale-image">
 
                   <div class="absolute inset-0 flex items-end justify-center pb-12">
-                    <div class="bg-white text-gray-800 text-sm font-bold px-6 py-3 rounded-full shadow-lg">
+                    <div class="bg-white text-gray-800 text-[10px] md:text-sm font-bold px-2 py-1 md:px-6 md:py-3 rounded-full shadow-lg">
                       موجودی به اتمام رسید
                     </div>
                   </div>
                 </div>
-
+              </a>
                 <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
                   <h3
                     class="text-sm md:text-base font-semibold text-gray-800 mb-2 truncate whitespace-nowrap overflow-hidden">
@@ -1782,20 +2033,30 @@
                     class="w-6 h-6 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-xs font-bold text-gray-600">
                     <i-con name="plus" class="w-4 h-4 text-black-600"></i-con>
                   </div>
-                  <span class="w-6 h-6 rounded-full"
-                    style="background-color: #b19cd9; border: 2px solid white; box-shadow: 0 0 0 1px #b19cd9;"></span>
+                  <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                    style="background-color: #b19cd9; box-shadow: 0 0 0 1px #b19cd9;"
+                    data-main-image="../assets/img/category/middle/1.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                  <span class="w-6 h-6 rounded-full"
-                    style="background-color: #aec6cf; border: 2px solid white; box-shadow: 0 0 0 1px #aec6cf;"></span>
+                  <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                    style="background-color: #aec6cf; box-shadow: 0 0 0 1px #aec6cf;"
+                    data-main-image="../assets/img/category/middle/2.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                  <span class="w-6 h-6 rounded-full"
-                    style="background-color: #77dd77; border: 2px solid white; box-shadow: 0 0 0 1px #77dd77;"></span>
+                  <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                    style="background-color: #77dd77; box-shadow: 0 0 0 1px #77dd77;"
+                    data-main-image="../assets/img/category/middle/3.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                  <span class="w-6 h-6 rounded-full"
-                    style="background-color: #ffc0cb; border: 2px solid white; box-shadow: 0 0 0 1px #ffc0cb;"></span>
+                  <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                    style="background-color: #ffc0cb; box-shadow: 0 0 0 1px #ffc0cb;"
+                    data-main-image="../assets/img/category/middle/4.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
 
-                  <span class="w-6 h-6 rounded-full"
-                    style="background-color: #ffb347; border: 2px solid white; box-shadow: 0 0 0 1px #ffb347;"></span>
+                  <span class="color-swatch cursor-pointer w-6 h-6 rounded-full"
+                    style="background-color: #ffb347; box-shadow: 0 0 0 1px #ffb347;"
+                    data-main-image="../assets/img/category/middle/5.jpg"
+                      data-hover-image="../assets/img/category/middle/6.jpg"></span>
                 </div>
 
               </div>

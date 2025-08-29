@@ -1,3 +1,36 @@
+function convertNumbers(input) {
+    const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    const englishDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  
+    // Check if the input contains Persian digits
+    const isPersian = [...input.toString()].some(char => persianDigits.includes(char));
+  
+    let output = '';
+    if (isPersian) {
+      // Convert Persian to English
+      for (const char of input.toString()) {
+        const index = persianDigits.indexOf(char);
+        if (index !== -1) {
+          output += englishDigits[index];
+        } else {
+          output += char; // Keep non-digit characters as they are
+        }
+      }
+    } else {
+      // Convert English to Persian
+      for (const char of input.toString()) {
+        const index = englishDigits.indexOf(char);
+        if (index !== -1) {
+          output += persianDigits[index];
+        } else {
+          output += char; // Keep non-digit characters as they are
+        }
+      }
+    }
+  
+    return output;
+  }
+
 document.addEventListener('DOMContentLoaded', function () {
     // @@checkout-cart
     // Find all product cards
@@ -16,8 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // اختصاص Event Listener به تمام دکمه‌های افزایش
         increaseBtns.forEach((increaseBtn, index) => {
             increaseBtn.addEventListener('click', () => {
-                let quantity = parseInt(quantityValues[index].textContent);
+                let quantity = convertNumbers(quantityValues[index].textContent)
+                quantity = parseInt(quantity);
                 quantity++;
+                quantity = convertNumbers(quantity)
                 quantityValues[index].textContent = quantity;
             });
         });
@@ -25,9 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // اختصاص Event Listener به تمام دکمه‌های کاهش
         decreaseBtns.forEach((decreaseBtn, index) => {
             decreaseBtn.addEventListener('click', () => {
-                let quantity = parseInt(quantityValues[index].textContent);
+                let quantity = convertNumbers(quantityValues[index].textContent)
+                quantity = parseInt(quantity);
                 if (quantity > 1) {
                     quantity--;
+                    quantity = convertNumbers(quantity)
                     quantityValues[index].textContent = quantity;
                 }
             });
@@ -140,13 +177,13 @@ document.addEventListener('DOMContentLoaded', function () {
     paymentOptions.forEach(option => {
         option.addEventListener('click', () => {
             paymentOptions.forEach(opt => {
-                opt.classList.remove('border-2', 'border-[#fcb108]');
+                opt.classList.remove('border-1', 'border-[#fcb108]');
                 opt.classList.add('border', 'border-[#ebebeb]');
                 opt.querySelector('.checked-icon').classList.add('hidden');
                 opt.querySelector('.unchecked-icon').classList.remove('hidden');
             });
             
-            option.classList.add('border-2', 'border-[#fcb108]');
+            option.classList.add('border-1', 'border-[#fcb108]');
             option.classList.remove('border', 'border-[#ebebeb]');
             option.querySelector('.checked-icon').classList.remove('hidden');
             option.querySelector('.unchecked-icon').classList.add('hidden');

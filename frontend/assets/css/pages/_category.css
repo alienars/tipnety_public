@@ -481,13 +481,13 @@ details[open] .chev {
 }
 
 /* Toman icon color overrides */
-i-con[name="toman"] svg {
+/* i-con[name="toman"] svg {
   color: black !important;
 }
 
 #filterHub i-con[name="toman"] svg {
   color: #838383 !important;
-}
+} */
 
 /* Filter hub rotation and styling */
 #filterHub .flex.items-center.gap-2 button i-con,

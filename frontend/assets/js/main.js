@@ -60,6 +60,29 @@ function initPageHeaders() {
     }
 }
 
+function persianizeInitialNumbers() {
+  const persianDigits = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+
+  function toPersian(text) {
+    return text.toString().replace(/[0-9]/g, (digit) => persianDigits[parseInt(digit, 10)]);
+  }
+
+  function traverse(node) {
+    if (node.nodeType === 3) {
+      // گره متنی یا Text Node
+      const parentTag = node.parentNode.tagName;
+      if (parentTag !== "SCRIPT" && parentTag !== "STYLE" && parentTag !== "TEXTAREA") {
+        node.nodeValue = toPersian(node.nodeValue);
+      }
+    } else if (node.nodeType === 1 && node.childNodes) {
+      // گره عنصری یا Element Node
+      node.childNodes.forEach(traverse);
+    }
+  }
+
+  traverse(document.body);
+}
+
 /**
  * Initialize all application components after partials are loaded
  */
@@ -72,6 +95,7 @@ function initializeApp() {
     initFooter();
     initSliders();
     initPageHeaders();
+    persianizeInitialNumbers();
 
     // Initialize page-specific components
     if (page === "auth") {

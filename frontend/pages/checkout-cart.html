@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="راه‌های ارتباط با فروشگاه تیپ نتی و پشتیبانی">
+    <title>دسته بندی تیپ نتی</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <style>
+
+      /* @media (max-width: 1024px) {
+        article.product-card {
+          padding-bottom: 5px !important;
+        }
+      } */
+      
+      .article-size{
+        height: 17em !important;
+      }
+
+      @media (min-width: 1020px) and (max-width: 1280px) {
+        .article-size {
+          height: 20em !important;
+        }
+
+        .total-box{
+          padding: 15px;
+        }
+
+        .total-box-inner{
+          padding: 5px;
+        }
+      }
+
+      @media (max-width: 770px) {
+        .article-size {
+          height: auto !important;
+          padding-bottom: 0;
+        }
+      }
+
+    </style>
+
+</head>
+<body data-page="category">
+
+  <div data-include="/partials/header.html" class="hidden md:block"></div>
+
+
+  <header class="container w-full bg-white mx-auto">
+    <div class="mx-auto py-3 md:py-14">
+  
+      <!-- Mobile: back/cart row with light bottom border -->
+      <div class="md:hidden border-b border-gray-200 pb-3 mb-4">
+        <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-gray-700 mr-4">
+          <span class="inline-flex items-center justify-center w-12 h-12 bg-white rounded-3xl border border-black-100">
+            <i-con name="arrow-right" class="w-6 h-6 text-black-600 rotate-180">
+            </i-con>
+          </span>
+          <span>سبد خرید</span>
+          <span class="bg-emerald-500 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">۳</span>
+        </a>
+      </div>
+  
+      <!-- Stepper + Desktop back button in the same row -->
+      <div class="relative">
+  
+        <!-- Desktop: back to shop button (placed at the right of the stepper row) -->
+        <a href="#"
+           class="hidden xl:flex items-center gap-3 text-right absolute right-0 top-1/2 -translate-y-1/2">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-gray-300">
+            <i-con name="arrow-right" class="w-5 h-5 text-yellow-600">
+            </i-con>
+          </span>
+          <div class="flex flex-col items-start leading-tight">
+            <span class="text-[14px] font-medium text-black-600">بازگشت به فروشگاه</span>
+            <span class="text-[11px] mt-2 text-black-300">خرید محصولات متنوع و پر از تخفیف</span>
+          </div>    
+        </a>
+  
+        <!-- Stepper -->
+        <div class="flex items-center justify-center gap-1 sm:gap-6 md:gap-6 mt-10">
+  
+          <!-- Step 1 (active) -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="inline-flex p-1 rounded-full ring-2 ring-offset-1 ring-offset-white ring-gray-200">
+              <span class="flex items-center justify-center w-[64px] h-[64px] sm:w-[100px] sm:h-[100px] rounded-full bg-yellow-600 text-white">
+                <i-con name="shopping-basket-add" class="w-6 h-6 md:w-9 md:h-9 text-white">
+
+                </i-con>
+              </span>
+            </span>
+            <span class="text-[12px] sm:text-base font-medium text-black-600 mt-3">سبد خرید</span>
+          </div>
+  
+          <!-- Connector 1: longer, closer to circles, vertically aligned higher -->
+          <div class="flex items-center -mt-6 mr-3 ml-0">
+            <span class="block h-px w-6 sm:w-14 md:w-30 bg-gray-200"></span>
+            <span class="block w-1.5 h-1.5 md:w-1 md:h-1 rounded-full bg-gray-200"></span>
+          </div>
+  
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="inline-flex p-1 rounded-full ring-2 ring-offset-1 ring-offset-white ring-gray-200">
+              <span class="flex items-center justify-center w-[64px] h-[64px] sm:w-[100px] sm:h-[100px] rounded-full bg-gray-100">
+                <i-con name="maps-global" class="w-6 h-6 md:w-9 md:h-9 text-black-300">
+
+                </i-con>
+              </span>
+            </span>
+            <span class="text-[12px] sm:text-base text-black-300 mt-3" >آدرس و زمان ارسال</span>
+          </div>
+  
+          <!-- Connector 2: longer, closer to circles, vertically aligned higher; smaller end dot -->
+          <div class="flex items-center -mt-6 mr-0 ml-4">
+            <span class="block h-px w-6 sm:w-14 md:w-30 bg-gray-200"></span>
+            <span class="block w-1.5 h-1.5 md:w-1 md:h-1 rounded-full bg-gray-200"></span>
+          </div>
+  
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center gap-2">
+            <span class="inline-flex p-1 rounded-full ring-2 ring-offset-1 ring-offset-white ring-gray-200">
+              <span class="flex items-center justify-center w-[64px] h-[64px] sm:w-[100px] sm:h-[100px] rounded-full bg-gray-100">
+                <i-con name="note" class="w-6 h-6 md:w-9 md:h-9 text-black-300"></i-con>
+              </span>
+            </span>
+            <span class="text-[12px] sm:text-base text-black-300 mt-3">پرداخت نهایی</span>
+          </div>
+  
+        </div>
+        <!-- /Stepper -->
+  
+      </div>
+      <!-- /relative -->
+    </div>
+  </header>
+
+    <!-- Content -->
+    <main class="py-0 md:py-0 pb-32">
+      <div class="container mx-auto pb-12">
+        <section id="content-base" class="border-0 bg-transparent p-0 mx-auto">
+          <div class="grid grid-cols-12 gap-4 md:gap-6 lg:gap-8">
+  
+              <!-- ITEMS (right on desktop) -->
+              <section class="col-span-12 lg:col-span-8 order-2 lg:order-1 space-y-4 md:space-y-5">
+  
+                  <!-- Item card 1 -->
+                  <article class="product-card md:rounded-2xl border border-gray-200 bg-white md:border-b pb-5 sm:pb-12 md:pb-12 article-size">
+                    <div class="p-4 md:hidden h-full flex flex-col">
+                      <div class="flex items-start gap-4">
+                        <div class="w-24 flex-shrink-0">
+                          <div class="flex h-full items-center justify-center overflow-hidden rounded-lg bg-gray-100">
+                            <img src="../assets/img/checkout/product-checkout.jpg" alt="محصول" class="h-full w-full object-cover" />
+                          </div>
+                        </div>
+                        <div class="flex flex-grow flex-col gap-5 md:gap-0">
+                          <div class="flex items-start justify-between">
+                            <h3 class="text-right font-semibold text-gray-900 text-[14px] md:text-[18px]">
+                              تی‌شرت اورسیاز مردانه نونزده<br /><span class="whitespace-nowrap">نودیک مدل TSI963 Gr</span>
+                            </h3>
+                            <button type="button" aria-label="حذف" class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-200">
+                              <i-con name="cross-mark" class="h-5 w-5 text-black-600"></i-con>
+                            </button>
+                          </div>
+                          <div class="flex items-end justify-between">
+                            <div class="space-y-1 text-right text-xs text-gray-600">
+                              <div class="flex items-center gap-2 py-1 md:py-2">
+                                <span class="min-w-[4rem] text-[#5E5E5E] text-[14px]">رنگ</span><span class="h-4 w-px bg-gray-200"></span><span class="text-[#5E5E5E] text-[14px] font-semibold">مشکی</span>
+                              </div>
+                              <div class="flex items-center gap-2 py-1 md:py-2">
+                                <span class="min-w-[4rem] text-[#5E5E5E] text-[14px]">سایز</span><span class="h-4 w-px bg-gray-200"></span><span class="text-[#5E5E5E] text-[14px]">L</span>
+                              </div>
+                              <div class="flex items-center gap-2 py-1 md:py-2">
+                                <span class="min-w-[4rem] text-[#5E5E5E] text-[14px]">کد کالا</span><span class="h-4 w-px bg-gray-200"></span><font-semibold class="text-amber-500 text-[14px]">۱۹۶۳</font-semibold>
+                              </div>
+                            </div>
+                            <div class="quantity-control inline-flex h-8 items-center justify-between rounded-full border border-gray-200 bg-white px-2 py-6">
+                              <button type="button" class="p-1" aria-label="افزایش">
+                                <i-con name="plus-sign" class="h-5 w-5 text-gray-700"></i-con>
+                              </button>
+                              <span class="mx-2 text-gray-800 text-[22px] md:text-[26px]">۳</span>
+                              <button type="button" class="p-1" aria-label="کاهش">
+                                <i-con name="minus-sign" class="h-5 w-5 text-gray-700"></i-con>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-4 divide-y divide-gray-200 border-t border-gray-200 text-sm">
+                        <div class="flex items-center justify-between py-3">
+                          <span class="text-sm md:text-[18px] text-[#868686]">جمع سفارش</span>
+                          <div class="flex items-center gap-1">
+                            <span class="font-semibold text-black-400 text-[20px]">۳۹۰,۰۰۰</span>
+                            <i-con name="toman" class="mb-1 h-4 w-4 text-black-400"></i-con>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between py-3">
+                          <span class="text-red-600">تخفیف کالا</span>
+                          <div class="flex items-center gap-2">
+                            <span class="font-semibold text-red-600 text-[22px]">۱۸۰,۰۰۰</span>
+                            <i-con name="toman" class="mb-1 h-4 w-4 text-red-600"></i-con>
+                            <div class="flex h-[17px] items-center justify-center rounded-full bg-red-600 px-[6px] pb-0 pt-[3px] text-xs text-white custom-red-ring">
+                              <i-con name="percent" class="mb-1 h-2 w-2 text-white"></i-con>
+                              <span>۱۵</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-3">
+                          <span class="text-black-600 text-sm md:text-[18px] font-bold text-[#363636]">قیمت نهایی</span>
+                          <div class="flex items-center gap-1">
+                            <span class="text-[14px] text-black-600 text-[24px] font-bold">۱,۰۲۰,۰۰۰</span>
+                            <i-con name="toman" class="mb-1 h-4 w-4 text-black-600"></i-con>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="hidden p-4 md:flex md:p-6 gap-4 md:gap-6 article-size">
+                      <div class="flex-shrink-0 w-[10em] h-[10em]">
+                          <div class="flex items-center justify-center overflow-hidden rounded-lg bg-gray-100">
+                              <img src="../assets/img/checkout/product-checkout.jpg" alt="محصول" class="h-full w-full object-cover" />
+                          </div>
+                      </div>
+                      <div class="flex h-[172px] flex-grow flex-col justify-between">
+                          <div class="flex items-start md:items-center justify-between">
+                              <h3 class="text-right text-[16px] font-semibold text-gray-900 md:text-[18px] text-[#363636]">
+                                  تی شرت اوورسیاز مردانه نونزده نودیک
+                                  <span class="whitespace-nowrap xl:block">مدل TSI963 Gr</span>
+                              </h3>
+                              <div class="flex flex-shrink-0 items-center gap-3">
+                                  <div class="quantity-control inline-flex h-10 items-center justify-between rounded-full border border-gray-200 bg-white px-3">
+                                      <button type="button" class="increase-btn p-1" aria-label="افزایش">
+                                          <i-con name="plus-sign" class="h-4 w-4 text-black-600"></i-con>
+                                      </button>
+                                      <span class="quantity-value mx-3 text-[16px] font-semibold text-gray-800">۳</span>
+                                      <button type="button" class="decrease-btn p-1" aria-label="کاهش">
+                                          <i-con name="minus-sign" class="h-4 w-4 text-black-600"></i-con>
+                                      </button>
+                                  </div>
+                                  <button type="button" aria-label="حذف" class="remove-btn inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200">
+                                      <i-con name="cross-mark" class="h-4 w-4 text-black-600"></i-con>
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="flex items-baseline justify-between pt-5">
+                              <div class="flex-1">
+                                  <div class="flex flex-col items-start text-xs text-gray-600">
+                                      <div class="flex items-center gap-2 py-5 text-[14px]">
+                                          <span class="min-w-[4rem] text-[#5E5E5E]">رنگ</span>
+                                          <span class="h-4 w-px bg-gray-200"></span>
+                                          <span class="text-[#5E5E5E]">مشکی</span>
+                                      </div>
+                                      <div class="h-px bg-gray-200 w-full max-w-[200px]"></div>
+                                      <div class="flex items-center gap-2 py-5 text-[14px]">
+                                          <span class="min-w-[4rem] text-[#5E5E5E]">سایز</span>
+                                          <span class="h-4 w-px bg-gray-200"></span>
+                                          <span class="text-[#5E5E5E]">L</span>
+                                      </div>
+                                      <div class="h-px bg-gray-200 w-full max-w-[200px]"></div>
+                                      <div class="flex items-center gap-2 py-1 mt-2 text-[14px]">
+                                          <span class="min-w-[4rem] text-[#5E5E5E]">کد کالا</span>
+                                          <span class="h-4 w-px bg-gray-200"></span>
+                                          <span class="font-semibold text-amber-500">۱۹۶۳</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="flex-1">
+                                <div class="flex flex-col items-end text-sm">
+                                    <div class="flex items-center justify-end py-3 mb-1">
+                                        <div class="flex items-center">
+                                            <span class="min-w-[80px] pl-4 text-[14px] text-black-400 lg:text-[13px] xl:text-[14px]">قیمت واحد</span>
+                                            <div class="mx-3 h-4 w-px bg-gray-200"></div>
+                                        </div>
+                                        <div class="flex items-center gap-2 min-w-[150px] justify-end">
+                                            <span class="font-semibold text-[18px] text-black-400 font-bold">۳۹۰,۰۰۰</span>
+                                            <i-con name="toman" class="h-4 w-4 text-black-400"></i-con>
+                                        </div>
+                                    </div>
+                                    <div class="h-px bg-gray-200 w-full max-w-[255px]"></div>
+                                    <div class="flex items-center justify-end py-4">
+                                        <div class="flex items-center">
+                                            <span class="min-w-[80px] pl-4 text-[14px] text-red-600">تخفیف کالا</span>
+                                            <div class="mx-3 h-4 w-px bg-gray-200"></div>
+                                        </div>
+                                        <div class="flex items-center gap-2 min-w-[150px] justify-end">
+                                            <span class="font-semibold text-red-600 text-[20px]">۱۸۰,۰۰۰</span>
+                                            <i-con name="toman" class="h-4 w-4 text-red-600"></i-con>
+                                            <div class="flex h-[17px] items-center justify-center rounded-full bg-red-600 px-[6px] pb-0 pt-[3px] text-xs text-white custom-red-ring">
+                                                <i-con name="percent" class="mb-1 h-2 w-2 text-white"></i-con>
+                                                <span>۱۵</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h-px bg-gray-200 w-full max-w-[255px]"></div>
+                                    <div class="flex items-center justify-end pt-1 mt-1">
+                                        <div class="flex items-center">
+                                            <span class="min-w-[80px] pl-4 text-[14px] text-black-600 font-semibold text-[#363636] lg:text-[12px] xl:text-[14px]">قیمت نهایی</span>
+                                            <div class="mx-3 h-4 w-px bg-gray-200"></div>
+                                        </div>
+                                        <div class="flex items-center gap-2 min-w-[150px] justify-end">
+                                            <span class="text-[18px] text-black-600 font-bold">۱,۰۲۱,۰۰۰</span>
+                                            <i-con name="toman" class="h-4 w-4 text-black-600"></i-con>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  </article>
+
+                  <article class="product-card md:rounded-2xl border border-gray-200 bg-white md:border-b pb-5 sm:pb-12 md:pb-12 article-size">
+                    <div class="p-4 md:hidden h-full flex flex-col">
+                      <div class="flex items-start gap-4">
+                        <div class="w-24 flex-shrink-0">
+                          <div class="flex h-full items-center justify-center overflow-hidden rounded-lg bg-gray-100">
+                            <img src="../assets/img/checkout/product-checkout.jpg" alt="محصول" class="h-full w-full object-cover" />
+                          </div>
+                        </div>
+                        <div class="flex flex-grow flex-col gap-5 md:gap-0">
+                          <div class="flex items-start justify-between">
+                            <h3 class="text-right font-semibold text-gray-900 text-[14px] md:text-[18px]">
+                              تی‌شرت اورسیاز مردانه نونزده<br /><span class="whitespace-nowrap">نودیک مدل TSI963 Gr</span>
+                            </h3>
+                            <button type="button" aria-label="حذف" class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-200">
+                              <i-con name="cross-mark" class="h-5 w-5 text-black-600"></i-con>
+                            </button>
+                          </div>
+                          <div class="flex items-end justify-between">
+                            <div class="space-y-1 text-right text-xs text-gray-600">
+                              <div class="flex items-center gap-2 py-1 md:py-2">
+                                <span class="min-w-[4rem] text-[#5E5E5E] text-[14px]">رنگ</span><span class="h-4 w-px bg-gray-200"></span><span class="text-[#5E5E5E] text-[14px] font-semibold">مشکی</span>
+                              </div>
+                              <div class="flex items-center gap-2 py-1 md:py-2">
+                                <span class="min-w-[4rem] text-[#5E5E5E] text-[14px]">سایز</span><span class="h-4 w-px bg-gray-200"></span><span class="text-[#5E5E5E] text-[14px]">L</span>
+                              </div>
+                              <div class="flex items-center gap-2 py-1 md:py-2">
+                                <span class="min-w-[4rem] text-[#5E5E5E] text-[14px]">کد کالا</span><span class="h-4 w-px bg-gray-200"></span><font-semibold class="text-amber-500 text-[14px]">۱۹۶۳</font-semibold>
+                              </div>
+                            </div>
+                            <div class="quantity-control inline-flex h-8 items-center justify-between rounded-full border border-gray-200 bg-white px-2 py-6">
+                              <button type="button" class="p-1" aria-label="افزایش">
+                                <i-con name="plus-sign" class="h-5 w-5 text-gray-700"></i-con>
+                              </button>
+                              <span class="mx-2 text-gray-800 text-[22px] md:text-[26px]">۳</span>
+                              <button type="button" class="p-1" aria-label="کاهش">
+                                <i-con name="minus-sign" class="h-5 w-5 text-gray-700"></i-con>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-4 divide-y divide-gray-200 border-t border-gray-200 text-sm">
+                        <div class="flex items-center justify-between py-3">
+                          <span class="text-sm md:text-[18px] text-[#868686]">جمع سفارش</span>
+                          <div class="flex items-center gap-1">
+                            <span class="font-semibold text-black-400 text-[20px]">۳۹۰,۰۰۰</span>
+                            <i-con name="toman" class="mb-1 h-4 w-4 text-black-400"></i-con>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between py-3">
+                          <span class="text-red-600">تخفیف کالا</span>
+                          <div class="flex items-center gap-2">
+                            <span class="font-semibold text-red-600 text-[22px]">۱۸۰,۰۰۰</span>
+                            <i-con name="toman" class="mb-1 h-4 w-4 text-red-600"></i-con>
+                            <div class="flex h-[17px] items-center justify-center rounded-full bg-red-600 px-[6px] pb-0 pt-[3px] text-xs text-white custom-red-ring">
+                              <i-con name="percent" class="mb-1 h-2 w-2 text-white"></i-con>
+                              <span>۱۵</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-3">
+                          <span class="text-black-600 text-sm md:text-[18px] font-bold text-[#363636]">قیمت نهایی</span>
+                          <div class="flex items-center gap-1">
+                            <span class="text-[14px] text-black-600 text-[24px] font-bold">۱,۰۲۰,۰۰۰</span>
+                            <i-con name="toman" class="mb-1 h-4 w-4 text-black-600"></i-con>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="hidden p-4 md:flex md:p-6 gap-4 md:gap-6 article-size">
+                      <div class="flex-shrink-0 w-[10em] h-[10em]">
+                          <div class="flex items-center justify-center overflow-hidden rounded-lg bg-gray-100">
+                              <img src="../assets/img/checkout/product-checkout.jpg" alt="محصول" class="h-full w-full object-cover" />
+                          </div>
+                      </div>
+                      <div class="flex h-[172px] flex-grow flex-col justify-between">
+                          <div class="flex items-start md:items-center justify-between">
+                              <h3 class="text-right text-[16px] font-semibold text-gray-900 md:text-[18px] text-[#363636]">
+                                  تی شرت اوورسیاز مردانه نونزده نودیک
+                                  <span class="whitespace-nowrap xl:block">مدل TSI963 Gr</span>
+                              </h3>
+                              <div class="flex flex-shrink-0 items-center gap-3">
+                                  <div class="quantity-control inline-flex h-10 items-center justify-between rounded-full border border-gray-200 bg-white px-3">
+                                      <button type="button" class="increase-btn p-1" aria-label="افزایش">
+                                          <i-con name="plus-sign" class="h-4 w-4 text-black-600"></i-con>
+                                      </button>
+                                      <span class="quantity-value mx-3 text-[16px] font-semibold text-gray-800">۳</span>
+                                      <button type="button" class="decrease-btn p-1" aria-label="کاهش">
+                                          <i-con name="minus-sign" class="h-4 w-4 text-black-600"></i-con>
+                                      </button>
+                                  </div>
+                                  <button type="button" aria-label="حذف" class="remove-btn inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200">
+                                      <i-con name="cross-mark" class="h-4 w-4 text-black-600"></i-con>
+                                  </button>
+                              </div>
+                          </div>
+                          <div class="flex items-baseline justify-between pt-5">
+                              <div class="flex-1">
+                                  <div class="flex flex-col items-start text-xs text-gray-600">
+                                      <div class="flex items-center gap-2 py-5">
+                                          <span class="min-w-[4rem] text-[#5E5E5E]">رنگ</span>
+                                          <span class="h-4 w-px bg-gray-200"></span>
+                                          <span class="text-[#5E5E5E] text-[14px]">مشکی</span>
+                                      </div>
+                                      <div class="h-px bg-gray-200 w-full max-w-[200px]"></div>
+                                      <div class="flex items-center gap-2 py-5">
+                                          <span class="min-w-[4rem] text-[#5E5E5E]">سایز</span>
+                                          <span class="h-4 w-px bg-gray-200"></span>
+                                          <span class="text-[#5E5E5E] text-[14px]">L</span>
+                                      </div>
+                                      <div class="h-px bg-gray-200 w-full max-w-[200px]"></div>
+                                      <div class="flex items-center gap-2 py-1 mt-2">
+                                          <span class="min-w-[4rem] text-[#5E5E5E]">کد کالا</span>
+                                          <span class="h-4 w-px bg-gray-200"></span>
+                                          <span class="font-semibold text-amber-500 text-[14px]">۱۹۶۳</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="flex-1">
+                                <div class="flex flex-col items-end text-sm">
+                                    <div class="flex items-center justify-end py-3 mb-1">
+                                        <div class="flex items-center">
+                                            <span class="min-w-[80px] pl-4 text-[14px] text-black-400 lg:text-[13px] xl:text-[14px]">قیمت واحد</span>
+                                            <div class="mx-3 h-4 w-px bg-gray-200"></div>
+                                        </div>
+                                        <div class="flex items-center gap-2 min-w-[150px] justify-end">
+                                            <span class="font-semibold text-[18px] text-black-400 font-bold">۳۹۰,۰۰۰</span>
+                                            <i-con name="toman" class="h-4 w-4 text-black-400"></i-con>
+                                        </div>
+                                    </div>
+                                    <div class="h-px bg-gray-200 w-full max-w-[255px]"></div>
+                                    <div class="flex items-center justify-end py-4">
+                                        <div class="flex items-center">
+                                            <span class="min-w-[80px] pl-4 text-[14px] text-red-600">تخفیف کالا</span>
+                                            <div class="mx-3 h-4 w-px bg-gray-200"></div>
+                                        </div>
+                                        <div class="flex items-center gap-2 min-w-[150px] justify-end">
+                                            <span class="font-semibold text-red-600 text-[20px]">۱۸۰,۰۰۰</span>
+                                            <i-con name="toman" class="h-4 w-4 text-red-600"></i-con>
+                                            <div class="flex h-[17px] items-center justify-center rounded-full bg-red-600 px-[6px] pb-0 pt-[3px] text-xs text-white custom-red-ring">
+                                                <i-con name="percent" class="mb-1 h-2 w-2 text-white"></i-con>
+                                                <span>۱۵</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h-px bg-gray-200 w-full max-w-[255px]"></div>
+                                    <div class="flex items-center justify-end pt-1 mt-1">
+                                        <div class="flex items-center">
+                                            <span class="min-w-[80px] pl-4 text-[14px] text-black-600 font-semibold text-[#363636] lg:text-[12px] xl:text-[14px]">قیمت نهایی</span>
+                                            <div class="mx-3 h-4 w-px bg-gray-200"></div>
+                                        </div>
+                                        <div class="flex items-center gap-2 min-w-[150px] justify-end">
+                                            <span class="text-[18px] text-black-600 font-bold">۱,۰۲۱,۰۰۰</span>
+                                            <i-con name="toman" class="h-4 w-4 text-black-600"></i-con>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  </article>
+  
+                  
+  
+              </section>
+  
+              <!-- SIDEBAR (left on desktop, sticky) -->
+              <aside class="col-span-12 lg:col-span-4 order-1 lg:order-2 mt-4 md:mt-0"> 
+                  <div class="sticky top-6">
+                      <div class="md:rounded-2xl bg-gray-200 p-6 space-y-2 md:space-y-3 total-box">
+  
+                          <!-- Free shipping progress -->
+                          <div class="rounded-xl bg-white p-4 md:p-6">
+                            <div class="flex items-center justify-start gap-3">
+                                <div class="flex items-center gap-2">
+                                    <i-con name="truck-delivery" class="w-6 h-6 text-yellow-600"></i-con>
+                                    <span class="text-[14px] text-black-600 font-semibold mr-4">۳۹۰,۰۰۰</span>
+                                    <i-con name="toman" class="w-4 h-4 text-black-600"></i-con>
+                                </div>
+                                <span class="text-[12px] md:text-[13px] text-black-600 text-xs">خرید بیشتر تا ارسال رایگان</span>
+                                
+                            </div>
+                            <div class="mt-3 md:mt-4 h-[2px] w-full rounded-full bg-gray-200 overflow-hidden">
+                                <div class="h-full w-4/5 rounded-full bg-emerald-500"></div>
+                            </div>
+                        </div>
+  
+                          <!-- Totals -->
+                          <div class="divide-y divide-gray-100 overflow-hidden rounded-xl bg-white px-4 md:px-6 pb-4 pt-4 total-box-inner">
+                            <div class="flex items-center justify-between py-4 md:py-5 px-3"> <div class="flex items-center">
+                                <span class="min-w-[100px] text-sm text-black-400">جمع سفارش</span>
+                                <div class="mx-3 h-3 w-px bg-gray-200 md:mx-4"></div>
+                              </div>
+                              <div class="flex flex-shrink-0 items-center gap-1">
+                                <span class="text-black-400 text-xl">۳۹۰,۰۰۰</span>
+                                <i-con name="toman" class="h-4 w-4 mb-1 text-black-400"></i-con>
+                              </div>
+                            </div>
+                          
+                            <div class="flex items-center justify-between py-4 md:py-5 px-3"> <div class="flex items-center">
+                                <span class="min-w-[100px] text-sm text-red-600">تخفیف کالا</span>
+                                <div class="mx-3 h-3 w-px bg-gray-200 md:mx-4"></div>
+                              </div>
+                              <div class="flex flex-shrink-0 items-center gap-2">
+                                
+                                <span class="font-semibold text-red-600 text-xl">۱۸۰,۰۰۰</span>
+                                <i-con name="toman" class="h-4 w-4 mb-1 text-red-600"></i-con>
+                                <div class="flex items-center justify-center rounded-full bg-red-600 text-xs text-white h-[17px] pt-[3px] pb-0 px-[6px] custom-red-ring">
+                                    <i-con name="percent" class="h-2 w-2 text-white mb-1"></i-con>
+                                    <span class="font-semibold">۱۵</span>
+                                  </div>
+                              </div>
+                            </div>
+                          
+                            <div class="flex items-center justify-between py-4 md:py-5 px-3"> <div class="flex items-center">
+                                <span class="min-w-[100px] text-base text-gray-800 font-semibold">قیمت نهایی</span>
+                                <div class="mx-3 h-3 w-px bg-gray-200 md:mx-4"></div>
+                              </div>
+                              <div class="flex flex-shrink-0 items-center gap-1">
+                                <span class="font-bold text-gray-800 text-2xl text-[#363636]">۱,۰۲۰,۰۰۰</span>
+                                <i-con name="toman" class="h-4 w-4 mb-1 text-gray-800"></i-con>
+                              </div>
+                            </div>
+                          </div>
+  
+                          <!-- CTA -->
+                          <button type="button" class="w-full rounded-full text-white py-3.5 md:py-4 text-[13px] md:text-[14px] font-semibold hover:bg-gray-800 transition-colors mt-4 hidden md:block bg-[#363636]">ثبت و مرحله بعد</button>
+  
+                          <!-- Note -->
+                          <div class="flex items-center gap-3 py-3 hidden md:flex">
+                            <i-con name="alert-circle" class="h-7 w-7 flex-shrink-0 text-black-600"></i-con>
+                            
+                            <div class="h-6 w-px bg-black-100"></div>
+                            
+                            <p class="text-xs  font-normal text-gray-700">
+                                افزودن کالا به سبد خرید به معنی رزرو آن نیست. جهت نهایی کردن خرید پیش از اتمام موجودی، سبد خود را ثبت و خرید را تکمیل کنید.
+                            </p>
+                          </div>
+  
+                      </div>
+                  </div>
+              </aside>
+  
+          </div>
+      </section>  
+      </div>
+    </main>
+
+    <div class="fixed bottom-0 left-0 right-0 bg-white p-3 border-t border-gray-200 shadow-lg xl:hidden z-50">
+        <div class="flex items-center justify-center">
+            <button class="bg-[#363636] text-white font-bold py-3 rounded-full w-full hover:bg-black transition-colors">افزودن به سبد خرید</button>
+        </div>
+    </div>
+    
+    <div data-include="/partials/footer.html" class="hidden md:block"></div>  
+
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/pages/checkout.js"></script>
+
+</body>
+</html>

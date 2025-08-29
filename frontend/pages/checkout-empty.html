@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="راه‌های ارتباط با فروشگاه تیپ نتی و پشتیبانی">
+    <title>دسته بندی تیپ نتی</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+      
+    </style>
+</head>
+<body data-page="category">
+
+    <div data-include="/partials/header.html" class="hidden md:block"></div>
+
+
+    <header class="container w-full bg-white mx-auto">
+      <div class="mx-auto py-3 md:py-14">
+    
+        <!-- Mobile: back/cart row with light bottom border -->
+        <div class="md:hidden border-b border-gray-200 pb-3 mb-4">
+          <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-gray-700 mr-4">
+            <span class="inline-flex items-center justify-center w-12 h-12 bg-white rounded-3xl border border-black-100">
+              <i-con name="arrow-right" class="w-6 h-6 text-black-600 rotate-180">
+              </i-con>
+            </span>
+            <span>سبد خرید</span>
+            <span class="bg-emerald-500 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full">۳</span>
+          </a>
+        </div>
+    
+        <!-- Stepper + Desktop back button in the same row -->
+        <div class="relative">
+    
+          <!-- Desktop: back to shop button (placed at the right of the stepper row) -->
+          <a href="#"
+             class="hidden xl:flex items-center gap-3 text-right absolute right-0 top-1/2 -translate-y-1/2">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-gray-300">
+              <i-con name="arrow-right" class="w-5 h-5 text-yellow-600">
+
+              </i-con>
+            </span>
+            <div class="flex flex-col items-start leading-tight">
+              <span class="text-[14px] font-medium text-black-600 font-semibold">بازگشت به فروشگاه</span>
+              <span class="text-[12px] mt-2 text-black-300">خرید محصولات متنوع و پر از تخفیف</span>
+            </div>    
+          </a>
+    
+          <!-- Stepper -->
+          <div class="flex items-center justify-center gap-1 sm:gap-6 md:gap-6 mt-10">
+    
+            <!-- Step 1 (active) -->
+            <div class="flex flex-col items-center gap-2">
+              <span class="inline-flex p-1 rounded-full ring-2 ring-offset-1 ring-offset-white ring-gray-200">
+                <span class="flex items-center justify-center w-[64px] h-[64px] sm:w-[100px] sm:h-[100px] rounded-full bg-yellow-600 text-white">
+                  <i-con name="shopping-basket-add" class="w-6 h-6 md:w-9 md:h-9 text-white">
+
+                  </i-con>
+                </span>
+              </span>
+              <span class="text-[12px] sm:text-base font-medium text-black-600 mt-3">سبد خرید</span>
+            </div>
+    
+            <!-- Connector 1: longer, closer to circles, vertically aligned higher -->
+            <div class="flex items-center -mt-6 mr-3 ml-0">
+              <span class="block h-px w-6 sm:w-14 md:w-30 bg-gray-200"></span>
+              <span class="block w-1.5 h-1.5 md:w-1 md:h-1 rounded-full bg-gray-200"></span>
+            </div>
+    
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center gap-2">
+              <span class="inline-flex p-1 rounded-full ring-2 ring-offset-1 ring-offset-white ring-gray-200">
+                <span class="flex items-center justify-center w-[64px] h-[64px] sm:w-[100px] sm:h-[100px] rounded-full bg-gray-100">
+                  <i-con name="maps-global" class="w-6 h-6 md:w-9 md:h-9 text-black-300">
+
+                  </i-con>
+                </span>
+              </span>
+              <span class="text-[12px] sm:text-sm md:text-sm text-black-300 mt-3" >آدرس و زمان ارسال</span>
+            </div>
+    
+            <!-- Connector 2: longer, closer to circles, vertically aligned higher; smaller end dot -->
+            <div class="flex items-center -mt-6 mr-0 ml-4">
+              <span class="block h-px w-6 sm:w-14 md:w-30 bg-gray-200"></span>
+              <span class="block w-1.5 h-1.5 md:w-1 md:h-1 rounded-full bg-gray-200"></span>
+            </div>
+    
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center gap-2">
+              <span class="inline-flex p-1 rounded-full ring-2 ring-offset-1 ring-offset-white ring-gray-200">
+                <span class="flex items-center justify-center w-[64px] h-[64px] sm:w-[100px] sm:h-[100px] rounded-full bg-gray-100">
+                  <i-con name="note" class="w-6 h-6 md:w-9 md:h-9 text-black-300">
+
+                  </i-con>
+                </span>
+              </span>
+              <span class="text-[12px] sm:text-base text-black-300 mt-3">پرداخت نهایی</span>
+            </div>
+    
+          </div>
+          <!-- /Stepper -->
+    
+        </div>
+        <!-- /relative -->
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="container py-10 md:py-16 mx-auto">
+      <div class="mx-auto">
+        <section id="content-base" class="rounded-[16px] md:rounded-[20px] md:border border-gray-200 bg-white px-4 sm:px-8 md:px-12 py-12 md:py-16">
+          <div class="flex flex-col items-center text-center">
+            <!-- Empty state emoji/icon -->
+            <i-con name="sad-face" class="w-[90px] h-[90px] md:w-[120px] md:h-[120px] text-gray-400 flex items-center justify-center"></i-con>
+
+            <!-- tiny handle -->
+            <div class="mt-4 w-6 h-1 rounded-full bg-gray-200"></div>
+
+            <h2 class="mt-6 text-[18px] md:text-[24px] font-semibold text-gray-800">سبد خرید شما خالیست!</h2>
+            <p class="mt-2 text-[12px] md:text-[14px] text-gray-500">بهتره یک نگاهی به سایتمون بیندازید.</p>
+
+            <!-- Categories -->
+            <nav class="mt-7 md:mt-8 flex items-center gap-1 md:gap-3 text-amber-500 font-medium">
+              <!-- Smaller text on mobile -->
+              <a class="hover:underline text-[12px] md:text-[14px]" href="#">خیاطی لباس</a>
+              <span class="text-gray-300 text-[10px] md:text-xs mx-2 md:mx-4">/</span>
+              <a class="hover:underline text-[12px] md:text-[14px]" href="#">ست لباس</a>
+              <span class="text-gray-300 text-[10px] md:text-xs mx-2 md:mx-4">/</span>
+              <a class="hover:underline text-[12px] md:text-[14px]" href="#">کیف و کفش</a>
+              <span class="text-gray-300 text-[10px] md:text-xs mx-2 md:mx-4">/</span>
+              <a class="hover:underline text-[12px] md:text-[14px]" href="#">اکسسوری</a>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </main>
+    
+    <div data-include="/partials/footer.html" class="hidden md:block"></div>  
+
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/pages/checkout.js"></script>
+
+</body>
+</html>

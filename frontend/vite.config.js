@@ -39,6 +39,13 @@ export default defineConfig({
         about: resolve(__dirname, "pages/about.html"),
         dashboard: resolve(__dirname, "pages/dashboard.html"),
         category: resolve(__dirname, "pages/category.html"),
+        checkoutAddr: resolve(__dirname, "pages/checkout-addr.html"),
+        checkoutCart: resolve(__dirname, "pages/checkout-cart.html"),
+        checkoutEmpty: resolve(__dirname, "pages/checkout-empty.html"),
+        checkoutPay: resolve(__dirname, "pages/checkout-pay.html"),
+        checkoutDone: resolve(__dirname, "pages/checkout-done.html"),
+        checkoutError: resolve(__dirname, "pages/checkout-error.html"),
+        product: resolve(__dirname, "pages/product.html"),
         // Additional pages can be added here
       },
     },

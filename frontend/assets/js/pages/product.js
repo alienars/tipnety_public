@@ -514,3 +514,252 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   });
 });
+
+
+
+
+
+
+
+// @product-page-slider
+
+const productSwiper = new Swiper(".product-swiper-container", {
+  // معرفی ماژول‌ها به Swiper
+  modules: [Navigation],
+
+  // پارامترهای اصلی
+  loop: true,
+
+  // تنظیمات ریسپانسیو (Breakpoints)
+  breakpoints: {
+    // برای موبایل
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    // برای تبلت
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    // برای دسکتاپ کوچک
+    1024: {
+      slidesPerView: 6, // اینجا در کد قبلی اشتباهی ۶ بود که اصلاح شد
+      spaceBetween: 24,
+    },
+    // برای دسکتاپ بزرگ
+    1920: {
+      slidesPerView: 6,
+      spaceBetween: 24,
+    },
+  },
+
+  // دکمه‌های پیمایش (Navigation)
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  
+});
+
+
+
+
+
+
+
+
+
+// @@change gallery img
+
+(function () {
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+
+  // عناصر موجود فعلی
+  const mainImg = $("#main-image"); // تصویر بزرگ دسکتاپ
+  const swiperImgs = $$(".swiper-main-img"); // اسلایدهای موبایل
+  const thumbs = $$("#thumbnail-container .thumbnail-img"); // بندانگشتی‌ها
+  const colorNameEl = $("#selected-color-name"); // نمایش نام رنگ
+  const swatches = $$(".color-swatch"); // دکمه‌های رنگ
+
+  // رینگ (دایره طوسی تیره) روی رنگ فعال
+  function setActiveSwatch(btn) {
+    swatches.forEach((b) => {
+      b.classList.remove("ring-2", "ring-offset-2", "ring-gray-700", "ring-black");
+    });
+    btn.classList.add("ring-2", "ring-offset-2", "ring-gray-700");
+  }
+
+  // تعویض کامل گالری بر اساس آرایه تصاویر
+  function updateGallery(images) {
+    if (!images || !images.length) return;
+
+    // تصویر اصلی
+    if (mainImg) mainImg.src = images[0];
+
+    // اسلایدهای موبایل (swiper)
+    swiperImgs.forEach((imgEl, i) => {
+      const slide = imgEl.closest(".swiper-slide") || imgEl.parentElement;
+      if (images[i]) {
+        imgEl.src = images[i];
+        slide && slide.classList.remove("hidden");
+      } else {
+        // اگر کمتر از تعداد اسلاید موجود بود، اسلاید اضافی را پنهان کن
+        slide && slide.classList.add("hidden");
+      }
+    });
+
+    // بندانگشتی‌ها
+    thumbs.forEach((thumbEl, i) => {
+      if (images[i]) {
+        thumbEl.src = images[i];
+        thumbEl.classList.remove("hidden");
+      } else {
+        thumbEl.classList.add("hidden");
+      }
+      // ریست حالت انتخاب
+      thumbEl.classList.remove("border-black-200", "opacity-100");
+      thumbEl.classList.add("border-transparent", "opacity-60");
+    });
+    // بندانگشتی اول را فعال کن
+    if (thumbs[0]) {
+      thumbs[0].classList.add("border-black-200", "opacity-100");
+      thumbs[0].classList.remove("border-transparent", "opacity-60");
+    }
+  }
+
+  // کلیک روی دکمه‌های رنگ
+  swatches.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.disabled) return;
+
+      // 1) رینگ رنگ فعال
+      setActiveSwatch(btn);
+
+      // 2) خواندن لیست عکس‌ها (JSON یا لیست کاما)
+      const raw = btn.getAttribute("data-images") || "[]";
+      let images = [];
+      try {
+        images = JSON.parse(raw);
+      } catch {
+        images = raw
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean);
+      }
+
+      // 3) تعویض گالری
+      updateGallery(images);
+
+      // 4) تغییر نام رنگ
+      if (colorNameEl && btn.dataset.color) {
+        colorNameEl.textContent = btn.dataset.color;
+      }
+    });
+  });
+})();
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Size scroller
+  const sizeContainer = document.getElementById("size-container");
+  const sizePrevBtn = document.getElementById("size-prev-btn");
+  const sizeNextBtn = document.getElementById("size-next-btn");
+
+  const checkSizeScroll = () => {
+    if (sizeContainer.scrollWidth > sizeContainer.clientWidth) {
+      sizePrevBtn.classList.remove("hidden");
+      sizeNextBtn.classList.remove("hidden");
+      sizeContainer.classList.add("px-12");
+    } else {
+      sizePrevBtn.classList.add("hidden");
+      sizeNextBtn.classList.add("hidden");
+      sizeContainer.classList.remove("px-12");
+    }
+
+    if (sizeContainer.scrollLeft === 0) {
+      sizePrevBtn.classList.add("opacity-50");
+    } else {
+      sizePrevBtn.classList.remove("opacity-50");
+    }
+
+    if (sizeContainer.scrollLeft + sizeContainer.clientWidth >= sizeContainer.scrollWidth - 1) {
+      // -1 for precision issues
+      sizeNextBtn.classList.add("opacity-50");
+    } else {
+      sizeNextBtn.classList.remove("opacity-50");
+    }
+  };
+
+  sizePrevBtn.addEventListener("click", () => {
+    sizeContainer.scrollBy({
+      left: 150,
+      behavior: "smooth",
+    });
+  });
+
+  sizeNextBtn.addEventListener("click", () => {
+    sizeContainer.scrollBy({
+      left: -150,
+      behavior: "smooth",
+    });
+  });
+
+  sizeContainer.addEventListener("scroll", checkSizeScroll);
+  window.addEventListener("resize", checkSizeScroll);
+  checkSizeScroll();
+
+  // Thumbnail scroller
+  const thumbContainer = document.getElementById("thumbnail-container");
+  const thumbPrevBtn = document.getElementById("thumb-prev-btn");
+  const thumbNextBtn = document.getElementById("thumb-next-btn");
+
+  const checkThumbScroll = () => {
+    if (thumbContainer.scrollHeight > thumbContainer.clientHeight) {
+      thumbPrevBtn.classList.remove("hidden");
+      thumbNextBtn.classList.remove("hidden");
+    } else {
+      thumbPrevBtn.classList.add("hidden");
+      thumbNextBtn.classList.add("hidden");
+    }
+
+    if (thumbContainer.scrollTop === 0) {
+      thumbPrevBtn.classList.add("opacity-50");
+    } else {
+      thumbPrevBtn.classList.remove("opacity-50");
+    }
+
+    if (thumbContainer.scrollTop + thumbContainer.clientHeight >= thumbContainer.scrollHeight - 1) {
+      thumbNextBtn.classList.add("opacity-50");
+    } else {
+      thumbNextBtn.classList.remove("opacity-50");
+    }
+  };
+
+  thumbPrevBtn.addEventListener("click", () => {
+    thumbContainer.scrollBy({
+      top: -100,
+      behavior: "smooth",
+    });
+  });
+
+  thumbNextBtn.addEventListener("click", () => {
+    thumbContainer.scrollBy({
+      top: 100,
+      behavior: "smooth",
+    });
+  });
+
+  thumbContainer.addEventListener("scroll", checkThumbScroll);
+  window.addEventListener("resize", checkThumbScroll);
+  checkThumbScroll();
+});

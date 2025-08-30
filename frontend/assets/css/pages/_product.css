@@ -1,0 +1,27 @@
+.badge-rotator {
+    display: grid;           /* هر دو بچه در یک سلول روی هم */
+    width: max-content;      /* اندازه به‌اندازه محتوا */
+    position: relative;
+  }
+  .badge-rotator > div {
+    grid-area: 1 / 1;        /* هم‌پوشانی */
+    opacity: 0;
+    animation: badgeFade 6s ease-in-out infinite; /* هر آیتم ۳ثانیه نمایان می‌شود */
+    will-change: opacity, transform;
+  }
+  .badge-rotator > div:nth-child(1) { animation-delay: 0s; }
+  .badge-rotator > div:nth-child(2) { animation-delay: 3s; }
+
+  @keyframes badgeFade {
+    0%   { opacity: 0; transform: translateY(4px); }
+    8%   { opacity: 1; transform: translateY(0); }   /* فید-این سریع */
+    42%  { opacity: 1; transform: translateY(0); }   /* نمایش پایدار ~2ث */
+    50%  { opacity: 0; transform: translateY(-2px);} /* فید-اوت کوتاه */
+    100% { opacity: 0; transform: translateY(-2px);}
+  }
+
+  /* احترام به کاهش حرکت سیستم: آیتم دوم را پنهان کن و انیمیشن را متوقف */
+  @media (prefers-reduced-motion: reduce) {
+    .badge-rotator > div { animation: none !important; opacity: 1; }
+    .badge-rotator > div:nth-child(2) { display: none; }
+  }

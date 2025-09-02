@@ -1,61 +1,41 @@
 .badge-rotator {
-      display: grid; /* استفاده از گرید برای قرار دادن آیتم‌ها روی هم */
-      place-items: center; /* مرکزچین کردن آیتم‌ها */
-      width: max-content; /* عرض به اندازه محتوا */
+      display: grid;
+      place-items: center;
+      width: max-content;
       position: relative;
     }
 
     .badge-rotator > div {
-      grid-area: 1 / 1; /* هر دو آیتم در یک سلول قرار می‌گیرند تا روی هم بیفتند */
-      
-      /* تنظیمات اولیه انیمیشن */
-      opacity: 0; /* هر دو آیتم در ابتدا کاملا شفاف (پنهان) هستند */
+      grid-area: 1 / 1;
+      opacity: 0;
       animation-name: badgeFadeInOut;
-      animation-duration: 10s; /* کل چرخه انیمیشن ۱۰ ثانیه است (۵ ثانیه برای هر آیتم) */
+      animation-duration: 10s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
-      
-      /* بهینه‌سازی عملکرد انیمیشن در مرورگرها */
       will-change: opacity;
     }
 
-    /* انیمیشن آیتم اول بلافاصله (با تاخیر ۰ ثانیه) شروع می‌شود.
-    */
     .badge-rotator > div:nth-child(1) {
       animation-delay: 0s;
     }
 
-    /* انیمیشن آیتم دوم با ۵ ثانیه تأخیر شروع می‌شود،
-      دقیقا زمانی که آیتم اول در حال محو شدن است.
-    */
     .badge-rotator > div:nth-child(2) {
       animation-delay: 5s;
     }
 
-    /*
-      تعریف کی‌فریم‌های انیمیشن (Keyframes)
-      یک چرخه کامل ۱۰ ثانیه‌ای که ۵ ثانیه نمایش و ۵ ثانیه پنهان بودن را مدیریت می‌کند.
-    */
+  
     @keyframes badgeFadeInOut {
-      /* فاز نمایش (مجموعا ۵ ثانیه) */
       0% {
-        opacity: 0; /* شروع از حالت پنهان */
+        opacity: 0;
       }
-      /* در ۰.۵ ثانیه (۵٪ از ۱۰ ثانیه) ظاهر شو و تا ثانیه ۴.۵ (۴۵٪) ثابت بمان */
       5%, 45% {
         opacity: 1; 
       }
-      
-      /* فاز پنهان شدن (مجموعا ۵ ثانیه) */
-      /* در ۰.۵ ثانیه (از ۴۵٪ تا ۵۰٪) محو شو و تا انتهای چرخه پنهان بمان */
       50%, 100% {
         opacity: 0;
       }
     }
 
-    /* برای کاربرانی که درخواست کاهش حرکت (reduced motion) را در سیستم‌عامل خود فعال کرده‌اند،
-      انیمیشن را غیرفعال کرده و فقط آیتم اول را نمایش می‌دهیم تا تجربه بهتری داشته باشند.
-    */
     @media (prefers-reduced-motion: reduce) {
       .badge-rotator > div {
         animation: none !important;
@@ -67,8 +47,8 @@
     }
 
   .size-btn {
-    border-color: #d1d5db; /* border-gray-300 */
-    color: #4b5563; /* text-gray-600 */
+    border-color: #d1d5db;
+    color: #4b5563;
     background-color: transparent;
   }
   .size-btn:hover {
@@ -82,31 +62,106 @@
   }
 
  .product-page-slider .swiper-slide {
-  opacity: 0.4; /* به طور پیش‌فرض همه اسلایدها شفاف‌تر باشند */
-  transition: opacity 0.4s ease; /* یک انیمیشن نرم برای تغییر شفافیت */
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
 }
 
 .product-page-slider .swiper-slide.swiper-slide-active {
-  opacity: 1; /* اسلایدی که در مرکز قرار دارد کاملا واضح باشد */
+  opacity: 1;
 }
 
 
 
 
-.tab-button.active {
+#size-guide-modal .tab-button.active {
             border-color: #363636;
             background-color: #ffffff;
         }
-        /* Style for inactive tabs */
-        .tab-button:not(.active) {
+
+        #size-guide-modal .tab-button:not(.active) {
             border-color: #f5f5f6;
         }
-        /* Vertical dividers for the table */
-        .table-container table th,
-        .table-container table td {
+
+        #size-guide-modal .table-container table th,
+        #size-guide-modal .table-container table td {
             border-left: 1px solid #ebebeb;
         }
-        .table-container table th:last-child,
-        .table-container table td:last-child {
+        #size-guide-modal .table-container table th:last-child,
+        #size-guide-modal .table-container table td:last-child {
             border-left: none;
+        }
+
+
+
+
+
+        .thumbnail-scrollbar::-webkit-scrollbar {
+          width: 4px;
+      }
+      .thumbnail-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+      }
+      .thumbnail-scrollbar::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 6px;
+      }
+      .thumbnail-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #555;
+      }
+
+      .size-scrollbar::-webkit-scrollbar {
+          height: 0px;
+          background: transparent;
+      }
+      .product-page-top-section .swiper-pagination{
+        top:-40px;
+      }
+
+      .product-page-top-section .swiper-pagination-bullet {
+          width: 20px !important;
+          height: 4px !important;
+          background-color: #ffffff !important;
+          opacity: 1 !important;
+          border-radius: 32px !important;
+      }
+      .product-page-top-section .swiper-pagination-bullet-active {
+          background-color: #363636 !important;
+          width: 20px !important;
+          
+      }
+      .nav-link.active {
+            border-color: #363636;
+            color: #363636;
+            font-weight: 700;
+        }
+        .truncated-text {
+            max-height: 7rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .truncated-text::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 3rem;
+            background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+        }
+        .truncated-text.expanded {
+            max-height: none;
+        }
+        .truncated-text.expanded::after {
+            display: none;
+        }
+        .custom-red-ring {
+            box-shadow: 0 0 0 2px rgba(220, 49, 52, 0.4);
+        }
+        .thumbnail-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .thumbnail-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }

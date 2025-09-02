@@ -1,36 +1,62 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper(".swiper-container", {
+  modules: [EffectCoverflow, Pagination],
   loop: true,
   // Base settings (for mobile)
-  slidesPerView: 1.25,
+  slidesPerView: 1.7,
   centeredSlides: true,
   spaceBetween: 16,
   pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    el: ".swiper-pagination",
+    clickable: true,
   },
-   // Responsive breakpoints
+  effect: "coverflow", // حالا این افکت شناخته می‌شود
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 0,
+    modifier: 0,
+    slideShadows: false,
+  },
+  // Responsive breakpoints
   breakpoints: {
-      // when window width is >= 768px
-      768: {
-          slidesPerView: 2.5,
-          spaceBetween: 20,
-          centeredSlides: false,
-      },
-      // when window width is >= 1024px
-      1024: {
-          slidesPerView: 3.5,
-          spaceBetween: 24,
-          centeredSlides: false,
-      }
-  }
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+      centeredSlides: false,
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 3.5,
+      spaceBetween: 24,
+      centeredSlides: false,
+    },
+  },
+  // on: {
+  //   init: function () {
+  //     updateOpacity(this);
+  //   },
+  //   slideChangeTransitionEnd: function () {
+  //     updateOpacity(this);
+  //   }
+  // }
 });
+
+// function updateOpacity(swiper) {
+//   swiper.slides.forEach((slide) => {
+//     slide.classList.add("opacity-50", "transition-opacity", "duration-300");
+//     slide.classList.remove("opacity-100");
+//   });
+//   swiper.slides[swiper.activeIndex].classList.remove("opacity-50");
+//   swiper.slides[swiper.activeIndex].classList.add("opacity-100");
+// }
 
 // Desktop gallery logic
 document.addEventListener('DOMContentLoaded', function() {
@@ -587,9 +613,9 @@ const productSwiper = new Swiper(".product-swiper-container", {
   // رینگ (دایره طوسی تیره) روی رنگ فعال
   function setActiveSwatch(btn) {
     swatches.forEach((b) => {
-      b.classList.remove("ring-2", "ring-offset-2", "ring-gray-700", "ring-black");
+      b.classList.remove("ring-1", "ring-offset-2", "ring-gray-600", "ring-black");
     });
-    btn.classList.add("ring-2", "ring-offset-2", "ring-gray-700");
+    btn.classList.add("ring-1", "ring-offset-2", "ring-gray-600");
   }
 
   // تعویض کامل گالری بر اساس آرایه تصاویر
@@ -762,4 +788,123 @@ document.addEventListener("DOMContentLoaded", function () {
   thumbContainer.addEventListener("scroll", checkThumbScroll);
   window.addEventListener("resize", checkThumbScroll);
   checkThumbScroll();
+});
+
+
+
+
+
+
+
+// @size options
+document.addEventListener("DOMContentLoaded", function () {
+  // 1. انتخاب تمام المان‌های مورد نیاز
+  const sizeContainer = document.getElementById("size-container");
+  const sizeButtons = sizeContainer.querySelectorAll(".size-btn");
+  const selectedSizeText = document.getElementById("selected-size-text");
+
+  // تابع برای مدیریت کلیک روی دکمه سایز
+  function handleSizeClick(event) {
+    // ابتدا کلاس active را از همه دکمه‌ها حذف می‌کنیم
+    sizeButtons.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    // سپس کلاس active را فقط به دکمه کلیک شده اضافه می‌کنیم
+    const clickedButton = event.currentTarget;
+    clickedButton.classList.add("active");
+
+    // در نهایت، متن سایز انتخاب شده را به‌روزرسانی می‌کنیم
+    selectedSizeText.textContent = clickedButton.textContent;
+  }
+
+  // به هر دکمه سایز یک Event Listener اضافه می‌کنیم
+  sizeButtons.forEach((button) => {
+    button.addEventListener("click", handleSizeClick);
+  });
+
+  // مقداردهی اولیه متن سایز بر اساس دکمه‌ای که از ابتدا کلاس active دارد
+  const initialActiveButton = sizeContainer.querySelector(".size-btn.active");
+  if (initialActiveButton) {
+    selectedSizeText.textContent = initialActiveButton.textContent;
+  }
+});
+
+
+
+
+
+
+
+// @@size-modal
+document.addEventListener("DOMContentLoaded", () => {
+  // Select elements
+  const openModalBtn = document.getElementById("open-size-guide-btn"); // دکمه‌ای که مودال را باز می‌کند
+  const closeModalBtn = document.getElementById("close-modal-btn");
+  const modal = document.getElementById("size-guide-modal");
+  const modalPanel = document.getElementById("modal-panel"); // پنل داخلی را انتخاب می‌کنیم
+  const tabs = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
+
+  // --- Modal Animation Logic ---
+  const openModal = () => {
+    if (!modal || !modalPanel) return;
+
+    modal.classList.remove("pointer-events-none");
+    modal.classList.remove("opacity-0");
+
+    // با یک تأخیر بسیار کوتاه، کلاس اسکیل را تغییر می‌دهیم تا انیمیشن اجرا شود
+    requestAnimationFrame(() => {
+      modalPanel.classList.remove("scale-95");
+      modalPanel.classList.add("scale-100");
+    });
+  };
+
+  const closeModal = () => {
+    if (!modal || !modalPanel) return;
+
+    modal.classList.add("opacity-0");
+    modalPanel.classList.remove("scale-100");
+    modalPanel.classList.add("scale-95");
+
+    // بعد از پایان انیمیشن (300 میلی‌ثانیه)، مودال را غیرقابل کلیک می‌کنیم
+    setTimeout(() => {
+      modal.classList.add("pointer-events-none");
+    }, 300);
+  };
+
+  // --- Event Listeners ---
+  if (openModalBtn) {
+    openModalBtn.addEventListener("click", openModal);
+  }
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", closeModal);
+  }
+
+  // بستن مودال با کلیک روی پس‌زمینه
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // بستن مودال با دکمه Escape
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.classList.contains("opacity-0")) {
+      closeModal();
+    }
+  });
+
+  // --- Tabs Logic (بدون تغییر) ---
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = document.querySelector(tab.dataset.tabTarget);
+      tabs.forEach((t) => t.classList.remove("active"));
+      contents.forEach((c) => c.classList.add("hidden"));
+      tab.classList.add("active");
+      if (target) {
+        target.classList.remove("hidden");
+      }
+    });
+  });
 });

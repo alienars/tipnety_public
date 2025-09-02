@@ -1,27 +1,112 @@
 .badge-rotator {
-    display: grid;           /* هر دو بچه در یک سلول روی هم */
-    width: max-content;      /* اندازه به‌اندازه محتوا */
-    position: relative;
-  }
-  .badge-rotator > div {
-    grid-area: 1 / 1;        /* هم‌پوشانی */
-    opacity: 0;
-    animation: badgeFade 6s ease-in-out infinite; /* هر آیتم ۳ثانیه نمایان می‌شود */
-    will-change: opacity, transform;
-  }
-  .badge-rotator > div:nth-child(1) { animation-delay: 0s; }
-  .badge-rotator > div:nth-child(2) { animation-delay: 3s; }
+      display: grid; /* استفاده از گرید برای قرار دادن آیتم‌ها روی هم */
+      place-items: center; /* مرکزچین کردن آیتم‌ها */
+      width: max-content; /* عرض به اندازه محتوا */
+      position: relative;
+    }
 
-  @keyframes badgeFade {
-    0%   { opacity: 0; transform: translateY(4px); }
-    8%   { opacity: 1; transform: translateY(0); }   /* فید-این سریع */
-    42%  { opacity: 1; transform: translateY(0); }   /* نمایش پایدار ~2ث */
-    50%  { opacity: 0; transform: translateY(-2px);} /* فید-اوت کوتاه */
-    100% { opacity: 0; transform: translateY(-2px);}
+    .badge-rotator > div {
+      grid-area: 1 / 1; /* هر دو آیتم در یک سلول قرار می‌گیرند تا روی هم بیفتند */
+      
+      /* تنظیمات اولیه انیمیشن */
+      opacity: 0; /* هر دو آیتم در ابتدا کاملا شفاف (پنهان) هستند */
+      animation-name: badgeFadeInOut;
+      animation-duration: 10s; /* کل چرخه انیمیشن ۱۰ ثانیه است (۵ ثانیه برای هر آیتم) */
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      
+      /* بهینه‌سازی عملکرد انیمیشن در مرورگرها */
+      will-change: opacity;
+    }
+
+    /* انیمیشن آیتم اول بلافاصله (با تاخیر ۰ ثانیه) شروع می‌شود.
+    */
+    .badge-rotator > div:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    /* انیمیشن آیتم دوم با ۵ ثانیه تأخیر شروع می‌شود،
+      دقیقا زمانی که آیتم اول در حال محو شدن است.
+    */
+    .badge-rotator > div:nth-child(2) {
+      animation-delay: 5s;
+    }
+
+    /*
+      تعریف کی‌فریم‌های انیمیشن (Keyframes)
+      یک چرخه کامل ۱۰ ثانیه‌ای که ۵ ثانیه نمایش و ۵ ثانیه پنهان بودن را مدیریت می‌کند.
+    */
+    @keyframes badgeFadeInOut {
+      /* فاز نمایش (مجموعا ۵ ثانیه) */
+      0% {
+        opacity: 0; /* شروع از حالت پنهان */
+      }
+      /* در ۰.۵ ثانیه (۵٪ از ۱۰ ثانیه) ظاهر شو و تا ثانیه ۴.۵ (۴۵٪) ثابت بمان */
+      5%, 45% {
+        opacity: 1; 
+      }
+      
+      /* فاز پنهان شدن (مجموعا ۵ ثانیه) */
+      /* در ۰.۵ ثانیه (از ۴۵٪ تا ۵۰٪) محو شو و تا انتهای چرخه پنهان بمان */
+      50%, 100% {
+        opacity: 0;
+      }
+    }
+
+    /* برای کاربرانی که درخواست کاهش حرکت (reduced motion) را در سیستم‌عامل خود فعال کرده‌اند،
+      انیمیشن را غیرفعال کرده و فقط آیتم اول را نمایش می‌دهیم تا تجربه بهتری داشته باشند.
+    */
+    @media (prefers-reduced-motion: reduce) {
+      .badge-rotator > div {
+        animation: none !important;
+        opacity: 1;
+      }
+      .badge-rotator > div:nth-child(2) {
+        display: none;
+      }
+    }
+
+  .size-btn {
+    border-color: #d1d5db; /* border-gray-300 */
+    color: #4b5563; /* text-gray-600 */
+    background-color: transparent;
+  }
+  .size-btn:hover {
+    border-color: #000;
+  }
+  .size-btn.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+    font-weight: 600;
   }
 
-  /* احترام به کاهش حرکت سیستم: آیتم دوم را پنهان کن و انیمیشن را متوقف */
-  @media (prefers-reduced-motion: reduce) {
-    .badge-rotator > div { animation: none !important; opacity: 1; }
-    .badge-rotator > div:nth-child(2) { display: none; }
-  }
+ .product-page-slider .swiper-slide {
+  opacity: 0.4; /* به طور پیش‌فرض همه اسلایدها شفاف‌تر باشند */
+  transition: opacity 0.4s ease; /* یک انیمیشن نرم برای تغییر شفافیت */
+}
+
+.product-page-slider .swiper-slide.swiper-slide-active {
+  opacity: 1; /* اسلایدی که در مرکز قرار دارد کاملا واضح باشد */
+}
+
+
+
+
+.tab-button.active {
+            border-color: #363636;
+            background-color: #ffffff;
+        }
+        /* Style for inactive tabs */
+        .tab-button:not(.active) {
+            border-color: #f5f5f6;
+        }
+        /* Vertical dividers for the table */
+        .table-container table th,
+        .table-container table td {
+            border-left: 1px solid #ebebeb;
+        }
+        .table-container table th:last-child,
+        .table-container table td:last-child {
+            border-left: none;
+        }

@@ -1,32 +1,52 @@
-/**
- * Slider Components Initialization
- * Handles all Swiper slider instances across the site
- */
+// @@main hero-slider
 export function initSliders() {
-    const { Navigation, Pagination, Autoplay, EffectFade } = window.SwiperModules;
+    const { Navigation, Pagination, Autoplay } = window.SwiperModules;
 
     // Initialize main hero section slider
     const heroSliderEl = document.querySelector('.hero-slider');
     if (heroSliderEl) {
         new Swiper(heroSliderEl, {
-            modules: [Navigation, Pagination, Autoplay, EffectFade],
-            loop: true,
-            effect: 'fade',
-            fadeEffect: { crossFade: true },
-            autoplay: { 
-                delay: 5000, 
-                disableOnInteraction: false 
+          modules: [Navigation, Pagination, Autoplay],
+          loop: true,
+          loopedSlides: 3, // تعداد اسلایدهای شبیه‌سازی‌شده برای حلقه
+          autoplay: {
+            delay: 50000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".hero-slider-next",
+            prevEl: ".hero-slider-prev",
+          },
+          breakpoints: {
+            // تنظیمات برای موبایل (تا عرض 1023 پیکسل)
+            320: {
+              slidesPerView: 1.2, // تغییر از 1.2 به 1
+              centeredSlides: false, // غیرفعال کردن centered
+              spaceBetween: 16,
+              slidesOffsetBefore: 15,
             },
-            pagination: { 
-                el: '.swiper-pagination', 
-                clickable: true 
+            // تنظیمات برای دسکتاپ (از عرض 1024 پیکسل به بالا)
+            1024: {
+              slidesPerView: 1,
+              centeredSlides: false,
+              spaceBetween: 0,
             },
-            navigation: { 
-                nextEl: '.hero-slider-next', 
-                prevEl: '.hero-slider-prev' 
-            }
+          },
         });
     }
+
+
+  // @@mobile mini pro slider
+  var swiper = new Swiper(".home-mini-swiper-mobile", {
+    slidesPerView: 3.5, // نمایش 3.5 اسلاید در هر نما
+    spaceBetween: 8, // فاصله 8 پیکسلی بین اسلایدها
+    freeMode: true, // برای اسکرول نرم و روان
+  });
+
 
     // Initialize product offers slider with responsive behavior
     document.querySelectorAll('.product-slider-component').forEach(component => {

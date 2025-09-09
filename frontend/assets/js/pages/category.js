@@ -343,28 +343,31 @@ const toggleText = document.getElementById('toggle-text');
 const toggleIcon = document.getElementById('toggle-icon');
 const fadeOverlay = document.getElementById('fade-overlay');
 
-const collapsedHeight = textContainer.style.maxHeight || window.getComputedStyle(textContainer).maxHeight;
+if (textContainer) {
+  const collapsedHeight = textContainer.style.maxHeight || window.getComputedStyle(textContainer).maxHeight;
+}
+if (toggleButton) {
+  toggleButton.addEventListener("click", () => {
+    const isExpanded = textContainer.classList.contains("expanded");
 
-toggleButton.addEventListener('click', () => {
-  const isExpanded = textContainer.classList.contains('expanded');
-
-  if (isExpanded) {
-    // Collapse text
-    textContainer.style.maxHeight = collapsedHeight;
-    toggleText.textContent = 'مشاهده بیشتر';
-    toggleIcon.classList.remove('rotate-180');
-    fadeOverlay.style.opacity = '1';
-    textContainer.classList.remove('expanded');
-  } else {
-    // Expand text
-    const buffer = 30;
-    textContainer.style.maxHeight = (textContainer.scrollHeight + buffer) + 'px';
-    toggleText.textContent = 'مشاهده کمتر';
-    toggleIcon.classList.add('rotate-180');
-    fadeOverlay.style.opacity = '0';
-    textContainer.classList.add('expanded');
-  }
-});
+    if (isExpanded) {
+      // Collapse text
+      textContainer.style.maxHeight = collapsedHeight;
+      toggleText.textContent = "مشاهده بیشتر";
+      toggleIcon.classList.remove("rotate-180");
+      fadeOverlay.style.opacity = "1";
+      textContainer.classList.remove("expanded");
+    } else {
+      // Expand text
+      const buffer = 30;
+      textContainer.style.maxHeight = textContainer.scrollHeight + buffer + "px";
+      toggleText.textContent = "مشاهده کمتر";
+      toggleIcon.classList.add("rotate-180");
+      fadeOverlay.style.opacity = "0";
+      textContainer.classList.add("expanded");
+    }
+  });
+}
 
 // ===== PRODUCT CARD SIZE SELECTOR FUNCTIONALITY =====
 document.addEventListener('DOMContentLoaded', () => {

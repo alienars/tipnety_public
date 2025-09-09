@@ -43,11 +43,7 @@ export function authForm() {
                 this.step = 'otp_entry';
                 this.timer.start(); // شروع تایمر
             }
-            Alpine.store('notifications').success(
-                'ارسال موفق!', 
-                'کد جدید با موفقیت برای شما ارسال شد.',
-                3000 
-            );
+            Alpine.store("notifications").success("ارسال موفق!", "کد جدید با موفقیت برای شما ارسال شد.", 3000);
         },
 
         resetTimer() {

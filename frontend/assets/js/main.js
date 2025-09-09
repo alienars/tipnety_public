@@ -19,7 +19,7 @@ import "swiper/css/autoplay";
 import { authForm, initAuthPage } from "./pages/auth.js";
 import { initHeader } from "./components/header.js";
 import { initFooter } from "./components/footer.js";
-import { initSliders } from "./components/sliders.js";
+// import { initSliders } from "./components/sliders.js";
 import { notificationStore } from "./components/notifications.js";
 import { loadIcons } from './components/icon-loader.js';
 import { loadPartials } from './utils/partial-loader.js';
@@ -93,7 +93,7 @@ function initializeApp() {
     loadIcons();
     initHeader();
     initFooter();
-    initSliders();
+    // initSliders();
     initPageHeaders();
     persianizeInitialNumbers();
 

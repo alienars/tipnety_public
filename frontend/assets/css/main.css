@@ -24,6 +24,7 @@
 @import "./pages/_checkout.css";
 @import "./pages/_category.css";
 @import "./pages/_product.css";
+@import "./pages/_home.css";
 /* menu custom css */
 
 
@@ -67,10 +68,10 @@
 
 /* استایل pagination موبایل برای اسلایدر اصلی */
 .hero-slider .swiper-pagination-bullet {
-    @apply w-6 h-1.5 rounded-sm bg-white opacity-80 transition-all duration-300;
+    @apply w-6 h-1 rounded-sm bg-white opacity-80 transition-all duration-300;
 }
 .hero-slider .swiper-pagination-bullet-active {
-    @apply w-10 bg-amber-500 opacity-100;
+    @apply w-6 h-1 bg-amber-500 opacity-100;
 }
 
 

@@ -1,0 +1,45 @@
+
+.home-page .top-text {
+  background-color: #DC3134;
+  box-shadow: 0 0 0 3px rgba(220, 49, 52, 0.32);
+  height: 20px;
+  top: 16px;
+  border-radius: 32px;
+  padding: 12px 8px 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.section-three-col .top-text {
+    background-color: #DC3134;
+    box-shadow: 0 0 0 3px rgba(220, 49, 52, 0.32);
+    height: 22px;
+    top: 16px;
+    border-radius: 32px;
+    /* padding: 18px 18px 16px 18px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 100s linear infinite;
+}
+
+.home-mini-slider-desktop .swiper-slide {
+    width: 240px !important; /* عرض ثابت و غیرقابل تغییر */
+    flex-shrink: 0;          /* جلوگیری از کوچک شدن اسلاید */
+}

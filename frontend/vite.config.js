@@ -46,6 +46,7 @@ export default defineConfig({
         checkoutDone: resolve(__dirname, "pages/checkout-done.html"),
         checkoutError: resolve(__dirname, "pages/checkout-error.html"),
         product: resolve(__dirname, "pages/product.html"),
+        home: resolve(__dirname, "pages/home.html"),
         // Additional pages can be added here
       },
     },

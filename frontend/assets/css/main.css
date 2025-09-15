@@ -24,7 +24,9 @@
 @import "./pages/_checkout.css";
 @import "./pages/_category.css";
 @import "./pages/_product.css";
+@import "./pages/_landing.css";
 @import "./pages/_home.css";
+@import "./pages/_sets.css";
 /* menu custom css */
 
 
@@ -44,13 +46,25 @@
     background: #a8a8a8;
   }
   
-  /* استایل برای آیتم فعال در منوی دسته‌بندی موبایل */
+    .custom-hover-btn {
+        background-color: white;
+        transition: background-color 0.2s, color 0.2s;
+    }
+    .custom-hover-btn:hover {
+        background-color: #FCB108;
+    }
+
+
   .mobile-category-active {
-    background-color: #f2f4f7; /* gray-100 */
+    background-color: #f2f4f7;
   }
 
-  
-
+  .zi-999 {
+    z-index: 999 !important;
+  }
+  .zi-9999 {
+    z-index: 9999 !important;
+  }
 
 /* ✅ استایل‌های اضافه شده برای دکمه‌های Swiper */
 .hero-slider-nav button {
@@ -75,7 +89,19 @@
 }
 
 
-
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    /* 1. با این ترفند یک سایه داخلی سفید روی پس‌زمینه آبی می‌کشیم و آن را پنهان می‌کنیم */
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    
+    /* 2. (اختیاری ولی پیشنهادی) رنگ متن را هم به مشکی تغییر می‌دهیم تا خوانا بماند */
+    -webkit-text-fill-color: #000 !important;
+    
+    /* 3. (ترفند اضافی) با ایجاد یک انیمیشن خیلی طولانی، مرورگر را از تغییر رنگ منصرف می‌کنیم */
+    transition: background-color 5000s ease-in-out 0s;
+}
 
 
 /* testtttt */
@@ -115,7 +141,6 @@
     font-size: 16px;
     font-weight: bold;
 }
-
 
 
 /* 4cards-offers */

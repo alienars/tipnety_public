@@ -75,6 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update the confirm amount when the input field changes
     chargeInput.addEventListener('input', () => {
         const value = getNumericValue(chargeInput.value);
-        confirmAmount.textContent = formatNumber(value);
+        updateDisplay(value);
     });
   });

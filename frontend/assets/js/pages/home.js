@@ -283,16 +283,16 @@ const popularBrandsSwiper = new Swiper(".popularBrandsSwiper", {
 
   breakpoints: {
     350: {
-      slidesPerView: 2.2,
+      slidesPerView: 2,
       spaceBetween: 8,
       slidesOffsetBefore: 16,
     },
     640: {
-      slidesPerView: 3.5,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 4.5,
+      slidesPerView: 4,
       spaceBetween: 30,
     },
   },

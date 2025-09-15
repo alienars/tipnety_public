@@ -1,0 +1,101 @@
+.set-page .swiper-button-next::after,
+.set-page .swiper-button-prev::after {
+  content: none !important;
+}
+.set-page .swiper-button-next,
+.set-page .swiper-button-prev {
+  background-color: transparent;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  color: inherit;
+  position: absolute;
+}
+.set-page .swiper-button-next{
+    right: 0;
+    padding: 5px;
+    background: #fff;
+    top: 58%;
+}
+.set-page .swiper-button-prev{
+    left: 0;
+    padding: 5px;
+    background: #fff;
+    top: 58%;
+}
+
+.custom-select-wrapper.is-open .arrow-icon {
+    transform: rotate(180deg);
+}
+.custom-select-wrapper.is-open .custom-select-trigger {
+    border-radius: 24px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.custom-options ul::-webkit-scrollbar {
+    width: 4px;
+}
+.custom-options ul::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 10px;
+}
+.custom-options ul::-webkit-scrollbar-thumb {
+    background: #fca120;
+    border-radius: 0;
+    width: 4px;
+}
+
+@keyframes fadeIn {from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.animate-fadeIn {animation: fadeIn 0.3s ease-out;}
+
+#productModal .swiper {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  height: 22rem !important; /* h-64 */
+}
+
+#productModal .swiper-wrapper {
+  display: flex !important;
+  transition-property: transform !important;
+  box-sizing: content-box !important;
+}
+
+#productModal .swiper-slide {
+  flex-shrink: 0 !important;
+  position: relative !important;
+  transition-property: transform !important;
+}
+
+#productModal .swiper-slide img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  max-width: none !important;
+}
+
+@media (min-width: 768px) {
+  #productModal .swiper {
+    height: 20rem !important; /* h-80 */
+  }
+}
+
+.set-page .swiper-pagination-bullet{
+	width: 30px !important;
+	height: 5px !important;
+	background: #ffffff !important;
+}
+
+.set-page .swiper-pagination-bullet-active{
+	width: 30px !important;
+	height: 5px !important;
+	background: #FCB108 !important;
+}
+
+@media (max-width: 768px) {
+  .set-page .product-tag {
+        margin: 0.3em 0.3em 0 0;
+    }
+}

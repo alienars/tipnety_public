@@ -1,0 +1,21 @@
+
+.mini-pro-main .mini-pro-main-inner.transparent {
+  background: linear-gradient(to bottom, #F5F5F6 30%, #ffffff 30%);
+}
+
+@media (min-width: 768px) {
+  .mini-pro-main .mini-pro-main-inner.transparent {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #fbd583 0%, #FFFFFF00 100%), url('../../../assets/img/landing-product-men.png');
+    
+    /* می‌توانید این دو خط را هم برای کنترل بهتر تصویر اضافه کنید */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.tab-btn.active {
+        background-color: #FCB108; /* این کد رنگ معادل yellow-600 در Tailwind است */
+        color: white;
+        border-color: transparent;
+    }

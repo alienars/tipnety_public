@@ -109,11 +109,115 @@
         </div>
 
         <!-- دکمه سبد خرید با badge -->
-        <a href="#" id="menu-user-basket" class="px-5 h-[44px] rounded-full box-border border border-black-100 hover:bg-gray-100 transition-colors relative flex justify-center items-center">
-          <i-con name="shopping-basket" class="w-5 h-5 text-stone-950"></i-con>
-          <!-- Badge -->
-          <span class="absolute -top-[8px] -left-[12px] pt-1 font-bold bg-green-500 text-white text-base w-6 h-6 flex items-center justify-center rounded-tl-xl rounded-tr-xl rounded-bl-xl">۵</span>
-        </a>
+        <div class="relative">
+  <a href="#" id="menu-user-basket" class="px-5 h-[44px] rounded-full box-border border border-black-100 hover:bg-gray-100 transition-colors relative flex justify-center items-center">
+    <i-con name="shopping-basket" class="w-5 h-5 text-stone-950" data-loaded="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" aria-hidden="true" role="img" class="w-5 h-5 text-stone-950 transition-opacity duration-300"><g clip-path="url(#clip0_1096_383)"><path d="M3.22757 14.1829L2.2246 8.19985C2.07296 7.29524 1.99713 6.84293 2.23994 6.54647C2.48275 6.25 2.92901 6.25 3.82153 6.25H16.1788C17.0713 6.25 17.5176 6.25 17.7604 6.54647C18.0032 6.84293 17.9274 7.29524 17.7757 8.19985L16.7727 14.1829C16.4403 16.1659 16.2741 17.1574 15.5955 17.7454C14.9168 18.3333 13.9385 18.3333 11.982 18.3333H8.01834C6.06179 18.3333 5.08352 18.3333 4.40487 17.7454C3.72622 17.1574 3.56001 16.1659 3.22757 14.1829Z" stroke="currentColor" stroke-width="2"></path><path d="M14.5837 6.25C14.5837 3.71869 12.5316 1.66666 10.0003 1.66666C7.46902 1.66666 5.41699 3.71869 5.41699 6.25" stroke="currentColor" stroke-width="2"></path></g><defs><clipPath id="clip0_1096_383"><rect width="20" height="20" fill="white"></rect></clipPath></defs></svg>
+    </i-con>
+    <span class="absolute -top-[8px] -left-[12px] pt-1 font-bold bg-green-500 text-white text-base w-6 h-6 flex items-center justify-center rounded-tl-xl rounded-tr-xl rounded-bl-xl">۵</span>
+  </a>
+
+  <div id="basket-popup" class="hidden absolute top-full left-0 mt-2 w-full max-w-md md:w-[480px] z-50">
+    <div class="flex flex-col h-[calc(100vh-80px)] md:h-auto md:max-h-[700px] bg-[#f5f5f6] rounded-2xl shadow-lg overflow-hidden">
+      <header class="p-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <div class="bg-[#363636] text-white text-xs font-light rounded-full w-6 h-5 pt-1 flex items-center justify-center">۵</div>
+          <p class="font-medium text-xs text-[#363636]">کالا</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <p class="font-medium text-xs text-[#363636]">مشاهده سبد خرید</p>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="w-5 h-5"><path d="M12.5 15L8.20711 10.7071C7.87377 10.3738 7.70711 10.2071 7.70711 10C7.70711 9.79289 7.87377 9.62623 8.20711 9.29289L12.5 5" stroke="#363636" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+      </header>
+      
+      <main class="flex-1 overflow-y-auto px-4 space-y-4">
+        <div class="bg-white rounded-xl p-4">
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center gap-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6"><circle cx="17" cy="18" r="2" stroke="#FCB108" stroke-width="2"></circle><circle cx="7" cy="18" r="2" stroke="#FCB108" stroke-width="2"></circle><path d="M5 17.9724C3.90328 17.9178 3.2191 17.7546 2.73223 17.2678C2.24536 16.7809 2.08222 16.0967 2.02755 15M9 18H15M19 17.9724C20.0967 17.9178 20.7809 17.7546 21.2678 17.2678C22 16.5355 22 15.357 22 13V11H17.3C16.5555 11 16.1832 11 15.882 10.9021C15.2731 10.7043 14.7957 10.2269 14.5979 9.61803C14.5 9.31677 14.5 8.94451 14.5 8.2C14.5 7.08323 14.5 6.52485 14.3532 6.07295C14.0564 5.15964 13.3404 4.44358 12.4271 4.14683C11.9752 4 11.4168 4 10.3 4H2" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 8H8" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2 11H6" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.5 6H16.3212C17.7766 6 18.5042 6 19.0964 6.35371C19.6886 6.70742 20.0336 7.34811 20.7236 8.6295L22 11" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <span class="text-sm font-semibold text-[#363636]">۳۹۰,۰۰۰ تومان</span>
+            </div>
+            <span class="text-xs font-semibold text-gray-600">خرید بیشتر تا ارسال رایگان</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-1.5">
+            <div class="bg-green-500 h-1.5 rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl p-4 space-y-4">
+          <div class="product-item flex gap-4">
+            <img src="https://via.placeholder.com/100x140/363636/FFFFFF?text=IMG" alt="Product Image" class="w-[100px] h-[140px] rounded-lg object-cover">
+            <div class="flex-1 flex flex-col justify-between">
+              <div>
+                <p class="font-bold text-sm text-[#363636] leading-6">تی شرت اورسایز مردانه نوزده نودیک مدل TS1963 Gr</p>
+                <div class="flex justify-between items-start mt-2">
+                    <div class="flex items-center text-xs text-gray-500 gap-2">
+                        <span>مشکی</span>
+                        <span class="text-gray-300">|</span>
+                        <span>لارج - L</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-base font-bold text-[#363636]">۳۹۰,۰۰۰ <span class="text-xs">تومان</span></span>
+                        <span class="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">%۱۶</span>
+                    </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex items-center gap-4 border border-gray-200 rounded-full px-3 py-1.5">
+                  <button class="quantity-plus text-gray-800 text-xl">+</button>
+                  <span class="quantity-value font-semibold text-lg">۳</span>
+                  <button class="quantity-minus text-gray-800 text-xl">-</button>
+                </div>
+                <button class="border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 4L8 8M8 8L4 12M8 8L12 12M8 8L4 4" stroke="#363636" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <hr class="border-gray-100">
+
+          <div class="product-item flex gap-4">
+            <img src="https://via.placeholder.com/100x140/FCB108/FFFFFF?text=IMG" alt="Product Image" class="w-[100px] h-[140px] rounded-lg object-cover">
+            <div class="flex-1 flex flex-col justify-between">
+              <div>
+                <p class="font-bold text-sm text-[#363636] leading-6">تی شرت اورسایز مردانه نوزده نودیک مدل TS1963 Gr</p>
+                <div class="flex justify-between items-start mt-2">
+                    <div class="flex items-center text-xs text-gray-500 gap-2">
+                        <span>مشکی</span>
+                        <span class="text-gray-300">|</span>
+                        <span>لارج - L</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-base font-bold text-[#363636]">۲۵۰,۰۰۰ <span class="text-xs">تومان</span></span>
+                    </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex items-center gap-4 border border-gray-200 rounded-full px-3 py-1.5">
+                  <button class="quantity-plus text-gray-800 text-xl">+</button>
+                  <span class="quantity-value font-semibold text-lg">۳</span>
+                  <button class="quantity-minus text-gray-800 text-xl">-</button>
+                </div>
+                <button class="border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 4L8 8M8 8L4 12M8 8L12 12M8 8L4 4" stroke="#363636" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="p-4 bg-[#f5f5f6] border-t border-gray-200 flex justify-between items-center mt-auto">
+        <div class="text-right">
+          <span class="text-xs text-green-600 font-semibold">مبلغ قابل پرداخت</span>
+          <p class="text-xl font-bold text-[#363636]">۲,۴۵۰,۰۰۰ <span class="text-sm">تومان</span></p>
+        </div>
+        <a href="#" class="bg-[#363636] text-white font-bold py-3 px-8 rounded-full">تکمیل سفارش</a>
+      </footer>
+    </div>
+  </div>
+</div>
       </div>
     </div>
     <!-- نسخه موبایل -->

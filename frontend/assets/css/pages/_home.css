@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 2px;
 }
 
 .section-three-col .top-text {
@@ -23,6 +23,15 @@
     justify-content: center;
     align-items: center;
     gap: 2px;
+}
+
+@media (min-width: 768px) {
+  .home-page .top-text,
+  .section-three-col .top-text {
+    height: 35px;
+    padding: 12px 16px 8px 16px;
+    gap: 3px;
+  }
 }
 
 @keyframes scroll {

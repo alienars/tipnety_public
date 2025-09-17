@@ -111,3 +111,47 @@ document.addEventListener("DOMContentLoaded", async () => {
     initializeApp();
     Alpine.start();
 });
+
+
+// header functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const basketButton = document.getElementById("menu-user-basket");
+  const basketPopup = document.getElementById("basket-popup");
+
+  // ========== بخش کنترل باز و بسته شدن پاپ آپ ==========
+  if (basketButton && basketPopup) {
+    basketButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      basketPopup.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!basketPopup.classList.contains("hidden") && !basketPopup.contains(event.target) && !basketButton.contains(event.target)) {
+        basketPopup.classList.add("hidden");
+      }
+    });
+  }
+
+  // ========== بخش کنترل دکمه های تعداد محصول (مثبت و منفی) ==========
+  const productItems = document.querySelectorAll(".product-item");
+
+  productItems.forEach((item) => {
+    const plusButton = item.querySelector(".quantity-plus");
+    const minusButton = item.querySelector(".quantity-minus");
+    const quantityValue = item.querySelector(".quantity-value");
+
+    plusButton.addEventListener("click", () => {
+      let currentQuantity = parseInt(quantityValue.textContent);
+      quantityValue.textContent = currentQuantity + 1;
+    });
+
+    minusButton.addEventListener("click", () => {
+      let currentQuantity = parseInt(quantityValue.textContent);
+      // جلوگیری از کم شدن تعداد به زیر ۱
+      if (currentQuantity > 1) {
+        quantityValue.textContent = currentQuantity - 1;
+      }
+    });
+  });
+});

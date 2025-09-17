@@ -93,18 +93,23 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    /* 1. با این ترفند یک سایه داخلی سفید روی پس‌زمینه آبی می‌کشیم و آن را پنهان می‌کنیم */
     -webkit-box-shadow: 0 0 0 30px white inset !important;
-    
-    /* 2. (اختیاری ولی پیشنهادی) رنگ متن را هم به مشکی تغییر می‌دهیم تا خوانا بماند */
     -webkit-text-fill-color: #000 !important;
-    
-    /* 3. (ترفند اضافی) با ایجاد یک انیمیشن خیلی طولانی، مرورگر را از تغییر رنگ منصرف می‌کنیم */
     transition: background-color 5000s ease-in-out 0s;
 }
 
-
-/* testtttt */
+.blog-page .top-text {
+    background-color: #DC3134;
+    box-shadow: 0 0 0 3px rgba(220, 49, 52, 0.32);
+    height: 30px;
+    top: 16px;
+    border-radius: 32px;
+    padding: 16px 12px 12px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
 
 
 /* استایل برای اسکرول بار سفارشی */

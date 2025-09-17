@@ -120,8 +120,7 @@ export function initHeader() {
   }
 
   // Mobile Menu (Off-canvas) Logic
-  // ... بقیه کدهای شما بدون تغییر باقی می‌ماند
-  // ...
+ 
 }
 
 
@@ -139,7 +138,7 @@ export function initHeader() {
 
 
 
-console.log("User dropdown initialized");
+// console.log("User dropdown initialized");
 
 (() => {
   if (window.__userDropdownInited) return;

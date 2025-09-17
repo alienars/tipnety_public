@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="راه‌های ارتباط با فروشگاه تیپ نتی و پشتیبانی">
+  <title>دسته بندی تیپ نتی</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- <style>
+    .set-header-01 {
+        background-image: url('../assets/img/set/guys.png');
+        background-size: contain;
+        background-position: 10% center;
+        background-repeat: no-repeat;
+        height: 400px;
+        /* or any height you want */
+    }
+</style> -->
+</head>
+
+<body data-page="category">
+
+  <div data-include="/partials/header.html"></div>
+
+  <div id="category-page" class="relative set-page">
+    
+
+
+    
+    <!-- Sorting and Filter Bar -->
+<header class="absolute top-30 w-full md:top-0 z-40 bg-white -mt-[315px] md:-mt-[208px] lg:mt-0">
+      <div class="mx-auto lg:hidden">
+        <div class="hidden lg:flex items-center justify-between py-3 [direction:ltr]">
+          
+          <div class="flex items-center gap-3 sm:gap-6">
+            
+            <label class="hidden lg:flex items-center gap-2 text-sm text-gray-700 cursor-pointer select-none">
+              <div class="relative specific-rotation">
+                <input id="discountSwitch" type="checkbox" class="peer sr-only" />
+                <div class="w-12 h-7 bg-gray-200 rounded-full transition peer-checked:bg-green-600"></div>
+                <div
+                  class="absolute right-1 top-1 h-5 w-5 rounded-full bg-white shadow pointer-events-none transition-transform duration-300 ease-in-out peer-checked:-translate-x-5">
+                </div>
+              </div>
+              <span>دارای تخفیف</span>
+              <i-con name="percent-circle" class="w-6 h-6 text-black-600"></i-con>
+            </label>
+          </div>
+          
+          <div class="flex [direction:rtl]">
+            <button data-js="toggle-filters"
+              class="w-11 h-11 p-3 rounded-3xl border border-black-100 flex items-center justify-center hover:bg-gray-100 transition-colors cursor-pointer">
+              <i-con name="hamburger-menu" class="w-5 h-5 text-gray-700"></i-con>
+            </button>
+
+            <div id="miniFiltersWrap" class="hidden lg:block mx-auto px-4 relative">
+              <div class="mini-filters flex flex-wrap items-center gap-4">
+
+                
+                <div class="popwrap">
+                  <button
+                    class="chip flex items-center gap-3 !bg-white h-[44px] px-4 rounded-full border border-black-100 text-gray-800"
+                    type="button" data-pop="cat">
+                    <span class="font-semibold text-sm text-black-600">دسته‌بندی</span>
+                    <i-con name="arrow-down-sharp" class="w-4 h-4 text-black-600"></i-con>
+                  </button>
+                  <div class="popover w-[360px] rounded-2xl border border-gray-200 bg-white shadow-xl"
+                    data-popover="cat">
+                    
+                    <div class="filter-body px-5 py-5">
+                      <div class="relative">
+                        <i-con name="search"
+                          class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"></i-con>
+                        <input type="search" dir="rtl" placeholder="جستجو در دسته‌ها…"
+                          class="w-full bg-transparent pr-7 pl-2 py-2 text-sm placeholder:text-gray-400 focus:outline-none"
+                          data-search="category">
+                      </div>
+
+                      <div class="mt-2 max-h-60 overflow-y-auto custom-scroll">
+                        <ul class="text-sm" data-list="category">
+                          <li>
+                            <label class="filter-row">
+                              <input type="checkbox" class="peer">
+                              <span
+                                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                                <img src="../assets/icons/checkbox-tick.svg" alt="" class="tick">
+                              </span>
+                              <span
+                                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">تی‌شرت
+                                مردانه</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="filter-row">
+                              <input type="checkbox" class="peer" checked>
+                              <span
+                                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                                <img src="../assets/icons/checkbox-tick.svg" alt="" class="tick">
+                              </span>
+                              <span
+                                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">شلوار
+                                مردانه</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="filter-row">
+                              <input type="checkbox" class="peer">
+                              <span
+                                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                                <img src="../assets/icons/checkbox-tick.svg" alt="" class="tick">
+                              </span>
+                              <span
+                                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">شلوارک
+                                مردانه</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="flex items-center justify-between gap-2 pt-3">
+                        <button type="button" class="icon-btn" title="اعمال انتخاب‌ها">
+                          <i-con name="tick-double" class="w-6 h-6 text-[var(--color-black-600,#1f2937)]"></i-con>
+                        </button>
+                        <div class="flex items-center gap-2">
+                          <button type="button" class="icon-btn" title="بازنشانی">
+                            <i-con name="refresh" class="w-6 h-6 text-[var(--color-black-600,#1f2937)]"></i-con>
+                          </button>
+                          <button type="button"
+                            class="h-12 px-4 rounded-full bg-yellow-600 text-white text-sm font-semibold">اعمال
+                            تغییرات</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+        
+        <div class="lg:hidden">
+          <nav aria-label="Breadcrumb" class="text-sm text-gray-500 flex items-center justify-start bg-gray-200 px-5 py-6">
+              <ol class="flex items-center">
+                <li class="font-light text-black-400 text-[13px]">فروشگاه لباس تیپ</li>
+
+                <li class="mx-3">
+                  <i-con name="arrow-down-sharp"
+                    class="w-4 h-4 text-black-400 transition-transform duration-300 rotate-90"></i-con>
+                </li>
+
+                <li class="font-semibold text-black-600 text-[13px]">لباس مردانه</li>
+              </ol>
+            </nav>
+
+          <div class="flex w-full border-y border-[#F5F5F6] divide-x divide-[#F5F5F6] [direction:rtl] font-semibold">
+            <button id="openCategoryModalBtn" data-js="toggle-filters" class="w-1/2 flex items-center justify-center gap-x-2 py-5 text-sm"
+              type="button">
+              <i-con name="hamburger-menu" class="w-5 h-5 text-gray-700"></i-con>
+              <span>دسته بندی</span>
+            </button>
+            <button id="openSortModalBtn" class="w-1/2 flex items-center justify-center gap-x-2 py-5 text-sm" type="button"
+              data-js="open-sort">
+              <span id="sortButtonText">جدید ترین</span>
+              <i-con name="sorting" class="w-6 h-6 text-black-600"></i-con>
+            </button>
+          </div>
+          <div class="lg:hidden pt-6 px-3">
+            <div class="open-search-trigger relative">
+              <input type="search" placeholder="...جستجو کنید"
+                class="w-full rounded-full bg-gray-200 pl-11 pr-4 py-3 text-sm placeholder:text-black-300 text-right"
+                dir="ltr">
+
+              <i-con name="search" class="absolute left-2 top-1/2 -translate-y-1/2 w-5 h-5 text-black-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<div dir="rtl" class="bg-[#ffffff] lg:bg-[#f5f5f6] p-4 lg:p-10 lg:pb-16 font-sans mt-[195px] md:mt-[208px] lg:mt-0">
+  <div class="max-w-screen-2xl mx-auto">
+    <header class="flex justify-center lg:justify-between items-center mt-2 lg:mt-0 mb-8">
+      <div class="text-center lg:text-right">
+        <h2 class="text-xl lg:text-lg font-bold text-[#363636]">اخبار و مقالات تیپ نتی</h2>
+        <div class="hidden lg:flex items-center justify-end gap-2 mt-2">
+          <p class="text-[#868686] text-[13px]">فروشگاه لباس تیپ</p>
+          <i-con name="arrow-down-sharp" class="w-3 h-3 text-black-600 rotate-45"></i-con>
+          <p class="text-[#363636] text-[13px] font-bold">مجله مد تیپ</p>
+        </div>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-4" dir="ltr">
+        <div class="flex items-center gap-3 px-5 py-3 rounded-full bg-[#ebebed]" dir="rtl">
+  <input 
+    type="text" 
+    placeholder="جستجو در میان مقالات..." 
+    class="w-full bg-transparent focus:outline-none text-right text-[#363636] placeholder:text-[#5e5e5e] text-[13px] font-medium"
+  />
+  <i-con name="search" class="w-5 h-5 text-black-600 flex-shrink-0"></i-con>
+</div>
+        <div class="relative">
+          <select class="appearance-none bg-white rounded-full pl-10 pr-4 py-3 text-sm font-bold text-[#363636] cursor-pointer">
+            <option>جدیدترین ها</option>
+            <option>محبوب‌ترین‌ها</option>
+            <option>قدیمی‌ترین‌ها</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 left-4 flex items-center">
+            <i-con name="arrow-down-sharp" class="w-3 h-3 text-black-600"></i-con>
+          </div>
+        </div>
+        <div class="relative">
+          <select class="appearance-none bg-white rounded-full pl-10 pr-4 py-3 text-sm font-bold text-[#363636] cursor-pointer">
+            <option>دسته بندی</option>
+            <option>استایل</option>
+            <option>مد و فشن</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 left-4 flex items-center">
+            <i-con name="arrow-down-sharp" class="w-3 h-3 text-black-600"></i-con>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex flex-col-reverse lg:grid lg:grid-cols-4 gap-6 " dir="ltr">
+
+      <div class="relative w-full h-[300px] lg:h-[600px] lg:col-span-1 rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          استایل
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]" dir="rtl">در فصل زمستان چه لباسی برای ما مناسب است ؟</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2 flex-row-reverse">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+            <div class="flex items-center gap-2">
+               <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+               <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-1 lg:flex lg:flex-col lg:gap-6 space-y-6 lg:space-y-0">
+        <div class="relative w-full h-[300px] lg:h-[288px] rounded-2xl overflow-hidden group">
+          <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+            استایل
+          </div>
+          <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 p-4 bg-white/90 rounded-xl">
+            <h3 class="truncate text-sm font-bold text-right text-[#363636]" dir="rtl">پوشیدن کلاه با چه استایلی توصیه می شود ؟</h3>
+            <div class="flex justify-between items-center mt-4">
+              <div class="flex items-center gap-2 flex-row-reverse">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+            <div class="flex items-center gap-2">
+               <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+               <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative w-full h-[300px] lg:h-[288px] rounded-2xl overflow-hidden group">
+          <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+            مد و فشن
+          </div>
+          <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 p-4 bg-white/90 rounded-xl">
+            <h3 class="truncate text-sm font-bold text-right text-[#363636]" dir="rtl">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+            <div class="flex justify-between items-center mt-4">
+              <div class="flex items-center gap-2 flex-row-reverse">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+            <div class="flex items-center gap-2">
+               <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+               <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative w-full h-[300px] lg:h-[600px] lg:col-span-2 rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          مد و فشن
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 p-4 lg:p-6 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]" dir="rtl">هر آنچه که باید درباره تاریخچه‌ی برند پرادا بدانید</h3>
+          <p class="block text-xs lg:text-[13px] text-right text-[#5e5e5e] my-4 font-light" dir="rtl">
+            وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد. پرادا با نوآوری و ابهام مترادف است...
+          </p>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2 flex-row-reverse">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+            <div class="flex items-center gap-2">
+               <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+               <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+
+
+<div dir="rtl" class="bg-white py-4 md:py-14 md:pb-10 font-sans px-4">
+  <div class="container mx-auto grid grid-cols-2 lg:grid-cols-6 gap-4 mx-4">
+
+    <a href="#" class="flex items-center justify-center w-full p-2 py-5 md:p-5 rounded-2xl border border-black-100 transition-transform hover:scale-105 gap-3">
+      <i-con name="t-shirt" class="w-5 h-5 text-black-600"></i-con>
+      <p class="font-semibold text-xs md:text-sm text-black-600">نگهداری لباس</p>
+    </a>
+
+    <a href="#" class="flex items-center justify-center w-full p-2 py-5 md:p-5 rounded-2xl border border-black-100 transition-transform hover:scale-105 gap-3">
+      <i-con name="fire" class="w-5 h-5 text-black-600"></i-con>
+      <p class="font-semibold text-xs md:text-sm text-black-600">ترند های دنیای فشن</p>
+    </a>
+
+    <a href="#" class="flex items-center justify-center w-full p-2 py-5 md:p-5 rounded-2xl border border-black-100 transition-transform hover:scale-105 gap-3">
+      <i-con name="suit" class="w-5 h-5 text-black-600"></i-con>
+      <p class="font-semibold text-xs md:text-sm text-black-600">ترفندهای لباس</p>
+    </a>
+
+    <a href="#" class="flex items-center justify-center w-full p-2 py-5 md:p-5 rounded-2xl border border-black-100 transition-transform hover:scale-105 gap-3">
+      <i-con name="t-shirt" class="w-5 h-5 text-black-600"></i-con>
+      <p class="font-semibold text-xs md:text-sm text-black-600">نگهداری لباس</p>
+    </a>
+
+    <a href="#" class="flex items-center justify-center w-full p-2 py-5 md:p-5 rounded-2xl border border-black-100 transition-transform hover:scale-105 gap-3">
+      <i-con name="fire" class="w-5 h-5 text-black-600"></i-con>
+      <p class="font-semibold text-xs md:text-sm text-black-600">ترند های دنیای فشن</p>
+    </a>
+
+    <a href="#" class="flex items-center justify-center w-full p-2 py-5 md:p-5 rounded-2xl border border-black-100 transition-transform hover:scale-105 gap-3">
+      <i-con name="suit" class="w-5 h-5 text-black-600"></i-con>
+      <p class="font-semibold text-xs md:text-sm text-black-600">ترفندهای لباس</p>
+    </a>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div dir="rtl" class="bg-white font-sans p-0 sm:p-6 lg:p-8">
+  <div class="container mx-auto flex flex-col md:flex-row-reverse gap-8">
+
+    <main class="w-full lg:w-3/4 space-y-8">
+      
+      <div dir="rtl" class="font-sans p-4 sm:p-6 lg:p-0">
+  <div class="mx-auto">
+    <main>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-10">
+        
+        <div>
+          <div class="relative">
+            <img src="/assets/img/blog/main-post-image.png" alt="Article" class="w-full h-68 object-cover rounded-2xl">
+            <span class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">آموزش</span>
+          </div>
+          <div class="pt-3">
+            <h3 class="font-bold text-gray-800 text-xs md:text-sm mb-3 mt-2 text-right">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+            <p class="text-black-500 text-xs leading-relaxed mb-3 text-right font-normal">وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد...</p>
+            <div class="flex justify-between items-center text-[0.65rem] text-gray-600 pt-2 flex-row-reverse">
+              <div class="flex items-center gap-4">
+                <p class="font-semibold text-black-600">مشاهده مقاله</p>
+                <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600 mb-1"></i-con>
+              </div>
+              <div class="flex items-center gap-2">
+                <i-con name="calendar-01" class="w-4 h-4 text-black-600 mb-0.5"></i-con>
+                <p class="font-semibold text-black-600">۶ شهریور، ۱۴۰۲</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="relative">
+            <img src="/assets/img/blog/main-post-image.png" alt="Article" class="w-full h-68 object-cover rounded-2xl">
+            <span class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">مد و فشن</span>
+          </div>
+          <div class="pt-3">
+            <h3 class="font-bold text-gray-800 text-xs md:text-sm mb-3 mt-2 text-right">پوشیدن کلاه با چه استایلی توصیه می شود؟</h3>
+            <p class="text-black-500 text-xs leading-relaxed mb-3 text-right font-normal">وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد...</p>
+            <div class="flex justify-between items-center text-[0.65rem] text-gray-600 pt-2 flex-row-reverse">
+              <div class="flex items-center gap-4">
+                <p class="font-semibold text-black-600">مشاهده مقاله</p>
+                <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600 mb-1"></i-con>
+              </div>
+              <div class="flex items-center gap-2">
+                <i-con name="calendar-01" class="w-4 h-4 text-black-600 mb-0.5"></i-con>
+                <p class="font-semibold text-black-600">۶ شهریور، ۱۴۰۲</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <div class="relative">
+            <img src="/assets/img/blog/main-post-image.png" alt="Article" class="w-full h-68 object-cover rounded-2xl">
+            <span class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">استایل</span>
+          </div>
+          <div class="pt-3">
+            <h3 class="font-bold text-gray-800 text-xs md:text-sm mb-3 mt-2 text-right">در فصل زمستان چه لباسی برای ما مناسب است؟</h3>
+            <p class="text-black-500 text-xs leading-relaxed mb-3 text-right font-normal">وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد...</p>
+            <div class="flex justify-between items-center text-[0.65rem] text-gray-600 pt-2 flex-row-reverse">
+              <div class="flex items-center gap-4">
+                <p class="font-semibold text-black-600">مشاهده مقاله</p>
+                <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600 mb-1"></i-con>
+              </div>
+              <div class="flex items-center gap-2">
+                <i-con name="calendar-01" class="w-4 h-4 text-black-600 mb-0.5"></i-con>
+                <p class="font-semibold text-black-600">۶ شهریور، ۱۴۰۲</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 relative">
+          <div class="relative h-full">
+            <img src="/assets/img/blog/main-post-image.png" alt="Banner Article" class="w-full lg:h-[400px] h-60 object-cover rounded-2xl">
+            <span class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">استایل</span>
+            <div class="absolute inset-x-0 bottom-2 left-2 right-2 md:bottom-6 md:left-6 md:right-6 p-4 lg:p-5 bg-white/90 rounded-2xl">
+              <div class="flex flex-col lg:flex-row-reverse justify-between items-start mb-3">
+                <h2 class="text-xs md:text-sm font-semibold text-gray-800 flex-1 ml-0 lg:ml-4">هر آنچه که باید درباره تاریخچه‌ی برند پرادا بدانید</h2>
+              </div>
+              <p class="text-[10px] text-black-500 mb-3 font-normal">وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد. پرادا با نوآوری و ابهام مترادف است و به‌عنوان یکی از هیجان انگیزترین برندها...</p>
+              <div class="flex justify-between items-center text-[0.65rem] text-gray-600 pt-2 flex-row-reverse">
+                <div class="flex items-center gap-4">
+                <p class="font-semibold text-black-600">مشاهده مقاله</p>
+                <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600 mb-1"></i-con>
+              </div>
+              <div class="flex items-center gap-2">
+                <i-con name="calendar-01" class="w-4 h-4 text-black-600 mb-0.5"></i-con>
+                <p class="font-semibold text-black-600">۶ شهریور، ۱۴۰۲</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="relative">
+            <img src="/assets/img/blog/main-post-image.png" alt="Article" class="w-full h-68 object-cover rounded-2xl">
+            <span class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">استایل</span>
+          </div>
+          <div class="pt-3">
+            <h3 class="font-bold text-gray-800 text-xs md:text-sm mb-3 mt-2 text-right">در فصل زمستان چه لباسی برای ما مناسب است؟</h3>
+            <p class="text-black-500 text-xs leading-relaxed mb-3 text-right font-normal">وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد...</p>
+            <div class="flex justify-between items-center text-[0.65rem] text-gray-600 pt-2 flex-row-reverse">
+              <div class="flex items-center gap-4">
+                <p class="font-semibold text-black-600">مشاهده مقاله</p>
+                <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600 mb-1"></i-con>
+              </div>
+              <div class="flex items-center gap-2">
+                <i-con name="calendar-01" class="w-4 h-4 text-black-600 mb-0.5"></i-con>
+                <p class="font-semibold text-black-600">۶ شهریور، ۱۴۰۲</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="relative">
+            <img src="/assets/img/blog/main-post-image.png" alt="Article" class="w-full h-68 object-cover rounded-2xl">
+            <span class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">آموزش</span>
+          </div>
+          <div class="pt-3">
+            <h3 class="font-bold text-gray-800 text-xs md:text-sm mb-3 mt-2 text-right">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+            <p class="text-black-500 text-xs leading-relaxed mb-3 text-right font-normal">وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد...</p>
+            <div class="flex justify-between items-center text-[0.65rem] text-gray-600 pt-2 flex-row-reverse">
+              <div class="flex items-center gap-4">
+                <p class="font-semibold text-black-600">مشاهده مقاله</p>
+                <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600 mb-1"></i-con>
+              </div>
+              <div class="flex items-center gap-2">
+                <i-con name="calendar-01" class="w-4 h-4 text-black-600 mb-0.5"></i-con>
+                <p class="font-semibold text-black-600">۶ شهریور، ۱۴۰۲</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="relative">
+            <img src="/assets/img/blog/main-post-image.png" alt="Article" class="w-full h-68 object-cover rounded-2xl">
+            <span class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">مد و فشن</span>
+          </div>
+          <div class="pt-3">
+            <h3 class="font-bold text-gray-800 text-xs md:text-sm mb-3 mt-2 text-right">پوشیدن کلاه با چه استایلی توصیه می شود؟</h3>
+            <p class="text-black-500 text-xs leading-relaxed mb-3 text-right font-normal">وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد...</p>
+            <div class="flex justify-between items-center text-[0.65rem] text-gray-600 pt-2 flex-row-reverse">
+              <div class="flex items-center gap-4">
+                <p class="font-semibold text-black-600">مشاهده مقاله</p>
+                <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600 mb-1"></i-con>
+              </div>
+              <div class="flex items-center gap-2">
+                <i-con name="calendar-01" class="w-4 h-4 text-black-600 mb-0.5"></i-con>
+                <p class="font-semibold text-black-600">۶ شهریور، ۱۴۰۲</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="relative">
+            <img src="/assets/img/blog/main-post-image.png" alt="Article" class="w-full h-68 object-cover rounded-2xl">
+            <span class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">استایل</span>
+          </div>
+          <div class="pt-3">
+            <h3 class="font-bold text-gray-800 text-xs md:text-sm mb-3 mt-2 text-right">در فصل زمستان چه لباسی برای ما مناسب است؟</h3>
+            <p class="text-black-500 text-xs leading-relaxed mb-3 text-right font-normal">وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد...</p>
+            <div class="flex justify-between items-center text-[0.65rem] text-gray-600 pt-2 flex-row-reverse">
+              <div class="flex items-center gap-4">
+                <p class="font-semibold text-black-600">مشاهده مقاله</p>
+                <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600 mb-1"></i-con>
+              </div>
+              <div class="flex items-center gap-2">
+                <i-con name="calendar-01" class="w-4 h-4 text-black-600 mb-0.5"></i-con>
+                <p class="font-semibold text-black-600">۶ شهریور، ۱۴۰۲</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center pt-8">
+        <button class="w-full md:w-auto px-16 py-3 bg-white border border-black-600 text-black-600 text-sm font-semibold rounded-full hover:bg-gray-800 hover:text-white transition-colors">
+          مشاهده آخرین مطالب
+        </button>
+      </div>
+
+    </main>
+  </div>
+</div>
+      
+    </main>
+
+    <aside class="block w-4/4 md:w-1/4">
+      <div class="sticky top-8 bg-white rounded-2xl">
+        <section class="w-full max-w-[420px] mx-auto rounded-none md:rounded-2xl bg-white border border-[#ebebeb] p-6 lg:p-4">
+                    <div class="flex flex-col items-center gap-4 text-[#363636] mb-8">
+                        <h2 class="text-xl font-semibold mt-4">منتخب سردبیر</h2>
+
+                        <div class="w-[1px] h-10 bg-[#FCB108] rounded-full relative">
+                            <span
+                                class="absolute w-1.5 h-1.5 -bottom-0 left-1/2 -translate-x-1/2 rounded-full bg-[#FCB108]"></span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <img src="/assets/img/blog/boys.png" alt="" class="mt-3">
+                        <h3 class="text-sm font-bold text-gray-800 mt-3">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                        <div class="flex items-center gap-x-1 mt-2">
+                            <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                            <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-200 mt-5 mb-5">
+
+                    <ul class="flex flex-col gap-y-6 mt-3">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-1.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-sm font-bold text-gray-800">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="border-gray-200">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-2.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-sm font-bold text-gray-800">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="border-gray-200">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-3.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-sm font-bold text-gray-800">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="border-gray-200 mt-5 mb-5">
+                    <a href="#"
+                        class="mt-8 mb-4 flex justify-center items-center gap-x-2 text-base font-semibold text-gray-800">
+                        <span>مشاهده همه</span>
+                        <i-con name="arrow-up-left-01-sharp" class="w-4 h-4 text-gray-700 mb-1 ml-1"></i-con>
+                    </a>
+                </section>
+
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div dir="rtl" class="bg-[#f5f5f6] font-sans p-4 sm:p-6 lg:p-8 lg:py-16">
+  <div class="container mx-auto flex flex-col-reverse lg:flex-row gap-8">
+
+    <aside class="w-full lg:w-1/4">
+      <div class="sticky top-8 rounded-2xl p-4 lg:p-2">
+        <div class="flex flex-col items-center gap-4 text-[#363636] mb-8">
+                        <h2 class="text-xl font-semibold">آخرین ویدیو ها</h2>
+
+                        <div class="w-[1px] h-10 bg-[#FCB108] rounded-full relative">
+                            <span
+                                class="absolute w-1.5 h-1.5 -bottom-0 left-1/2 -translate-x-1/2 rounded-full bg-[#FCB108]"></span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <img src="/assets/img/blog/boys.png" alt="" class="mt-3">
+                        <h3 class="text-sm font-bold text-gray-800 mt-3">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                        <div class="flex items-center gap-x-1 mt-2">
+                            <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                            <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-300 mt-4 mb-4">
+
+                    <ul class="flex flex-col gap-y-6 mt-3">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-1.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-sm font-bold text-gray-800">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="border-gray-300">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-2.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-sm font-bold text-gray-800">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="border-gray-300">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-3.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-sm font-bold text-gray-800">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="border-gray-300 mt-4 mb-4">
+                    <a href="#"
+                        class="mt-8 mb-4 flex justify-center items-center gap-x-2 text-base font-semibold text-gray-800">
+                        <span>مشاهده همه</span>
+                        <i-con name="arrow-up-left-01-sharp" class="w-4 h-4 text-gray-700 mb-1 ml-1"></i-con>
+                    </a>
+      </div>
+    </aside>
+
+    <main class="w-full lg:w-3/4">
+      <div class="relative w-full h-[300px] lg:h-full rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        
+        <div class="absolute inset-0 flex items-center justify-center">
+          <button class="bg-yellow-400/20 p-2 mb-16 md:p-3 rounded-full border border-yellow-500">
+            <div class="bg-yellow-500 w-12 h-12 md:w-20 md:h-20 rounded-full flex items-center justify-center">
+              <i-con name="play" class="w-6 h-6 md:w-12 md:h-12 text-gray-700 "></i-con>
+            </div>
+          </button>
+        </div>
+
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          مد و فشن
+        </div>
+        
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 lg:p-6 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">هر آنچه که باید درباره تاریخچه‌ی برند پرادا بدانید</h3>
+          <p class="block text-[10px] lg:text-[13px] text-right text-[#5e5e5e] my-4 font-light">
+            وقتی صحبت از مد لوکس ایتالیایی می‌شود، نام پرادا همیشه به ذهن افراد می‌رسد. پرادا با نوآوری و ابهام مترادف است...
+          </p>
+          <div class="flex justify-between items-center mt-4">
+            
+            <div class="flex items-center gap-2">
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+               <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+               
+            </div>
+            <div class="flex items-center gap-2 flex-row-reverse">
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</div>
+
+
+
+
+
+
+<div dir="rtl" class="bg-white font-sans p-4 sm:p-6 lg:p-8">
+  <section class="container hidden lg:block mx-auto">
+    
+    <div class="flex justify-between items-center mb-8 mt-6">
+        <h2 class="text-sm md:text-base font-bold text-[#363636]">مطالب محبوب</h2>
+        <div class="flex-1 h-px bg-gray-200 mx-4"></div>
+        <a href="#" class="flex-shrink-0 flex items-center justify-center gap-2 px-2 py-1 md:px-5 md:py-3 rounded-full border border-[#363636] transition-colors hover:bg-gray-100">
+            <span class="text-[12px] font-medium text-black-600">مشاهده همه</span>
+            <i-con name="arrow-left" class="w-4 h-4 text-black-600 rotate-25 mb-0.5"></i-con>
+        </a>
+    </div>
+
+    <div class="grid grid-cols-4 gap-6">
+      
+      <div class="relative w-full h-[288px] rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          فشن بلاگ
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">در فصل زمستان چه لباسی برای ما مناسب است ؟</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2">
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative w-full h-[288px] rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          مراقبت لباس
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">هر آنچه که باید درباره تاریخچه‌ی برند پرادا بدانید</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2">
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative w-full h-[288px] rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          مد و فشن
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">استایل دوشنبه بهاری چی بپوشیم ؟</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2">
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative w-full h-[288px] rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          استایل
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">پوشیدن کلاه با چه استایلی توصیه می شود ؟</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2">
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative w-full h-[288px] rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          مد و فشن
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">هر آنچه که باید درباره تاریخچه‌ی برند پرادا بدانید</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2">
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative w-full h-[288px] rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          استایل جنتلمن
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">استایل دوشنبه بهاری چی بپوشیم ؟</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2">
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative w-full h-[288px] rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          تیپ بیرونی
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">پوشیدن کلاه با چه استایلی توصیه می شود ؟</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2">
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative w-full h-[288px] rounded-2xl overflow-hidden group">
+        <img src="/assets/img/blog/main-post-image.png" alt="Blog Post Image" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 md:top-5 md:left-5 px-1.5 py-1 rounded-full bg-[#fcb108] ring-2 ring-[#fcb108]/30 text-white text-xs">
+          مد و فشن
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 md:bottom-4 md:left-4 md:right-4 p-4 bg-white/90 rounded-xl">
+          <h3 class="truncate text-sm font-bold text-right text-[#363636]">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+          <div class="flex justify-between items-center mt-4">
+            <div class="flex items-center gap-2">
+              <i-con name="calendar-01" class="w-4 h-4 text-black-600"></i-con>
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <p class="text-[11px] lg:text-xs font-semibold text-[#363636]">مشاهده مقاله</p>
+              <i-con name="arrow-right-2" class="w-4 h-4 text-yellow-600"></i-con>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+    
+
+
+
+<div class="blog-page hidden md:block container mx-auto pt-8 pb-16">
+        <div class="swiper home-mini-slider-desktop">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide w-[250px] flex-none">
+              <div class="relative h-[370px] rounded-2xl overflow-hidden">
+                <img src="../assets/img/category/up_lane/1.jpg" class="w-full h-full object-cover" alt="پیراهن" />
+
+                <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%)"></div>
+
+                <div class="absolute top-5 right-5 md:top-7 md:right-7 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-5 md:py-3 gap-2">
+                  <span class="font-medium ml-1">تا</span>
+                  <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-1"></i-con>
+                  <span>۵</span>
+                </div>
+
+                <div class="absolute bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 w-max max-w-[90%] p-0.5 bg-white/30 rounded-full">
+                  <p class="text-[10px] md:text-[14px] font-bold text-[#363636] bg-white px-3 py-1.5 rounded-full truncate">پیراهن آستین بلند و راه راه</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide w-[250px] flex-none">
+              <div class="relative h-[370px] rounded-2xl overflow-hidden">
+                <img src="../assets/img/category/up_lane/2.jpg" class="w-full h-full object-cover" alt="شلوارک" />
+
+                <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%)"></div>
+
+                <div class="absolute bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 w-max max-w-[90%] p-0.5 bg-white/30 rounded-full">
+                  <p class="text-[10px] md:text-[14px] font-bold text-[#363636] bg-white px-3 py-1.5 rounded-full truncate">شلوارک</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide w-[250px] flex-none">
+              <div class="relative h-[370px] rounded-2xl overflow-hidden">
+                <img src="../assets/img/category/up_lane/3.jpg" class="w-full h-full object-cover" alt="شلوار" />
+
+                <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%)"></div>
+
+                <div class="absolute top-5 right-5 md:top-7 md:right-7 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-5 md:py-3 gap-2">
+                  <span class="font-medium ml-1">تا</span>
+                  <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-1"></i-con>
+                  <span>۵</span>
+                </div>
+
+                <div class="absolute bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 w-max max-w-[90%] p-0.5 bg-white/30 rounded-full">
+                  <p class="text-[10px] md:text-[14px] font-bold text-[#363636] bg-white px-3 py-1.5 rounded-full truncate">شلوار</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide w-[250px] flex-none">
+              <div class="relative h-[370px] rounded-2xl overflow-hidden">
+                <img src="../assets/img/category/up_lane/1.jpg" class="w-full h-full object-cover" alt="تی شرت" />
+
+                <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%)"></div>
+
+                <div class="absolute bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 w-max max-w-[90%] p-0.5 bg-white/30 rounded-full">
+                  <p class="text-[10px] md:text-[14px] font-bold text-[#363636] bg-white px-3 py-1.5 rounded-full truncate">تی شرت</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide w-[250px] flex-none">
+              <div class="relative h-[370px] rounded-2xl overflow-hidden">
+                <img src="../assets/img/category/up_lane/1.jpg" class="w-full h-full object-cover" alt="پیراهن" />
+
+                <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%)"></div>
+
+                <div class="absolute top-5 right-5 md:top-7 md:right-7 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-5 md:py-3 gap-2">
+                  <span class="font-medium ml-1">تا</span>
+                  <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-1"></i-con>
+                  <span>۵</span>
+                </div>
+
+                <div class="absolute bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 w-max max-w-[90%] p-0.5 bg-white/30 rounded-full">
+                  <p class="text-[10px] md:text-[14px] font-bold text-[#363636] bg-white px-3 py-1.5 rounded-full truncate">پیراهن آستین بلند و راه راه</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide w-[250px] flex-none">
+              <div class="relative h-[370px] rounded-2xl overflow-hidden">
+                <img src="../assets/img/category/up_lane/2.jpg" class="w-full h-full object-cover" alt="شلوارک" />
+
+                <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%)"></div>
+
+                <div class="absolute bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 w-max max-w-[90%] p-0.5 bg-white/30 rounded-full">
+                  <p class="text-[10px] md:text-[14px] font-bold text-[#363636] bg-white px-3 py-1.5 rounded-full truncate">شلوارک</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide w-[250px] flex-none">
+              <div class="relative h-[370px] rounded-2xl overflow-hidden">
+                <img src="../assets/img/category/up_lane/2.jpg" class="w-full h-full object-cover" alt="شلوارک" />
+
+                <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%)"></div>
+
+                <div class="absolute bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 w-max max-w-[90%] p-0.5 bg-white/30 rounded-full">
+                  <p class="text-[10px] md:text-[14px] font-bold text-[#363636] bg-white px-3 py-1.5 rounded-full truncate">شلوارک</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+    <!-- Main Catalog Content -->
+<div class="grid grid-cols-3 mini-pro-swiper gap-4 md:hidden px-4">
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/1.jpg" alt="تی شرت" class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    تی شرت
+                  </div>
+                </div>
+              </a>
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/2.jpg" alt="شلوار" class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute top-3 right-3 flex items-center bg-red-600 text-white text-xs px-1 py-0.5 rounded-full top-text">
+                    <span class="font-medium">تا</span>
+                    <i-con name="percent" class="w-2 h-2 text-white mb-1"></i-con>
+                    <span>۵</span>
+                  </div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    شلوار
+                  </div>
+                </div>
+              </a>
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/3.jpg" alt="شلوارک" class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute top-3 right-3 flex items-center bg-red-600 text-white text-xs px-1 py-0.5 rounded-full top-text">
+                    <span class="font-medium">تا</span>
+                    <i-con name="percent" class="w-2 h-2 text-white mb-1"></i-con>
+                    <span>۲۵</span>
+                  </div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    شلوارک
+                  </div>
+                </div>
+              </a>
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/4.jpg" alt="پیراهن آستین بلند"
+                    class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    پیراهن آستین بلند
+                  </div>
+                </div>
+              </a>
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/5.jpg" alt="کیف و کفش" class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute top-3 right-3 flex items-center bg-red-600 text-white text-xs px-1 py-0.5 rounded-full top-text">
+                    <span class="font-medium">تا</span>
+                    <i-con name="percent" class="w-2 h-2 text-white mb-1"></i-con>
+                    <span>۵۰</span>
+                  </div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    کیف و کفش
+                  </div>
+                </div>
+              </a>
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/6.jpg" alt="اکسسوری" class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    اکسسوری
+                  </div>
+                </div>
+              </a>
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/7.jpg" alt="تی شرت چاپی" class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    تی شرت چاپی
+                  </div>
+                </div>
+              </a>
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/8.jpg" alt="کمربند" class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute top-3 right-3 flex items-center bg-red-600 text-white text-xs px-1 py-0.5 rounded-full top-text">
+                    <span class="font-medium">تا</span>
+                    <i-con name="percent" class="w-2 h-2 text-white mb-1"></i-con>
+                    <span>۵</span>
+                  </div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    کمربند
+                  </div>
+                </div>
+              </a>
+
+              
+              <a href="#" class="block group">
+                <div
+                  class="relative aspect-[2/3] w-full bg-gray-100 rounded-2xl overflow-hidden duration-300">
+                  <img src="../assets/img/category/up_lane/9.jpg" alt="کمربند" class="w-full h-full object-cover">
+                  <div class="absolute inset-0"></div>
+                  <div
+                    class="absolute top-3 right-3 flex items-center bg-red-600 text-white text-xs px-1 py-0.5 rounded-full top-text">
+                    <span class="font-medium">تا</span>
+                    <i-con name="percent" class="w-2 h-2 text-white mb-1"></i-con>
+                    <span>۵</span>
+                  </div>
+                  <div
+                    class="absolute bottom-4 left-1 right-1 text-center py-0 px-0 rounded-full text-black-600 font-normal bottom-text text-[4px]">
+                    کمربند
+                  </div>
+                </div>
+              </a>
+
+            </div>
+
+  </div>
+
+
+
+
+  <section id="sortModal" class="sheet" aria-hidden="true" style="display: none;">
+  <div class="panel">
+    <div class="filter-header w-full flex items-center justify-between px-5 py-6">
+      <div class="flex items-center gap-4">
+        <button type="button" data-close id="closeSortModalBtn"
+          class="size-10 rounded-full border border-gray-200 flex items-center justify-center">
+          <i-con name="light-arrow" class="w-3 h-3 text-black-600"></i-con>
+        </button>
+        <h3 class="text-[16px] font-bold text-[var(--color-black-600,#1f2937)]">مرتب سازی براساس</h3>
+      </div>
+    </div>
+    <div class="filter-body px-5 pb-5 h-full">
+      <div class="mt-2 overflow-y-auto custom-scroll h-full">
+        <ul class="text-sm" data-list="size">
+          <li class="border-t border-b border-gray-200 p-[15px]">
+            <label class="filter-row">
+              <input type="radio" class="peer appearance-none hidden" name="sort">
+              <span
+                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+              </span>
+              <span
+                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">گران
+                ترین</span>
+            </label>
+          </li>
+          <li class="border-b border-gray-200 p-[15px]">
+            <label class="filter-row">
+              <input type="radio" class="peer appearance-none hidden" name="sort">
+              <span
+                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+              </span>
+              <span
+                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">ارزان
+                ترین</span>
+            </label>
+          </li>
+          <li class="border-b border-gray-200 p-[15px]">
+            <label class="filter-row">
+              <input type="radio" class="peer appearance-none hidden" name="sort" checked>
+              <span
+                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+              </span>
+              <span
+                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">جدید
+                ترین</span>
+            </label>
+          </li>
+          <li class="last:border-b-0 p-[15px]">
+            <label class="filter-row">
+              <input type="radio" class="peer appearance-none hidden" name="sort">
+              <span
+                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+              </span>
+              <span
+                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">پرفروش
+                ترین</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="categoryModal" class="sheet" aria-hidden="true" style="display: none;">
+  <div class="panel">
+    <div class="filter-header w-full flex items-center justify-between px-5 py-6">
+      <div class="flex items-center gap-4">
+        <button type="button" data-close id="closeCategoryModalBtn"
+          class="size-10 rounded-full border border-gray-200 flex items-center justify-center">
+          <i-con name="light-arrow" class="w-3 h-3 text-black-600"></i-con>
+        </button>
+        <h3 class="text-[16px] font-bold text-[var(--color-black-600,#1f2937)]">دسته بندی</h3>
+      </div>
+    </div>
+    <div class="filter-body px-5 pb-5 h-full">
+
+      <div class="pb-2 mb-2 border-b border-gray-200">
+        <input type="text" placeholder="جستجو در دسته بندی ها..."
+          class="w-full p-2 text-[14px] bg-transparent outline-none border-none shadow-none focus:ring-0 placeholder-gray-400">
+      </div>
+
+      <div class="overflow-y-auto custom-scroll h-full">
+        <ul class="text-sm" data-list="category">
+          <li class="border-b border-gray-200 p-[15px]">
+            <label class="filter-row">
+              <input type="radio" class="peer appearance-none hidden" name="category" checked>
+              <span
+                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+              </span>
+              <span
+                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">همه
+                دسته ها</span>
+            </label>
+          </li>
+          <li class="border-b border-gray-200 p-[15px]">
+            <label class="filter-row">
+              <input type="radio" class="peer appearance-none hidden" name="category">
+              <span
+                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+              </span>
+              <span
+                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">دسته
+                بندی اول</span>
+            </label>
+          </li>
+          <li class="border-b border-gray-200 p-[15px]">
+            <label class="filter-row">
+              <input type="radio" class="peer appearance-none hidden" name="category">
+              <span
+                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+              </span>
+              <span
+                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">دسته
+                بندی دوم</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <div data-include="/partials/footer.html"></div>
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/pages/category.js"></script>
+  <script type="module" src="/assets/js/pages/blog.js"></script>
+
+</body>
+
+</html>

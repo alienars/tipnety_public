@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="راه‌های ارتباط با فروشگاه تیپ نتی و پشتیبانی">
+    <title>درباره تیپ نتی</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body data-page="contact-us" class="relative">
+
+    <!-- ===== HEADER ===== -->
+    <div data-include="/partials/header.html"></div>
+
+    <!-- ===== SECTION: PAGE HEADER ===== -->
+    <div 
+        class="hidden md:flex absolute top-0 left-0 right-0 h-[600px] md:bg-gray-200 bg-center -z-10">
+    </div>
+    <!-- Breadcrumb for Mobile View (Visible on small screens) -->
+    <div class="m-0 w-full px-4 py-6 lg:hidden bg-gray-200 top-0 z-50">
+        <nav class="flex items-center text-xs font-normal text-black-400">
+            <a href="/index.html" class="text-[#868686] mr-3">فروشگاه لباس تیپ</a>
+            <i-con
+            name="arrow-left-01-sharp"
+            class="w-2 h-2 font-normal text-[#868686] mr-1"
+            ></i-con>
+            <a href="/index.html" class="text-[#868686] mr-3">مجله مد تیپ</a>
+            <i-con
+            name="arrow-left-01-sharp"
+            class="w-2 h-2 font-normal text-[#868686] mr-1"
+            ></i-con>
+            <a href="/index.html" class="text-[#363636] mr-3">ترفند های مراقبت لباس</a>
+            <span class="font-semibold text-white page-header-title"></span>
+        </nav>
+    </div>
+
+    <!-- Main Header Section with Background -->
+    <section class="relative bg-cover bg-center text-black-400 zi-999"> <!-- مسیر عکس را اصلاح کنید -->
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0"></div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 container mx-auto lg:px-4 pt-0 lg:pt-10 text-center">
+
+            <!-- Breadcrumb for Desktop View (Hidden on small screens) -->
+            <nav
+                class="hidden lg:flex md:absolute md:top-6 md:right-6 items-center text-xs text-gray-300 mb-12 md:mb-0">
+                <a href="/index.html" class="text-[#868686] font-light -mr-1">فروشگاه لباس تیپ</a>
+                <i-con name="arrow-left-01-sharp" class="w-2 h-2 font-bold text-[#868686] mr-2"></i-con>
+                <a href="/index.html" class="text-[#868686] font-light mr-4">مجله مد تیپ</a>
+                <i-con name="arrow-left-01-sharp" class="w-2 h-2 font-bold text-[#868686] mr-2"></i-con>
+                <a href="/index.html" class="text-[#868686] font-light mr-4">مراقبت لباس</a>
+                <i-con name="arrow-left-01-sharp" class="w-2 h-2 font-bold text-[#868686] mr-2"></i-con>
+                <a href="/index.html" class="text-[#363636] mr-4">پوشیدن کلاه با چه استایلی توصیه می شود ؟</a>
+                <span class="font-semibold text-white page-header-title"></span>
+            </nav>
+
+            <div class="hidden mt-0">
+                <div class="flex w-full border-y border-[#F5F5F6] divide-x divide-[#F5F5F6] [direction:rtl]">
+                    <button data-js="toggle-filters" class="w-1/2 flex items-center justify-center gap-x-2 py-5 text-sm"
+                        type="button">
+                        <i-con name="hamburger-menu" class="w-5 h-5 text-gray-700"></i-con>
+                        <span class="text-black-600">دسته بندی</span>
+                    </button>
+                    <button id="mSortBtn" class="w-1/2 flex items-center justify-center gap-x-2 py-5 text-sm"
+                        type="button" data-js="open-sort">
+                        <span class="text-black-600">گرانترین</span>
+                        <i-con name="sorting" class="w-6 h-6 text-black-600"></i-con>
+                    </button>
+                </div>
+            </div>
+
+            <section id="sortSheet" class="sheet" aria-hidden="true">
+                <div class="panel">
+                  <div class="filter-header w-full flex items-center justify-between px-5 py-6">
+                    <div class="flex items-center gap-4">
+                      <button type="button" data-close
+                        class="size-10 rounded-full border border-gray-200 flex items-center justify-center">
+                        <i-con name="light-arrow" class="w-3 h-3 text-black-600"></i-con>
+                      </button>
+                      <h3 class="text-[16px] font-bold text-[var(--color-black-600,#1f2937)]">مرتب سازی براساس</h3>
+                    </div>
+                  </div>
+                  <div class="filter-body px-5 pb-5 h-full">
+                    <div class="mt-2 overflow-y-auto custom-scroll h-full">
+                      <ul class="text-sm" data-list="size">
+                        <li class="border-t border-b border-gray-200 p-[15px]">
+                          <label class="filter-row">
+                            <input type="radio" class="peer appearance-none hidden" name="sort">
+                            <span
+                              class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                              <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+                            </span>
+                            <span
+                              class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">گران
+                              ترین</span>
+                          </label>
+                        </li>
+                        <li class="border-b border-gray-200 p-[15px]">
+                          <label class="filter-row">
+                            <input type="radio" class="peer appearance-none hidden" name="sort">
+                            <span
+                              class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                              <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+                            </span>
+                            <span
+                              class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">ارزان
+                              ترین</span>
+                          </label>
+                        </li>
+                        <li class="border-b border-gray-200 p-[15px]">
+                          <label class="filter-row">
+                            <input type="radio" class="peer appearance-none hidden" name="sort" checked>
+                            <span
+                              class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                              <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+                            </span>
+                            <span
+                              class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">محبوب
+                              ترین</span>
+                          </label>
+                        </li>
+                        <li class="last:border-b-0 p-[15px]">
+                          <label class="filter-row">
+                            <input type="radio" class="peer appearance-none hidden" name="sort">
+                            <span
+                              class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                              <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+                            </span>
+                            <span
+                              class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">پرفروش
+                              ترین</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            <section id="filterHub" class="sheet" aria-hidden="true">
+                <div class="panel">
+                    <div class="filter-header w-full flex items-center justify-between px-5 py-6">
+                      <div class="flex items-center gap-4">
+                        <button type="button" data-close
+                          class="size-10 rounded-full border border-gray-200 flex items-center justify-center">
+                          <i-con name="light-arrow" class="w-3 h-3 text-black-600"></i-con>
+                        </button>
+                        <h3 class="text-[16px] font-bold text-[var(--color-black-600,#1f2937)]">من دسته بندی ام</h3>
+                      </div>
+                    </div>
+                    <div class="filter-body px-5 pb-5 h-full">
+                      <div class="mt-2 overflow-y-auto custom-scroll h-full">
+                        <ul class="text-sm" data-list="size">
+                          <li class="border-t border-b border-gray-200 p-[15px]">
+                            <label class="filter-row">
+                              <input type="radio" class="peer appearance-none hidden" name="sort">
+                              <span
+                                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+                              </span>
+                              <span
+                                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">گران
+                                ترین</span>
+                            </label>
+                          </li>
+                          <li class="border-b border-gray-200 p-[15px]">
+                            <label class="filter-row">
+                              <input type="radio" class="peer appearance-none hidden" name="sort">
+                              <span
+                                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+                              </span>
+                              <span
+                                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">ارزان
+                                ترین</span>
+                            </label>
+                          </li>
+                          <li class="border-b border-gray-200 p-[15px]">
+                            <label class="filter-row">
+                              <input type="radio" class="peer appearance-none hidden" name="sort" checked>
+                              <span
+                                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+                              </span>
+                              <span
+                                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">محبوب
+                                ترین</span>
+                            </label>
+                          </li>
+                          <li class="last:border-b-0 p-[15px]">
+                            <label class="filter-row">
+                              <input type="radio" class="peer appearance-none hidden" name="sort">
+                              <span
+                                class="checkbox-custom peer-checked:bg-[var(--color-black-600,#1f2937)] peer-checked:border-transparent">
+                                <img src="../assets/icons/checkbox-tick.svg" class="tick" alt="">
+                              </span>
+                              <span
+                                class="category-text text-[14px] font-medium text-[var(--color-black-500,#374151)] peer-checked:font-semibold peer-checked:text-[var(--color-black-600,#1f2937)]">پرفروش
+                                ترین</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+            </section>
+
+            <!-- Title and Description -->
+            <div class="w-full mx-auto text-center md:text-start mt-6">
+                <h1 class="text-xl lg:text-2xl font-semibold lg:font-bold mb-6 lg:mt-12 page-header-title text-[#363636] mx-auto my-2">پوشیدن
+                    کلاه با چه استایلی توصیه می شود ؟</h1>
+            </div>
+
+            <div dir="ltr"
+                class="hidden lg:flex flex-col lg:flex-row-reverse justify-start items-center p-0 pb-2 rounded-lg">
+
+                <div class="flex items-center gap-4">
+                    <p class="text-sm font-medium text-gray-700">یاسین هزاریان</p>
+                    <div class="w-8 h-8 rounded-full bg-gray-200">
+                        <img src="/assets/img/blog/sender.png" alt="">
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 mr-6" dir="rtl">
+                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700"></i-con>
+                    <p class="text-xs font-medium text-gray-700">۰۶ . شهریور . ۱۴۰۲</p>
+                </div>
+
+                <div class="w-px h-6 bg-gray-300 mx-2 mr-6"></div>
+
+                <div class="flex items-center gap-2 mr-6">
+                    <p class="text-xs font-medium text-gray-700">۲۵۰</p>
+                    <i-con name="eye" class="w-5 h-5 text-gray-700"></i-con>
+                </div>
+
+                <div class="w-px h-6 bg-gray-300 mx-2 mr-6"></div>
+
+                <div class="flex items-center gap-2 mr-6">
+                    <p class="text-xs font-medium text-gray-700">مراقبت لباس</p>
+                    <i-con name="folder-01" class="w-5 h-5 text-gray-700"></i-con>
+                </div>
+
+                <div id="share-button" class="cursor-pointer flex items-center gap-2 mt-4 lg:mt-0 mr-24">
+                    <i-con name="share-04" class="w-5 h-5 text-gray-700"></i-con>
+                    <p class="text-xs font-medium   text-gray-700">اشتراک گذاری</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+    <!-- ===== END SECTION: PAGE HEADER ===== -->
+
+    <!-- =================================================================== -->
+    <!-- محتوای اصلی صفحه (بخش جدید و طراحی شده) -->
+    <!-- =================================================================== -->
+    <!-- Mobile Category Header -->
+    <main class="container mx-auto text-center">
+        <div class="mx-4 md:mx-0 grid grid-cols-1 xl:grid-cols-8 gap-4 lg:px-4 mt-4 items-start">
+            <div class="p-0 col-span-1 xl:col-span-6">
+
+                <img src="/assets/img/blog/main-post-image.png" alt="">
+                <p class="text-justify leading-loose text-[#5E5E5E] mt-5 text-xs md:text-sm font-medium">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.
+                </p>
+
+                <div class="text-right mt-5">
+
+                    <div class="flex items-center">
+                        <i-con name="success" class="w-5 h-5 text-gray-700"></i-con>
+                        <div class="w-px h-6 bg-gray-300 mx-2 mr-3"></div>
+                        <span class="mr-1 text-[#363636]">چرا تیشرت سفید زود کثیف میشه؟</span>
+                    </div>
+
+                    <div class="flex items-center mt-5">
+                        <i-con name="success" class="w-5 h-5 text-gray-700"></i-con>
+                        <div class="w-px h-6 bg-gray-300 mx-2 mr-3"></div>
+                        <span class="mr-1 text-[#363636]">روش‌های صحیح شستن تیشرت سفید</span>
+                    </div>
+
+                    <div class="flex items-center mt-5">
+                        <i-con name="success" class="w-5 h-5 text-gray-700"></i-con>
+                        <div class="w-px h-6 bg-gray-300 mx-2 mr-3"></div>
+                        <span class="mr-1 text-[#363636]">نکات مهم برای حفظ سفیدی تیشرت</span>
+                    </div>
+
+                    <div class="flex items-center mt-5">
+                        <i-con name="success" class="w-5 h-5 text-gray-700"></i-con>
+                        <div class="w-px h-6 bg-gray-300 mx-2 mr-3"></div>
+                        <span class="mr-1 text-[#363636]">چطور تیشرت سفید را بشوییم که زرد نشود</span>
+                    </div>
+
+                </div>
+
+                <p class="text-justify leading-loose text-[#5E5E5E] mt-5 text-xs md:text-sm font-medium">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.
+                </p>
+
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
+	<div class="hidden group md:flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                  <a href="#" class="card-link">
+                    <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
+                      <img src="../assets/img/category/middle/1.jpg" alt="تیشرت طرح دار مردانه" class="product-main-image w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0" />
+
+                      <img src="../assets/img/category/middle/2.jpg" alt="تیشرت طرح دار مردانه" class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100" />
+                      <div class="absolute top-0.5 right-0.5 bg-white/90 rounded-full px-1 py-0.5 md:px-2 md:py-1 text-[10px] md:text-xs font-medium md:font-semibold text-black product-tag">کالکشن جدید</div>
+                      <div class="absolute bottom-3 right-3 bg-red-600 text-gray-100 rounded-full px-1.5 py-1 pt-2 text-[12px] md:text-[14px] font-normal md:font-medium flex h-[20px] md:h-[22px] items-center gap-1 shadow-[0_0_0_1px_rgba(220,38,38,0.33)]">
+                        <i-con name="percent" class="w-2 h-2 md:w-3 md:h-3 text-gray-100 mb-1"></i-con>
+                        <span>۱۶</span>
+                      </div>
+
+                      <div class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        <div class="transform-wrapper">
+                          <div class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                            <div class="plus-icon transition-opacity duration-200">
+                              <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                            </div>
+                            <div class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
+                    <h3 class="text-xs md:text-base font-semibold text-gray-800 mb-0 md:mb-2 truncate whitespace-nowrap overflow-hidden">تیشرت طرح دار مرداشرت طرح دار مردانه لجنی ۱۴شرت طرح دار مردانه لجنی ۱۴نه لجنی ۱۴۲۱</h3>
+
+                    <div class="flex justify-between items-center mb-0 md:mb-3">
+                      <div class="hidden md:flex items-center gap-2">
+                        <button class="text-black/40 text-sm font-medium border border-black/30 rounded-[10px] px-3 py-1.5 whitespace-nowrap">۳ رنگ</button>
+                        <button class="text-black/40 text-sm font-medium border border-black/30 rounded-[10px] px-3 py-1.5 whitespace-nowrap">۶ سایز</button>
+                      </div>
+                      <div class="flex flex-col items-end relative w-full min-h-[49px] justify-end">
+                        <span class="text-gray-400 line-through text-xs md:text-sm specific-gray-text-color">۵,۴۲۰,۰۰۰</span>
+                        <div class="flex items-baseline gap-1">
+                          <span class="text-gray-900 font-bold text-base md:text-lg">۴,۰۰۰,۰۰۰</span>
+                          <i-con name="toman" class="w-3 h-3 md:w-4 md:h-4 text-black-600"></i-con>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #a7c7e7; box-shadow: 0 0 0 1px #a7c7e7" data-main-image="../assets/img/category/middle/5.jpg" data-hover-image="../assets/img/category/middle/6.jpg"></span>
+
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #c9c9c9; box-shadow: 0 0 0 1px #c9c9c9" data-main-image="../assets/img/category/middle/3.jpg" data-hover-image="../assets/img/category/middle/4.jpg"></span>
+
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #ffb3ba; box-shadow: 0 0 0 1px #ffb3ba" data-main-image="../assets/img/category/middle/1.jpg" data-hover-image="../assets/img/category/middle/2.jpg"></span>
+                    </div>
+                  </div>
+                </div>
+
+	<div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                  <a href="#" class="card-link">
+                    <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
+                      <img src="../assets/img/category/middle/1.jpg" alt="تیشرت طرح دار مردانه" class="product-main-image w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0" />
+
+                      <img src="../assets/img/category/middle/2.jpg" alt="تیشرت طرح دار مردانه" class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100" />
+                      <div class="absolute top-0.5 right-0.5 bg-white/90 rounded-full px-1 py-0.5 md:px-2 md:py-1 text-[10px] md:text-xs font-medium md:font-semibold text-black product-tag">کالکشن جدید</div>
+                      <div class="absolute bottom-3 right-3 bg-red-600 text-gray-100 rounded-full px-1.5 py-1 pt-2 text-[12px] md:text-[14px] font-normal md:font-medium flex h-[20px] md:h-[22px] items-center gap-1 shadow-[0_0_0_1px_rgba(220,38,38,0.33)]">
+                        <i-con name="percent" class="w-2 h-2 md:w-3 md:h-3 text-gray-100 mb-1"></i-con>
+                        <span>۱۶</span>
+                      </div>
+
+                      <div class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        <div class="transform-wrapper">
+                          <div class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                            <div class="plus-icon transition-opacity duration-200">
+                              <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                            </div>
+                            <div class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
+                    <h3 class="text-xs md:text-base font-semibold text-gray-800 mb-0 md:mb-2 truncate whitespace-nowrap overflow-hidden">تیشرت طرح دار مرداشرت طرح دار مردانه لجنی ۱۴شرت طرح دار مردانه لجنی ۱۴نه لجنی ۱۴۲۱</h3>
+
+                    <div class="flex justify-between items-center mb-0 md:mb-3">
+                      <div class="hidden md:flex items-center gap-2">
+                        <button class="text-black/40 text-sm font-medium border border-black/30 rounded-[10px] px-3 py-1.5 whitespace-nowrap">۳ رنگ</button>
+                        <button class="text-black/40 text-sm font-medium border border-black/30 rounded-[10px] px-3 py-1.5 whitespace-nowrap">۶ سایز</button>
+                      </div>
+                      <div class="flex flex-col items-end relative w-full min-h-[49px] justify-end">
+                        <span class="text-gray-400 line-through text-xs md:text-sm specific-gray-text-color">۵,۴۲۰,۰۰۰</span>
+                        <div class="flex items-baseline gap-1">
+                          <span class="text-gray-900 font-bold text-base md:text-lg">۴,۰۰۰,۰۰۰</span>
+                          <i-con name="toman" class="w-3 h-3 md:w-4 md:h-4 text-black-600"></i-con>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #a7c7e7; box-shadow: 0 0 0 1px #a7c7e7" data-main-image="../assets/img/category/middle/5.jpg" data-hover-image="../assets/img/category/middle/6.jpg"></span>
+
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #c9c9c9; box-shadow: 0 0 0 1px #c9c9c9" data-main-image="../assets/img/category/middle/3.jpg" data-hover-image="../assets/img/category/middle/4.jpg"></span>
+
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #ffb3ba; box-shadow: 0 0 0 1px #ffb3ba" data-main-image="../assets/img/category/middle/1.jpg" data-hover-image="../assets/img/category/middle/2.jpg"></span>
+                    </div>
+                  </div>
+                </div>
+
+	<div class="group flex flex-col bg-transparent rounded-t-[32px] pb-4 product-card">
+                  <a href="#" class="card-link">
+                    <div class="relative overflow-hidden aspect-[2/3] rounded-2xl">
+                      <img src="../assets/img/category/middle/1.jpg" alt="تیشرت طرح دار مردانه" class="product-main-image w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0" />
+
+                      <img src="../assets/img/category/middle/2.jpg" alt="تیشرت طرح دار مردانه" class="product-hover-image absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100" />
+                      <div class="absolute top-0.5 right-0.5 bg-white/90 rounded-full px-1 py-0.5 md:px-2 md:py-1 text-[10px] md:text-xs font-medium md:font-semibold text-black product-tag">کالکشن جدید</div>
+                      <div class="absolute bottom-3 right-3 bg-red-600 text-gray-100 rounded-full px-1.5 py-1 pt-2 text-[12px] md:text-[14px] font-normal md:font-medium flex h-[20px] md:h-[22px] items-center gap-1 shadow-[0_0_0_1px_rgba(220,38,38,0.33)]">
+                        <i-con name="percent" class="w-2 h-2 md:w-3 md:h-3 text-gray-100 mb-1"></i-con>
+                        <span>۱۶</span>
+                      </div>
+
+                      <div class="absolute bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        <div class="transform-wrapper">
+                          <div class="transform-container relative flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer transition-all duration-300 ease-in-out shadow-sm">
+                            <div class="plus-icon transition-opacity duration-200">
+                              <i-con name="plus-sign" class="w-5 h-5 text-black-600"></i-con>
+                            </div>
+                            <div class="size-options absolute flex gap-2 whitespace-nowrap px-3 opacity-0 invisible transition-opacity duration-200 delay-150 max-w-[220px] overflow-x-auto overflow-y-hidden no-scrollbar">
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">M</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">L</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">XL</button>
+                              <button class="cursor-pointer px-3 rounded-md border border-gray-300 text-sm text-gray-600 hover:bg-black hover:text-white transition-colors h-6 pt-[3px]">2XL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="pt-3 md:pt-6 flex flex-col flex-grow text-right">
+                    <h3 class="text-xs md:text-base font-semibold text-gray-800 mb-0 md:mb-2 truncate whitespace-nowrap overflow-hidden">تیشرت طرح دار مرداشرت طرح دار مردانه لجنی ۱۴شرت طرح دار مردانه لجنی ۱۴نه لجنی ۱۴۲۱</h3>
+
+                    <div class="flex justify-between items-center mb-0 md:mb-3">
+                      <div class="hidden md:flex items-center gap-2">
+                        <button class="text-black/40 text-sm font-medium border border-black/30 rounded-[10px] px-3 py-1.5 whitespace-nowrap">۳ رنگ</button>
+                        <button class="text-black/40 text-sm font-medium border border-black/30 rounded-[10px] px-3 py-1.5 whitespace-nowrap">۶ سایز</button>
+                      </div>
+                      <div class="flex flex-col items-end relative w-full min-h-[49px] justify-end">
+                        <span class="text-gray-400 line-through text-xs md:text-sm specific-gray-text-color">۵,۴۲۰,۰۰۰</span>
+                        <div class="flex items-baseline gap-1">
+                          <span class="text-gray-900 font-bold text-base md:text-lg">۴,۰۰۰,۰۰۰</span>
+                          <i-con name="toman" class="w-3 h-3 md:w-4 md:h-4 text-black-600"></i-con>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex justify-end gap-2">
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #a7c7e7; box-shadow: 0 0 0 1px #a7c7e7" data-main-image="../assets/img/category/middle/5.jpg" data-hover-image="../assets/img/category/middle/6.jpg"></span>
+
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #c9c9c9; box-shadow: 0 0 0 1px #c9c9c9" data-main-image="../assets/img/category/middle/3.jpg" data-hover-image="../assets/img/category/middle/4.jpg"></span>
+
+                      <span class="color-swatch cursor-pointer w-4 h-4 md:w-5 md:h-5 rounded-full" style="background-color: #ffb3ba; box-shadow: 0 0 0 1px #ffb3ba" data-main-image="../assets/img/category/middle/1.jpg" data-hover-image="../assets/img/category/middle/2.jpg"></span>
+                    </div>
+                  </div>
+                </div>
+</div>
+
+                <p class="text-justify leading-loose text-[#5E5E5E] mt-1">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.
+                </p>
+
+                <h1 class="text-right font-bold text-[20px] text-[#363636] mt-6">
+                    پوشیدن کلاه با چه استایلی توصیه می شود ؟
+                </h1>
+
+                <p class="text-justify leading-loose text-black-300 mt-1 text-[13px]">
+                    H1 Style
+                </p>
+
+                <h2 class="text-right font-bold text-[18px] text-[#363636]">
+                    پوشیدن کلاه با چه استایلی توصیه می شود ؟
+                </h2>
+
+                <p class="text-justify leading-loose text-black-300 mt-1 text-[13px]">
+                    H2 Style
+                </p>
+
+                <h3 class="text-right font-bold text-[16px] text-[#363636]">
+                    پوشیدن کلاه با چه استایلی توصیه می شود ؟
+                </h3>
+
+                <p class="text-justify leading-loose text-black-300 mt-1 text-[13px]">
+                    H3 Style
+                </p>
+
+                <h4 class="text-right font-bold text-[14px] text-[#363636]">
+                    پوشیدن کلاه با چه استایلی توصیه می شود ؟
+                </h4>
+
+                <p class="text-justify leading-loose text-black-300 mt-1 text-[13px]">
+                    H4 Style
+                </p>
+
+                <h5 class="text-right font-bold text-[13px] text-[#363636]">
+                    پوشیدن کلاه با چه استایلی توصیه می شود ؟
+                </h5>
+
+                <p class="text-justify leading-loose text-black-300 mt-1 text-[13px]">
+                    H5 Style
+                </p>
+
+                <h6 class="text-right font-bold text-[12px] text-[#363636]">
+                    پوشیدن کلاه با چه استایلی توصیه می شود ؟
+                </h6>
+
+                <p class="text-justify leading-loose text-black-300 mt-1 text-[13px]">
+                    H6 Style
+                </p>
+
+                <p class="text-justify leading-loose text-[#5E5E5E] mt-5 text-xs md:text-sm font-medium">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.
+                </p>
+
+                <!-- FAQ List -->
+                <div class="w-full mt-12">
+                    <div class="space-y-4" id="faq-list">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                            <button
+                                class="accordion-toggle w-full flex items-center p-5 text-right cursor-pointer md:min-h-[100px]">
+                                <div class="accordion-icon-wrapper w-4 h-4 flex-shrink-0 relative text-yellow-600">
+                                    <i-con name="plus"
+                                        class="icon-plus absolute inset-0 transition-opacity duration-300"></i-con>
+                                    <i-con name="minus"
+                                        class="icon-minus absolute inset-0 transition-opacity duration-300 opacity-0"></i-con>
+                                </div>
+                                <div class="w-px h-4 bg-gray-200 mx-4"></div>
+                                <h3 class="font-semibold text-xs md:text-base text-dark">چطور میتوانم سفارشم را ثبت کنم؟</h3>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-5 pb-5 text-justify text-black-400 leading-8 font-light">
+                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                        گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و
+                                        برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
+                                        کاربردی می باشد.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                            <button
+                                class="accordion-toggle w-full flex items-center p-5 text-right cursor-pointer md:min-h-[100px]">
+                                <div class="accordion-icon-wrapper w-4 h-4 flex-shrink-0 relative text-yellow-600">
+                                    <i-con name="plus"
+                                        class="icon-plus absolute inset-0 transition-opacity duration-300"></i-con>
+                                    <i-con name="minus"
+                                        class="icon-minus absolute inset-0 transition-opacity duration-300 opacity-0"></i-con>
+                                </div>
+                                <div class="w-px h-4 bg-gray-200 mx-4"></div>
+                                <h3 class="font-semibold text-xs md:text-base text-dark">میتوانم سفارشم را در محل پرداخت کنم؟</h3>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-5 pb-5 text-justify text-black-400 leading-8 font-light">
+                                    <p>بله، شما می‌توانید هنگام تحویل سفارش در محل، هزینه آن را به صورت نقدی یا با
+                                        استفاده از کارت‌خوان پرداخت کنید. این امکان برای تمامی شهرهای تحت پوشش سرویس
+                                        تحویل اکسپرس ما فراهم است.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                            <button
+                                class="accordion-toggle w-full flex items-center p-5 text-right cursor-pointer md:min-h-[100px]">
+                                <div class="accordion-icon-wrapper w-4 h-4 flex-shrink-0 relative text-yellow-600">
+                                    <i-con name="plus"
+                                        class="icon-plus absolute inset-0 transition-opacity duration-300"></i-con>
+                                    <i-con name="minus"
+                                        class="icon-minus absolute inset-0 transition-opacity duration-300 opacity-0"></i-con>
+                                </div>
+                                <div class="w-px h-4 bg-gray-200 mx-4"></div>
+                                <h3 class="font-semibold text-xs md:text-base text-dark">میتوانم سفارشم را در محل پرداخت کنم؟</h3>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-5 pb-5 text-justify text-black-400 leading-8 font-light">
+                                    <p>بله، شما می‌توانید هنگام تحویل سفارش در محل، هزینه آن را به صورت نقدی یا با
+                                        استفاده از کارت‌خوان پرداخت کنید. این امکان برای تمامی شهرهای تحت پوشش سرویس
+                                        تحویل اکسپرس ما فراهم است.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4  -->
+                        <div class="faq-item bg-white border border-gray-200 rounded-xl overflow-hidden">
+                            <button
+                                class="accordion-toggle w-full flex items-center p-5 text-right cursor-pointer md:min-h-[100px]">
+                                <div class="accordion-icon-wrapper w-4 h-4 flex-shrink-0 relative text-yellow-600">
+                                    <i-con name="plus"
+                                        class="icon-plus absolute inset-0 transition-opacity duration-300"></i-con>
+                                    <i-con name="minus"
+                                        class="icon-minus absolute inset-0 transition-opacity duration-300 opacity-0"></i-con>
+                                </div>
+                                <div class="w-px h-4 bg-gray-200 mx-4"></div>
+                                <h3 class="font-semibold text-xs md:text-base text-dark">میتوانم سفارشم را در محل پرداخت کنم؟</h3>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="px-5 pb-5 text-justify text-black-400 leading-8 font-light">
+                                    <p>بله، شما می‌توانید هنگام تحویل سفارش در محل، هزینه آن را به صورت نقدی یا با
+                                        استفاده از کارت‌خوان پرداخت کنید. این امکان برای تمامی شهرهای تحت پوشش سرویس
+                                        تحویل اکسپرس ما فراهم است.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="text-justify leading-loose text-[#5E5E5E] mt-5 text-xs md:text-sm font-medium">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
+                    شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.
+                </p>
+
+                <div
+                    class="w-full flex justify-start items-center gap-6 rounded-none md:rounded-xl bg-white p-6 px-2 md:p-6 border-b border-t md:border border-gray-200 mt-6">
+
+                    <span class="text-xs md:text-sm font-normal md:font-bold text-gray-800">برچسب ها</span>
+
+                    <div class="hidden md:block w-px h-6 bg-gray-300"></div>
+
+                    <div class="flex items-center flex-wrap justify-start gap-3">
+                        <span
+                            class="flex items-center gap-2 px-4 py-2 border-1 border-[#FCB108] rounded-full text-xs md:text-sm font-semibold text-[#FCB108] hover:bg-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200">
+                            از بین بردن لکه
+                        </span>
+
+                        <span
+                            class="flex items-center gap-2 px-4 py-2 border-1 border-[#FCB108] rounded-full text-xs md:text-sm font-semibold text-[#FCB108] hover:bg-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200">
+                            نگهداری لباس
+                        </span>
+
+                        <span
+                            class="flex items-center gap-2 px-4 py-2 border-1 border-[#FCB108] rounded-full text-xs md:text-sm font-semibold text-[#FCB108] hover:bg-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200">
+                            تیشرت سفید
+                        </span>
+
+                        <span
+                            class="flex items-center gap-2 px-4 py-2 border-1 border-[#FCB108] rounded-full text-xs md:text-sm font-semibold text-[#FCB108] hover:bg-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-colors duration-200">
+                            شستشوی لباس
+                        </span>
+                    </div>
+
+                </div>
+
+                <h2 class="text-right font-bold text-sm md:text-2xl text-[#363636] mt-7">
+                    دیدگاه کاربران
+                </h2>
+
+                <p class="text-justify text-xs md:text-sm leading-loose text-[#5E5E5E] mt-1">
+                    پوشیدن کلاه با چه استایلی توصیه می شود ؟
+                </p>
+
+                <div
+                    class="flex flex-col items-center justify-center p-8 py-12 md:py-10 border border-gray-200 rounded-xl bg-white w-full md:min-h-[211px] mt-5">
+                    <div class="flex items-center justify-center gap-8" dir="ltr">
+                        <div class="flex items-center justify-center">
+                            <i-con name="comment-add-01" class="w-13 h-13 text-gray-700"></i-con>
+                        </div>
+
+                        <div class="flex flex-col items-start" dir="rtl">
+                            <p class="text-base md:text-lg font-semibold text-gray-800 text-right mb-1">
+                                هیچ دیدگاهی ثبت نشده است!
+                            </p>
+
+                            <p class="text-sm font-medium text-gray-500 text-right">
+                                اولین دیدگاه را ثبت کنید
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full rounded-none md:rounded-xl bg-white p-0 pb-4 md:p-10 border-b md:border border-gray-200 my-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center gap-8">
+                            <span class="text-xs md:text-sm font-semibold text-black-500">شایان چاوشی</span>
+                            <div class="w-px h-5 bg-gray-300"></div>
+                            <span
+                                class="inline-block px-2 py-1 md:px-4 md:py-1.5 rounded-full text-xs font-semibold text-[#5E5E5E] bg-gray-200">
+                                کاربر سایت
+                            </span>
+                        </div>
+
+                        <span class="text-xs font-medium text-[#AFAFAF]">۶ . شهریور . ۱۴۰۲</span>
+
+                    </div>
+
+                    <div class="my-6">
+                        <p class="text-justify leading-loose font-light text-sm text-[#5E5E5E] mt-5">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                            است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                            تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
+                            در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد.نامفهوم از صنعت
+                            چاپ، و با استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                            صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                            ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                            جامعه و متخصصان را می طلبد.نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.
+                        </p>
+                    </div>
+
+                    <hr class="border-t border-gray-200 my-4" />
+
+                    <div class="flex justify-start items-center gap-6">
+                        <div class="flex items-center gap-2 hover:text-green-600 cursor-pointer ml-10">
+                            <i-con name="thumbs-up" class="w-5 h-5 text-green ml-3"></i-con>
+                            <span class="text-sm font-semibold">می‌پسندم</span>
+                            <span class="text-sm text-gray-400">(</span>
+                            <span class="text-sm text-black-600 font-bold">۱۶</span>
+                            <span class="text-sm text-gray-400">)</span>
+                        </div>
+
+                        <div class="flex items-center gap-2 text-gray-800 hover:text-gray-900 cursor-pointer">
+                            <i-con name="arrow-up-right-01-sharp" class="w-5 h-5 text-gray-700"></i-con>
+                            <span class="text-sm font-semibold">پاسخ دهید</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w-full rounded-none md:rounded-xl bg-white p-0 pb-4 md:p-10 border-b md:border border-gray-200 my-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center gap-8">
+                            <span class="text-xs md:text-sm font-semibold text-black-500">شایان چاوشی</span>
+                            <div class="w-px h-5 bg-gray-300"></div>
+                            <span
+                                class="inline-block px-2 py-1 md:px-4 md:py-1.5 rounded-full text-xs font-semibold text-[#5E5E5E] bg-gray-200">
+                                کاربر سایت
+                            </span>
+                        </div>
+
+                        <span class="text-xs font-medium text-[#AFAFAF]">۶ . شهریور . ۱۴۰۲</span>
+
+                    </div>
+
+                    <div class="my-6">
+                        <p class="text-justify leading-loose font-light text-sm text-[#5E5E5E] mt-5">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                            است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                            تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
+                            در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد.نامفهوم از صنعت
+                            چاپ، و با استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                            صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+                            ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                            جامعه و متخصصان را می طلبد.نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.
+                        </p>
+                    </div>
+
+                    <hr class="border-t border-gray-200 my-4" />
+
+                    <div class="flex justify-start items-center gap-6">
+                        <div class="flex items-center gap-2 hover:text-green-600 cursor-pointer ml-10">
+                            <i-con name="thumbs-up" class="w-5 h-5 text-green ml-3"></i-con>
+                            <span class="text-sm font-semibold">می‌پسندم</span>
+                            <span class="text-sm text-gray-400">(</span>
+                            <span class="text-sm text-black-600 font-bold">۱۶</span>
+                            <span class="text-sm text-gray-400">)</span>
+                        </div>
+
+                        <div class="flex items-center gap-2 text-gray-800 hover:text-gray-900 cursor-pointer">
+                            <i-con name="arrow-up-right-01-sharp" class="w-5 h-5 text-gray-700"></i-con>
+                            <span class="text-sm font-semibold">پاسخ دهید</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center mt-5">
+                    <h2 class="text-right font-semibold text-[#FCB108]">
+                        مشاهده نظرات بیشتر
+                    </h2>
+                    <i-con name="arrow-down-sharp" class="w-5 h-5 mr-1 text-[#FCB108]"></i-con>
+                </div>
+
+                <form class="flex flex-col gap-6 rounded-xl bg-white w-full mt-10">
+                    <h2 class="text-sm md:text-xl font-semibold text-gray-800 text-right">ارسال دیدگاه جدید</h2>
+                  
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div class="relative w-full">
+                        <label
+                          for="name"
+                          class="absolute -top-3 right-4 bg-white px-2 text-sm font-medium text-gray-700"
+                        >
+                          نام شما
+                          <span class="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          class="w-full h-16 p-4 pt-6 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200"
+                        />
+                      </div>
+                  
+                      <div class="relative w-full">
+                        <label
+                          for="email"
+                          class="absolute -top-3 right-4 bg-white px-2 text-sm font-medium text-gray-700"
+                        >
+                          ایمیل
+                          <span class="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          class="w-full h-16 p-4 pt-6 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200"
+                        />
+                      </div>
+                    </div>
+                  
+                    <div class="relative w-full">
+                      <label
+                        for="comment"
+                        class="absolute -top-3 right-4 bg-white px-2 text-sm font-medium text-gray-700"
+                      >
+                        متن دیدگاه خود را بنویسید
+                        <span class="text-red-500">*</span>
+                      </label>
+                      <textarea
+                        id="comment"
+                        rows="8"
+                        class="w-full p-4 pt-6 border border-gray-300 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200"
+                      ></textarea>
+                    </div>
+                  
+                    <div class="flex justify-start w-full" dir="ltr">
+                        <button
+                          type="submit"
+                          class="w-full lg:w-fit px-0 md:px-36 py-4 bg-[#363636] text-white font-light rounded-full hover:bg-gray-900 transition-colors duration-200"
+                        >
+                          ارسال دیدگاه
+                        </button>
+                      </div>
+                  </form>
+
+
+            </div>
+            <div class="hidden xl:flex xl:col-span-2 sticky top-5">
+                <section class="w-full max-w-[420px] mx-auto rounded-none md:rounded-2xl bg-white border border-[#ebebeb] p-6 lg:p-4">
+                    <div class="flex flex-col items-center gap-4 text-[#363636] mb-8">
+                        <h2 class="text-xl font-semibold mt-4">مطالب مرتبط</h2>
+
+                        <div class="w-[1px] h-10 bg-[#FCB108] rounded-full relative">
+                            <span
+                                class="absolute w-1.5 h-1.5 -bottom-0 left-1/2 -translate-x-1/2 rounded-full bg-[#FCB108]"></span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <img src="/assets/img/blog/boys.png" alt="" class="mt-3">
+                        <h3 class="text-xs md:text-sm font-semibold text-black-500 mt-3">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                        <div class="flex items-center gap-x-1 mt-2">
+                            <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                            <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                        </div>
+                    </div>
+
+                    <hr class="border-gray-200 mt-5 mb-5">
+
+                    <ul class="flex flex-col gap-y-6 mt-3">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-1.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-xs md:text-sm font-semibold text-black-500">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="border-gray-200">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-2.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-xs md:text-sm font-semibold text-black-500">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                        <hr class="border-gray-200">
+                        <li class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                                <img src="/assets/img/blog/post-3.png" alt="تصویر مقاله ۱"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow flex flex-col items-start text-right">
+                                <h3 class="text-xs md:text-sm font-semibold text-black-500">انواع کفش جیر را چگونه باید تمیز کنیم؟</h3>
+                                <div class="flex items-center gap-x-1 mt-3">
+                                    <i-con name="calendar-01" class="w-5 h-5 text-gray-700 mb-1 ml-1"></i-con>
+                                    <span class="text-xs font-semibold text-[#363636]">۶ . شهریور . ۱۴۰۲</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="border-gray-200 mt-5 mb-5">
+                    <a href="#"
+                        class="mt-8 mb-4 flex justify-center items-center gap-x-2 text-base font-semibold text-gray-800">
+                        <span>مشاهده همه</span>
+                        <i-con name="arrow-up-left-01-sharp" class="w-4 h-4 text-gray-700 mb-1 ml-1"></i-con>
+                    </a>
+                </section>
+            </div>
+        </div>
+
+        <hr class="my-12 border-gray-300">
+
+        <div class="hidden xl:grid grid-cols-4 gap-8 mt-12 mb-8">
+            <!-- Feature 1: Express Delivery -->
+            <div class="flex items-center gap-4 p-6 justify-between">
+                <div class="flex flex-col justify-center items-start gap-4">
+                    <p class="text-base font-bold text-right text-[#363636]">ارسال بصورت اکسپرس</p>
+                    <p class="text-[10px] text-right text-[#afafaf]">ارسال فوری به سرتاسر ایران</p>
+                </div>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-18 h-18 flex-shrink-0 rounded-2xl border border-[#ebebeb] p-3"><path d="M39 35C39 37.7614 36.7614 40 34 40C31.2386 40 29 37.7614 29 35C29 32.2386 31.2386 30 34 30C36.7614 30 39 32.2386 39 35Z" stroke="#FCB108" stroke-width="2"></path><path d="M19 35C19 37.7614 16.7614 40 14 40C11.2386 40 9 37.7614 9 35C9 32.2386 11.2386 30 14 30C16.7614 30 19 32.2386 19 35Z" stroke="#FCB108" stroke-width="2"></path><path d="M29 35H19M4 8H24C26.8284 8 28.2426 8 29.1213 8.87868C30 9.75736 30 11.1716 30 14V31M31 13H34.6029C36.2621 13 37.0918 13 37.7795 13.3894C38.4673 13.7788 38.8941 14.4902 39.7478 15.913L43.145 21.5749C43.5698 22.2831 43.7823 22.6371 43.8911 23.0302C44 23.4232 44 23.8361 44 24.6619V30C44 31.8692 44 32.8038 43.5981 33.5C43.3348 33.9561 42.9561 34.3348 42.5 34.5981C41.8038 35 40.8692 35 39 35M4 26V30C4 31.8692 4 32.8038 4.40192 33.5C4.66523 33.9561 5.04394 34.3348 5.5 34.5981C6.19615 35 7.13077 35 9 35" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 14H16M4 20H12" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                
+            </div>
+             <!-- Feature 2: 24/7 Support -->
+            <div class="flex items-center gap-4 p-6 justify-between">
+                <div class="flex flex-col justify-center items-start gap-4">
+                    <p class="text-base font-bold text-right text-[#363636]">پشتیبانی ۲۴ ساعته</p>
+                    <p class="text-[10px] text-right text-[#afafaf]">۲۴ ساعت شبانه روز پاسخگوی شما هستیم</p>
+                </div>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-18 h-18 flex-shrink-0 rounded-2xl border border-[#ebebeb] p-3"><path d="M34 21.6089C34 20.9177 34 20.5721 34.1041 20.2639C34.4065 19.3689 35.2036 19.0215 36.0022 18.6578C36.9 18.2488 37.3489 18.0444 37.7937 18.0084C38.2986 17.9676 38.8045 18.0764 39.236 18.3186C39.8081 18.6397 40.2072 19.2499 40.6157 19.746C42.5025 22.0377 43.4459 23.1835 43.7911 24.4471C44.0696 25.4668 44.0696 26.5332 43.7911 27.5529C43.2876 29.3959 41.697 30.9407 40.5196 32.3708C39.9173 33.1023 39.6162 33.468 39.236 33.6814C38.8045 33.9236 38.2986 34.0324 37.7937 33.9916C37.3489 33.9556 36.9 33.7512 36.0022 33.3422C35.2036 32.9785 34.4065 32.6311 34.1041 31.7361C34 31.4279 34 31.0823 34 30.3911V21.6089Z" stroke="#FCB108" stroke-width="2"></path><path d="M14 21.6087C14 20.7382 13.9756 19.9559 13.2718 19.3439C13.0159 19.1213 12.6765 18.9667 11.9978 18.6576C11.1 18.2487 10.6511 18.0442 10.2063 18.0082C8.87183 17.9003 8.15384 18.8111 7.38425 19.7459C5.4975 22.0375 4.55412 23.1834 4.20893 24.447C3.93036 25.4667 3.93036 26.533 4.20893 27.5527C4.71241 29.3957 6.30304 30.9406 7.48042 32.3706C8.22257 33.272 8.93154 34.0945 10.2063 33.9914C10.6511 33.9555 11.1 33.751 11.9978 33.3421C12.6765 33.0329 13.0159 32.8784 13.2718 32.6558C13.9756 32.0438 14 31.2614 14 30.3909V21.6087Z" stroke="#FCB108" stroke-width="2"></path><path d="M10 18C10 11.3726 16.268 6 24 6C31.732 6 38 11.3726 38 18" stroke="#FCB108" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path><path d="M38 34V35.6C38 39.1346 34.4183 42 30 42H26" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                
+            </div>
+            <!-- Feature 3: Authenticity Guarantee -->
+            <div class="flex items-center gap-4 p-6 justify-between">
+                <div class="flex flex-col justify-center items-start gap-4">
+                    <p class="text-base font-bold text-right text-[#363636]">تضمین اصالت کالا</p>
+                    <p class="text-[10px] text-right text-[#afafaf]">هر محصولی را برای شما ضمانت می‌کنیم</p>
+                </div>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-18 h-18 flex-shrink-0 rounded-2xl border border-[#ebebeb] p-3"><path d="M23.9964 4.00024C17.9809 4.00024 14.0804 8.03823 9.46743 9.51005C7.59177 10.1085 6.65394 10.4077 6.2744 10.8295C5.89486 11.2514 5.78372 11.8677 5.56144 13.1005C3.18287 26.2922 8.3818 38.4882 20.7806 43.2352C22.1128 43.7452 22.7789 44.0003 24.003 44.0002C25.2271 44.0002 25.8931 43.7452 27.2252 43.2352C39.6232 38.4881 44.8172 26.2922 42.4379 13.1005C42.2156 11.8675 42.1044 11.251 41.7248 10.8292C41.3451 10.4074 40.4074 10.1083 38.5318 9.51022C33.9171 8.03853 30.0122 4.00024 23.9964 4.00024Z" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M24 14.0002L24 18.0002" stroke="#FCB108" stroke-width="2" stroke-linecap="round"></path></svg>
+                
+            </div>
+            <!-- Feature 4: Secure Payment -->
+            <div class="flex items-center gap-4 p-6 justify-between">
+                <div class="flex flex-col justify-center items-start gap-4">
+                    <p class="text-base font-bold text-right text-[#363636]">پرداخت امن و مطمئن</p>
+                    <p class="text-[10px] text-right text-[#afafaf]">درگاه پرداخت امن و دارای مجوز رسمی</p>
+                </div>
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-18 h-18 flex-shrink-0 rounded-2xl border border-[#ebebeb] p-3"><path d="M32 28C32 29.6569 33.3431 31 35 31C36.6569 31 38 29.6569 38 28C38 26.3431 36.6569 25 35 25C33.3431 25 32 26.3431 32 28Z" stroke="#FCB108" stroke-width="2"></path><path d="M20 14H32C37.6569 14 40.4853 14 42.2426 15.7574C44 17.5147 44 20.3431 44 26V30C44 35.6569 44 38.4853 42.2426 40.2426C40.4853 42 37.6569 42 32 42H20C12.4575 42 8.68629 42 6.34315 39.6569C4 37.3137 4 33.5425 4 26V22C4 14.4575 4 10.6863 6.34315 8.34315C8.68629 6 12.4575 6 20 6H28C29.8599 6 30.7899 6 31.5529 6.20445C33.6235 6.75925 35.2408 8.37653 35.7956 10.4471C36 11.2101 36 12.1401 36 14" stroke="#FCB108" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <!-- ====== share Modal ====== -->
+<div id="share-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[rgba(0,0,0,0.6)] zi-9999 transition-opacity duration-300 opacity-0 pointer-events-none">
+        
+        <!-- محتوای پاپ‌آپ -->
+        <div id="share-modal-content" class="bg-white w-full max-w-md p-8 transform scale-95 transition-transform duration-300 flex flex-col text-center">
+            
+            <!-- هدر پاپ‌آپ (اصلاح شده) -->
+            <div class="relative flex justify-center items-center mb-4">
+                <h2 class="text-sm font-bold text-black-600 mb-7">اشتراک گذاری با دوستان</h2>
+                <button id="close-share-modal" class="absolute -right-1 top-3 -translate-y-1/2 w-9 h-9 flex items-center justify-center border border-gray-200 rounded-full hover:bg-gray-100 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#363636]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- متن توضیحی اول -->
+            <p class="text-xs text-[#5e5e5e] mb-6 text-right leading-relaxed">
+                می‌توانید محصول را برای دوستان خود به اشتراک بگذارید و برای خرید از آن‌ها مشورت بگیرید!
+            </p>
+
+            <!-- آیکون‌های شبکه‌های اجتماعی -->
+            <div class="grid grid-cols-4 gap-4 my-4">
+                <!-- Instagram -->
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div class="w-18 h-18 flex items-center justify-center bg-red-100 rounded-full transition-transform group-hover:scale-110bg-[#fbeaeb] rounded-full transition-transform">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.1665 20.0001C4.1665 12.5362 4.1665 8.80422 6.48524 6.48549C8.80398 4.16675 12.5359 4.16675 19.9998 4.16675C27.4637 4.16675 31.1957 4.16675 33.5144 6.48549C35.8332 8.80422 35.8332 12.5362 35.8332 20.0001C35.8332 27.464 35.8332 31.1959 33.5144 33.5147C31.1957 35.8334 27.4637 35.8334 19.9998 35.8334C12.5359 35.8334 8.80398 35.8334 6.48524 33.5147C4.1665 31.1959 4.1665 27.464 4.1665 20.0001Z" stroke="#DC3134" stroke-width="2" stroke-linejoin="round"></path><path d="M27.5 20C27.5 24.1421 24.1421 27.5 20 27.5C15.8579 27.5 12.5 24.1421 12.5 20C12.5 15.8579 15.8579 12.5 20 12.5C24.1421 12.5 27.5 15.8579 27.5 20Z" stroke="#DC3134" stroke-width="2"></path><path d="M29.1797 10.8334L29.1647 10.8334" stroke="#DC3134" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <p class="text-xs font-semibold text-[#363636] mt-2">اینستاگرام</p>
+                </a>
+                <!-- Facebook -->
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div class="w-18 h-18 flex items-center justify-center bg-[#ECECFF] rounded-full transition-transform group-hover:scale-110bg-[#ececff] rounded-full transition-transform">
+                       <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.3032 17.2221C8.6736 17.2221 8.3335 17.5419 8.3335 19.074V21.8518C8.3335 23.3839 8.6736 23.7036 10.3032 23.7036H14.2426V34.8147C14.2426 36.3468 14.5827 36.6666 16.2123 36.6666H20.1517C21.7813 36.6666 22.1214 36.3468 22.1214 34.8147V23.7036H26.5447C27.7806 23.7036 28.0991 23.4778 28.4386 22.3605L29.2828 19.5827C29.8644 17.6688 29.506 17.2221 27.3889 17.2221H22.1214V12.5925C22.1214 11.5698 23.0032 10.7407 24.0911 10.7407H29.6971C31.3267 10.7407 31.6668 10.4209 31.6668 8.88881V5.1851C31.6668 3.653 31.3267 3.33325 29.6971 3.33325H24.0911C18.6519 3.33325 14.2426 7.47876 14.2426 12.5925V17.2221H10.3032Z" stroke="#2326E3" stroke-width="2" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <p class="text-xs font-semibold text-[#363636] mt-2">فیسبوک</p>
+                </a>
+                <!-- Telegram -->
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div class="w-18 h-18 flex items-center justify-center bg-[#E0F5FF] rounded-full transition-transform group-hover:scale-110bg-[#e0f5ff] rounded-full transition-transform">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.9759 25.6805L25.3782 31.8226C27.3797 34.0982 28.3805 35.2361 29.428 34.9591C30.4756 34.6821 30.8348 33.1846 31.5532 30.1897L35.5383 13.5765C36.6448 8.96387 37.198 6.65756 35.9682 5.52C34.7385 4.38244 32.6069 5.22875 28.3437 6.92136L8.56476 14.7741C5.15504 16.1279 3.45018 16.8048 3.34194 17.9681C3.33087 18.0871 3.33068 18.2069 3.34139 18.3259C3.44606 19.4895 5.14885 20.1721 8.55441 21.5372C10.0975 22.1557 10.869 22.465 11.4222 23.0573C11.4844 23.1239 11.5442 23.1928 11.6015 23.264C12.1111 23.8973 12.3286 24.7284 12.7636 26.3907L13.5777 29.5016C14.001 31.1192 14.2126 31.928 14.767 32.0383C15.3213 32.1485 15.8039 31.4779 16.7692 30.1366L19.9759 25.6805ZM19.9759 25.6805L19.4462 25.1285C18.8434 24.5002 18.542 24.1861 18.542 23.7958C18.542 23.4054 18.8434 23.0913 19.4462 22.4631L25.4011 16.2568" stroke="#08ABFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <p class="text-xs font-semibold text-[#363636] mt-2">تلگرام</p>
+                </a>
+                <!-- WhatsApp -->
+                <a href="#" class="flex flex-col items-center gap-2 group">
+                    <div class="w-18 h-18 flex items-center justify-center bg-green-100 rounded-full transition-transform group-hover:scale-110bg-[#e7f8f0] rounded-full transition-transform">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.0002 36.6666C29.2049 36.6666 36.6668 29.2047 36.6668 19.9999C36.6668 10.7952 29.2049 3.33325 20.0002 3.33325C10.7954 3.33325 3.3335 10.7952 3.3335 19.9999C3.3335 22.298 3.79862 24.4875 4.63987 26.4793C5.10479 27.5802 5.33726 28.1306 5.36604 28.5465C5.39483 28.9625 5.27239 29.4201 5.02752 30.3353L3.3335 36.6666L9.66478 34.9726C10.58 34.7277 11.0376 34.6052 11.4535 34.634C11.8695 34.6628 12.4199 34.8953 13.5207 35.3602C15.5126 36.2015 17.7021 36.6666 20.0002 36.6666Z" stroke="#12B76A" stroke-width="2" stroke-linejoin="round"></path><path d="M14.3139 20.6289L15.7655 18.826C16.3773 18.0662 17.1336 17.3588 17.1928 16.3471C17.2077 16.0915 17.0279 14.9442 16.6683 12.6497C16.527 11.748 15.6851 11.6666 14.9559 11.6666C14.0056 11.6666 13.5304 11.6666 13.0586 11.8822C12.4622 12.1546 11.85 12.9205 11.7156 13.5622C11.6093 14.0699 11.6883 14.4197 11.8463 15.1194C12.5174 18.0913 14.0917 21.0264 16.5328 23.4675C18.9739 25.9086 21.909 27.4829 24.8808 28.154C25.5805 28.312 25.9304 28.391 26.4381 28.2847C27.0798 28.1503 27.8457 27.5381 28.1181 26.9417C28.3337 26.4699 28.3337 25.9947 28.3337 25.0444C28.3337 24.3152 28.2523 23.4733 27.3506 23.332C25.056 22.9724 23.9088 22.7926 23.6532 22.8075C22.6415 22.8667 21.9341 23.623 21.1743 24.2348L19.3714 25.6864" stroke="#12B76A" stroke-width="2"></path></svg>
+                    </div>
+                    <p class="text-xs font-semibold text-[#363636] mt-2">واتساپ</p>
+                </a>
+            </div>
+
+            <!-- متن توضیحی دوم -->
+            <p class="text-xs text-[#5e5e5e] mt-6 mb-6 text-right">
+                لینک را کپی کنید تا جای دیگری به اشتراک بگذارید.
+            </p>
+
+            <!-- دکمه کپی لینک -->
+            <button id="copy-link-button" class="w-full h-12 bg-[#363636] text-white font-medium text-[12px] rounded-full transition flex items-center justify-center gap-2">
+                
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"><path d="M15.0563 13.2183C14.014 14.2606 12.3241 14.2606 11.2817 13.2183C10.2394 12.1759 10.2394 10.486 11.2817 9.44364L13.6409 7.0845C14.6357 6.08961 16.2206 6.04433 17.2692 6.94866M16.9437 3.78175C17.986 2.73942 19.6759 2.73942 20.7183 3.78175C21.7606 4.82408 21.7606 6.51403 20.7183 7.55636L18.3591 9.9155C17.3643 10.9104 15.7794 10.9557 14.7308 10.0513" stroke="white" stroke-width="1.5" stroke-linecap="round"></path><path d="M21.5 13C21.5 16.7712 21.5 18.6569 20.3284 19.8284C19.1569 21 17.2712 21 13.5 21H11.5C7.72876 21 5.84315 21 4.67157 19.8284C3.5 18.6569 3.5 16.7712 3.5 13V11C3.5 7.22876 3.5 5.34315 4.67157 4.17157C5.84315 3 7.72876 3 11.5 3" stroke="white" stroke-width="1.5" stroke-linecap="round"></path></svg>
+            <span id="copy-link-text">لینک محصول را کپی کنید</span>
+            </button>
+        </div>
+    </div>
+    
+
+    <!-- فوتر اصلی سایت -->
+    <div data-include="/partials/footer.html"></div>
+
+    <!-- اسکریپت اصلی -->
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/pages/blog-singlepost.js"></script>
+    <script type="module" src="/assets/js/pages/category.js"></script>
+
+</body>
+
+</html>

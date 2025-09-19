@@ -118,6 +118,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const basketButton = document.getElementById("menu-user-basket");
   const basketPopup = document.getElementById("basket-popup");
 
+  // ========== توابع کمکی برای تبدیل اعداد ==========
+  const persianNumerals = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+
+  // تابعی برای تبدیل رشته عدد فارسی به انگلیسی
+  function toWesternNumerals(str) {
+    let result = str.toString();
+    for (let i = 0; i < 10; i++) {
+      // با استفاده از یک عبارت باقاعده (RegExp) تمام نمونه‌های عدد فارسی را جایگزین می‌کند
+      result = result.replace(new RegExp(persianNumerals[i], "g"), i);
+    }
+    return result;
+  }
+
+  // تابعی برای تبدیل عدد انگلیسی به رشته فارسی
+  function toPersianNumerals(num) {
+    let result = num.toString();
+    const westernNumerals = [/\d/g]; // این بخش لازم نیست، می‌توان مستقیم جایگزین کرد
+    for (let i = 0; i < 10; i++) {
+      result = result.replace(new RegExp(i, "g"), persianNumerals[i]);
+    }
+    return result;
+  }
+
   // ========== بخش کنترل باز و بسته شدن پاپ آپ ==========
   if (basketButton && basketPopup) {
     basketButton.addEventListener("click", function (event) {
@@ -142,15 +165,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const quantityValue = item.querySelector(".quantity-value");
 
     plusButton.addEventListener("click", () => {
-      let currentQuantity = parseInt(quantityValue.textContent);
-      quantityValue.textContent = currentQuantity + 1;
+      // ۱. عدد فارسی را بخوان و به انگلیسی تبدیل کن
+      const westernNumStr = toWesternNumerals(quantityValue.textContent);
+      // ۲. رشته انگلیسی را به عدد تبدیل کن
+      let currentQuantity = parseInt(westernNumStr);
+      // ۳. محاسبه را انجام بده
+      const newQuantity = currentQuantity + 1;
+      // ۴. نتیجه را به فارسی تبدیل و در صفحه نمایش بده
+      quantityValue.textContent = toPersianNumerals(newQuantity);
     });
 
     minusButton.addEventListener("click", () => {
-      let currentQuantity = parseInt(quantityValue.textContent);
-      // جلوگیری از کم شدن تعداد به زیر ۱
+      const westernNumStr = toWesternNumerals(quantityValue.textContent);
+      let currentQuantity = parseInt(westernNumStr);
+
       if (currentQuantity > 1) {
-        quantityValue.textContent = currentQuantity - 1;
+        const newQuantity = currentQuantity - 1;
+        quantityValue.textContent = toPersianNumerals(newQuantity);
       }
     });
   });

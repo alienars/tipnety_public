@@ -147,6 +147,17 @@ input:-webkit-autofill:active {
     font-weight: bold;
 }
 
+/* header */
+.main-category-link.active {
+    background-color: white;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 /* 4cards-offers */
 

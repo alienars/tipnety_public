@@ -43,7 +43,7 @@ export function initHeader() {
             observer: true,
             observeParents: true,
             breakpoints: {
-              640: { slidesPerView: 4 },
+              320: { slidesPerView: 3 },
               768: { slidesPerView: 5 },
               1024: { slidesPerView: 6 },
             },
@@ -104,7 +104,7 @@ export function initHeader() {
                 },
                 // نمایش 4 کارت در دسکتاپ
                 1024: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                   spaceBetween: 24,
                 },
               },
@@ -120,7 +120,144 @@ export function initHeader() {
   }
 
   // Mobile Menu (Off-canvas) Logic
- 
+//  const hamburgerButton = document.getElementById("hamburger-button");
+//  const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+//  const mobileMenu = document.getElementById("mobile-menu");
+//  const closeMobileMenuButton = document.getElementById("close-mobile-menu");
+
+//  if (hamburgerButton && mobileMenuOverlay && mobileMenu) {
+//    // باز کردن منوی موبایل
+//    const openMobileMenu = () => {
+//      mobileMenuOverlay.classList.remove("hidden");
+//      mobileMenu.classList.remove("translate-x-full");
+//      document.body.style.overflow = "hidden";
+//    };
+
+//    // بستن منوی موبایل
+//    const closeMobileMenu = () => {
+//      mobileMenuOverlay.classList.add("hidden");
+//      mobileMenu.classList.add("translate-x-full");
+//      // فقط اگر مودال جستجو باز نباشد، اسکرول را آزاد کن
+//      const searchModal = document.getElementById("search-modal");
+//      if (!searchModal || searchModal.classList.contains("hidden")) {
+//        document.body.style.overflow = "";
+//      }
+//    };
+
+//    // Event listeners برای منوی موبایل
+//    hamburgerButton.addEventListener("click", (e) => {
+//      e.preventDefault();
+//      openMobileMenu();
+//    });
+
+//    // بستن با کلیک روی overlay
+//    mobileMenuOverlay.addEventListener("click", (e) => {
+//      if (e.target === mobileMenuOverlay) {
+//        closeMobileMenu();
+//      }
+//    });
+
+//    // بستن با دکمه close
+//    closeMobileMenuButton?.addEventListener("click", closeMobileMenu);
+
+//    // بستن با کلید ESC
+//    document.addEventListener("keydown", (e) => {
+//      if (e.key === "Escape" && !mobileMenuOverlay.classList.contains("hidden")) {
+//        closeMobileMenu();
+//      }
+//    });
+
+//    // کنترل accordion در منوی موبایل
+//    const accordionToggles = mobileMenu.querySelectorAll(".accordion-toggle");
+//    accordionToggles.forEach((toggle) => {
+//      toggle.addEventListener("click", () => {
+//        const content = toggle.nextElementSibling;
+//        const arrow = toggle.querySelector("svg");
+
+//        // بررسی کنید که content وجود دارد
+//        if (content && content.classList.contains("accordion-content")) {
+//          if (content.classList.contains("hidden")) {
+//            // باز کردن accordion
+//            content.classList.remove("hidden");
+//            if (arrow) {
+//              arrow.classList.add("rotate-180");
+//            }
+//          } else {
+//            // بستن accordion
+//            content.classList.add("hidden");
+//            if (arrow) {
+//              arrow.classList.remove("rotate-180");
+//            }
+//          }
+//        }
+//      });
+//    });
+
+//    // تغییر دسته‌بندی در منوی موبایل
+//    const categoryItems = mobileMenu.querySelectorAll(".mobile-category-item");
+//    const categoryContents = mobileMenu.querySelectorAll(".mobile-category-content");
+
+//    categoryItems.forEach((item) => {
+//      item.addEventListener("click", () => {
+//        const categoryId = item.dataset.category;
+
+//        // حذف کلاس active از همه آیتم‌ها
+//        categoryItems.forEach((cat) => cat.classList.remove("mobile-category-active"));
+//        // اضافه کردن کلاس active به آیتم کلیک شده
+//        item.classList.add("mobile-category-active");
+
+//        // مخفی کردن همه محتواها
+//        categoryContents.forEach((content) => content.classList.add("hidden"));
+//        // نمایش محتوای مربوط به دسته‌بندی انتخاب شده
+//        const targetContent = document.getElementById(`${categoryId}-content`);
+//        if (targetContent) {
+//          targetContent.classList.remove("hidden");
+//        }
+//      });
+//    });
+//  }
+
+const hamburgerButton = document.getElementById("hamburger-button");
+const closeMenuButton = document.getElementById("close-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+const mainCategoryLinks = document.querySelectorAll(".main-category-link");
+const categoryContents = document.querySelectorAll(".category-content");
+const accordionToggles = document.querySelectorAll(".accordion-toggle");
+
+hamburgerButton.addEventListener("click", () => mobileMenu.classList.remove("translate-x-full"));
+closeMenuButton.addEventListener("click", () => mobileMenu.classList.add("translate-x-full"));
+
+mainCategoryLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    mainCategoryLinks.forEach((l) => l.classList.remove("active"));
+    link.classList.add("active");
+    const targetId = link.dataset.target;
+    categoryContents.forEach((content) => {
+      content.classList.add("hidden");
+    });
+    const targetContent = document.getElementById(targetId);
+    if (targetContent) {
+      targetContent.classList.remove("hidden");
+    }
+  });
+});
+
+accordionToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const content = toggle.nextElementSibling;
+    const arrow = toggle.querySelector(".arrow-icon");
+    const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+    if (isOpen) {
+      content.style.maxHeight = "0px";
+      arrow.style.transform = "rotate(0deg)";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      arrow.style.transform = "rotate(180deg)";
+    }
+  });
+});
+
 }
 
 

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="راه‌های ارتباط با فروشگاه تیپ نتی و پشتیبانی" />
+    <title>درباره تیپ نتی</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/pages/_home.css" />
+    <style>
+      /* Custom scrollbar for desktop thumbnails */
+    </style>
+  </head>
+
+  <body data-page="contact-us">
+    <!-- ===== HEADER ===== -->
+    <div data-include="/partials/header.html"></div>
+
+    <main class="home-page">
+      <!-- @@mobile-search -->
+      <div class="lg:hidden pt-3 pb-2 px-4 border-t border-gray-200">
+        <div class="relative open-search-trigger">
+          <i-con name="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-black-600"></i-con>
+          <input type="text" placeholder="جستجو کنید..." id="mobile-search-input" class="bg-gray-100 text-xs rounded-full py-3 pr-4 pl-10 w-full text-right" />
+        </div>
+      </div>
+      <!-- @@hero-slider -->
+      <section class="relative w-full pt-1 pb-1 md:p-0 md:py-6 overflow-hidden">
+        <!-- کانتینر اصلی اسلایدر -->
+        <div class="swiper hero-slider h-[30vh] lg:h-auto max-h-[790px]">
+          <div class="swiper-wrapper items-center">
+            <!-- items-center برای تراز عمودی اسلایدها در موبایل -->
+            <!-- اسلاید ۱ -->
+            <div class="swiper-slide">
+              <div class="relative h-full rounded-2xl overflow-hidden bg-[#f5f1ec]">
+                <img src="../assets/img/slider-1.png" alt="کالکشن جدید" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <!-- اسلاید ۲ -->
+            <div class="swiper-slide">
+              <div class="relative h-full rounded-2xl overflow-hidden bg-[#e5f0eb]">
+                <img src="../assets/img/slider-2.png" alt="تخفیف ویژه" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <!-- اسلاید ۳ -->
+            <div class="swiper-slide">
+              <div class="relative h-full rounded-2xl overflow-hidden bg-[#ebe5f0]">
+                <img src="../assets/img/slider-3.png" alt="هدیه روز پدر" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative h-full rounded-2xl overflow-hidden bg-[#e5f0eb]">
+                <img src="../assets/img/slider-2.png" alt="تخفیف ویژه" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative h-full rounded-2xl overflow-hidden bg-[#f5f1ec]">
+                <img src="../assets/img/slider-1.png" alt="کالکشن جدید" class="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+          <!-- Pagination فقط برای موبایل -->
+          <div class="swiper-pagination lg:hidden"></div>
+        </div>
+        <!-- دکمه‌های ناوبری برای دسکتاپ -->
+        <div class="hidden md:flex items-center gap-2 absolute bottom-14 right-56 z-20">
+          <!-- Prev -->
+          <button class="hero-slider-prev flex items-center justify-center px-7 py-2.5 rounded-[32px] border-2 border-[#363636] cursor-pointer backdrop-blur-sm shadow-sm hover:bg-white" aria-label="اسلاید قبلی" type="button">
+            <!-- Icon: line + chevron (RTL friendly) -->
+            <i-con name="arrow-left-2" class="w-5 h-5 text-black-600"></i-con>
+          </button>
+          <!-- Next -->
+          <button class="hero-slider-next flex items-center justify-center px-7 py-2.5 rounded-[32px] border-2 border-[#363636] cursor-pointer backdrop-blur-sm shadow-sm hover:bg-white" aria-label="اسلاید بعدی" type="button">
+            <i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+          </button>
+        </div>
+      </section>
+      
+    
+      <div class="flex justify-center items-center w-full md:gap-x-6 py-6 pb-2 md:pb-6">
+        <div class="hidden md:block flex-grow h-16" style="background-image: url('../assets/img/landing-title-right.png'); background-repeat: repeat-x; background-size: contain; background-position: right center;">
+        </div>
+
+        <div class="text-center w-full md:w-auto flex-shrink-0">
+            <h2 class="text-[16px] md:text-[26px] font-semibold text-black-600 mb-1">این روزا تیپ همه چیز حراجه!</h2>
+            <p class="text-[12px] md:text-[16px] text-black-600">انواع لباس مردانه را با تخفیف ویژه در حراج روزانه تیپ بخرید</p>
+
+            <div class="md:hidden w-full h-16 -mt-2" style="background-image: url('../assets/img/landing-title-center.png'); background-repeat: no-repeat; background-size: contain; background-position: center;">
+            </div>
+        </div>
+
+        <div class="hidden md:block flex-grow h-16" style="background-image: url('../assets/img/landing-title-left.png'); background-repeat: repeat-x; background-size: contain; background-position: left center;">
+        </div>
+    </div>
+
+
+    <div class="tabs-container">
+        <div class="flex justify-center items-center flex-wrap gap-2.5 md:gap-4 mb-8 mt-0 md:mt-8 md:mb-0 text-[13px] md:text-[15px] px-14">
+    <button class="tab-btn px-3 py-1.5 md:px-6 md:py-3 rounded-full border border-gray-300 text-gray-700 font-semibold transition-colors duration-300" data-tab="tshirt">تیشرت</button>
+    <button class="tab-btn active px-3 py-1.5 md:px-6 md:py-3 rounded-full border border-gray-300 text-gray-700 font-semibold transition-colors duration-300" data-tab="shalvar">شلوار</button>
+    <button class="tab-btn px-3 py-1.5 md:px-6 md:py-3 rounded-full border border-gray-300 text-gray-700 font-semibold transition-colors duration-300" data-tab="kif">کیف و کفش</button>
+    <button class="tab-btn px-3 py-1.5 md:px-6 md:py-3 rounded-full border border-gray-300 text-gray-700 font-semibold transition-colors duration-300" data-tab="varzeshi">ورزشی</button>
+    <button class="tab-btn px-3 py-1.5 md:px-6 md:py-3 rounded-full border border-gray-300 text-gray-700 font-semibold transition-colors duration-300" data-tab="accessory">اکسسوری</button>
+</div>      
+
+        <div class="tab-content-container">
+            <div id="tshirt" class="tab-panel hidden">
+              
+
+
+<!-- @@four-cards -->
+       <section class="w-full pt-0 pb-0 md:pt-12 md:pb-0 container mx-auto">
+        <div class="max-w-screen-2xl mx-auto">
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-0">
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/1.jpg" alt="انواع کمربند چرم" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع کمربند چرم</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+                                <i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/2.jpg" alt="لباس های برند مراکش" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute top-5 right-5 md:top-7 md:right-7 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-5 md:py-3 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">لباس های برند مراکش</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/3.jpg" alt="انواع شلوارک" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع شلوارک</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/4.jpg" alt="تی شرت های چاپی" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">تی شرت های چاپی</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                             <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+      <!-- @@three-col -->
+      <section class="container mx-auto p-4 md:px-0 md:pb-16 section-three-col">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner1.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            <div class="absolute top-5 right-5 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-3 md:py-1.5 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید انواع کلاه</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 2: Sunglasses -->
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner2.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید عینک آفتابی</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 3: Man in jacket -->
+          <a href="#" class="relative col-span-2 lg:col-span-1 block aspect-video lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <!-- Background Image -->
+            <img src="../assets/img/home/threebanner3.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری در حال حمل کیسه‌های خرید" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-start">
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-3">
+                  <span>خرید لباس بهاری</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+
+
+            </div>
+            <div id="shalvar" class="tab-panel">
+              
+
+<!-- @@four-cards -->
+       <section class="w-full pt-0 pb-0 md:pt-12 md:pb-0 container mx-auto">
+        <div class="max-w-screen-2xl mx-auto">
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-0">
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/home/home-4-col1.png" alt="انواع کمربند چرم" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع کمربند چرم</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+                                <i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/home/home-4-col2.png" alt="لباس های برند مراکش" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute top-5 right-5 md:top-7 md:right-7 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-5 md:py-3 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">لباس های برند مراکش</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/home/home-4-col3.png" alt="انواع شلوارک" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع شلوارک</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/home/home-4-col4.png" alt="تی شرت های چاپی" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">تی شرت های چاپی</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                             <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+      <!-- @@three-col -->
+      <section class="container mx-auto p-4 md:px-0 md:pb-16 section-three-col">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner1.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            <div class="absolute top-5 right-5 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-3 md:py-1.5 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید انواع کلاه</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 2: Sunglasses -->
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner2.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید عینک آفتابی</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 3: Man in jacket -->
+          <a href="#" class="relative col-span-2 lg:col-span-1 block aspect-video lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <!-- Background Image -->
+            <img src="../assets/img/home/threebanner3.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری در حال حمل کیسه‌های خرید" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-start">
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-3">
+                  <span>خرید لباس بهاری</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+
+            </div>
+            <div id="kif" class="tab-panel hidden">
+              
+<!-- @@four-cards -->
+       <section class="w-full pt-0 pb-0 md:pt-12 md:pb-0 container mx-auto">
+        <div class="max-w-screen-2xl mx-auto">
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-0">
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/3.jpg" alt="انواع کمربند چرم" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع کمربند چرم</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+                                <i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/4.jpg" alt="لباس های برند مراکش" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute top-5 right-5 md:top-7 md:right-7 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-5 md:py-3 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">لباس های برند مراکش</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/5.jpg" alt="انواع شلوارک" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع شلوارک</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/6.jpg" alt="تی شرت های چاپی" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">تی شرت های چاپی</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                             <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+      <!-- @@three-col -->
+      <section class="container mx-auto p-4 md:px-0 md:pb-16 section-three-col">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner1.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            <div class="absolute top-5 right-5 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-3 md:py-1.5 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید انواع کلاه</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 2: Sunglasses -->
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner2.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید عینک آفتابی</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 3: Man in jacket -->
+          <a href="#" class="relative col-span-2 lg:col-span-1 block aspect-video lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <!-- Background Image -->
+            <img src="../assets/img/home/threebanner3.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری در حال حمل کیسه‌های خرید" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-start">
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-3">
+                  <span>خرید لباس بهاری</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+            </div>
+            <div id="varzeshi" class="tab-panel hidden">
+              
+
+<!-- @@four-cards -->
+       <section class="w-full pt-0 pb-0 md:pt-12 md:pb-0 container mx-auto">
+        <div class="max-w-screen-2xl mx-auto">
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-0">
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/1.jpg" alt="انواع کمربند چرم" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع کمربند چرم</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+                                <i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/2.jpg" alt="لباس های برند مراکش" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute top-5 right-5 md:top-7 md:right-7 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-5 md:py-3 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">لباس های برند مراکش</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/3.jpg" alt="انواع شلوارک" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع شلوارک</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/4.jpg" alt="تی شرت های چاپی" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">تی شرت های چاپی</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                             <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+      <!-- @@three-col -->
+      <section class="container mx-auto p-4 md:px-0 md:pb-16 section-three-col">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner1.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            <div class="absolute top-5 right-5 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-3 md:py-1.5 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید انواع کلاه</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 2: Sunglasses -->
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner2.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید عینک آفتابی</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 3: Man in jacket -->
+          <a href="#" class="relative col-span-2 lg:col-span-1 block aspect-video lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <!-- Background Image -->
+            <img src="../assets/img/home/threebanner3.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری در حال حمل کیسه‌های خرید" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-start">
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-3">
+                  <span>خرید لباس بهاری</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+
+            </div>
+            <div id="accessory" class="tab-panel hidden">
+              
+
+<!-- @@four-cards -->
+       <section class="w-full pt-0 pb-0 md:pt-12 md:pb-0 container mx-auto">
+        <div class="max-w-screen-2xl mx-auto">
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-0">
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/1.jpg" alt="انواع کمربند چرم" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع کمربند چرم</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+                                <i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/2.jpg" alt="لباس های برند مراکش" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute top-5 right-5 md:top-7 md:right-7 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-5 md:py-3 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">لباس های برند مراکش</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/3.jpg" alt="انواع شلوارک" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">انواع شلوارک</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                            <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative block w-full aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden">
+                    <img src="../assets/img/category/middle/4.jpg" alt="تی شرت های چاپی" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <h3 class="text-white text-xs md:text-lg font-semibold">تی شرت های چاپی</h3>
+                        <div class="mt-6 mb-0 md:mb-4 p-1 rounded-full bg-white/20 backdrop-blur-xs">
+                             <a href="#" class="inline-flex items-center gap-2 px-2 py-2 md:gap-3 md:px-5 md:py-3 rounded-full bg-white">
+                                <span class="text-[10px] lg:text-base font-semibold text-[#363636]">مشاهده کنید</span>
+<i-con name="arrow-right-2" class="w-4 h-4 md:w-5 md:h-5 text-black-600"></i-con>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+      <!-- @@three-col -->
+      <section class="container mx-auto p-4 md:px-0 md:pb-16 section-three-col">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4">
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner1.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            <div class="absolute top-5 right-5 flex items-center bg-red-600 text-white text-[10px] md:text-[16px] rounded-full top-text px-1.5 py-1 md:px-3 md:py-1.5 gap-2">
+              <span class="font-medium">تا</span>
+              <i-con name="percent" class="w-2 h-2 md:w-2.5 md:h-2.5 text-white mb-0.5"></i-con>
+              <span>۵</span>
+            </div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید انواع کلاه</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 2: Sunglasses -->
+          <a href="#" class="relative col-span-1 block h-[280px] lg:h-auto lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <img src="../assets/img/home/threebanner2.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-center lg:items-start">
+              <!-- CTA Button with Glassy Border -->
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-1 md:gap-3">
+                  <span>خرید عینک آفتابی</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Banner 3: Man in jacket -->
+          <a href="#" class="relative col-span-2 lg:col-span-1 block aspect-video lg:aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden group">
+            <!-- Background Image -->
+            <img src="../assets/img/home/threebanner3.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300" alt="مردی با کت و کلاه بهاری در حال حمل کیسه‌های خرید" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+            <div class="absolute inset-0 p-4 md:p-5 flex flex-col justify-end items-start">
+              <div class="mb-0 p-1 rounded-full bg-white/30 backdrop-blur-sm transition-transform duration-300">
+                <div class="bg-white text-[#363636] font-semibold text-[10px] sm:text-xs md:text-sm rounded-full px-1.5 py-1 md:px-3 md:py-3 flex items-center gap-3">
+                  <span>خرید لباس بهاری</span>
+                  <i-con name="arrow-right-2" class="w-4 h-4 text-black-600"></i-con>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+
+            </div>
+        </div>
+    </div>
+      
+      
+
+      
+
+      
+
+    </main>
+    <!-- فوتر اصلی سایت -->
+
+    <div data-include="/partials/footer.html"></div>
+    <script type="module" src="../assets/js/main.js"></script>
+    <!-- <script type="module" src="../assets/js/pages/category.js"></script> -->
+    <script type="module" src="../assets/js/pages/landing.js"></script>
+    <script></script>
+  </body>
+</html>

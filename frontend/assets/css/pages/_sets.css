@@ -99,3 +99,17 @@
         margin: 0.3em 0.3em 0 0;
     }
 }
+
+#modal-panel .product-slider-1,
+#modal-panel .product-slider-2,
+#modal-panel .product-slider-3,
+#modal-panel .product-slider-4 {
+    max-height: 320px !important;
+}
+
+#modal-panel .product-card{
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  max-width: 280px;
+}
